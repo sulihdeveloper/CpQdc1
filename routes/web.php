@@ -18,4 +18,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
-Route::get('/dashboard-v2', 'HomeController@dashboardV2')->name('dashboard-v2');
+
+
+
+
+    Route::resource('slide', 'SlideController');
+    Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);
+    Route::resource('about', 'AboutController',['except' => [
+        'destroy','show'
+    ]]);
+    Route::resource('vision', 'VismisController',['except' => [
+        'destroy','show'
+    ]]);
+    Route::resource('category', 'CategoryController',['except'=>['show']]);
+    Route::resource('product', 'ProductController');
+
+Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);
