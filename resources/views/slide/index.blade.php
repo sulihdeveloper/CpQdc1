@@ -11,7 +11,7 @@
 		    </p>
 		@endif   
 	</div>
-	<div class="col-md-10">
+	<div class="col-md-12">
 		<table class="table table-striped">
 			<thead>
 				<th>No</th>

@@ -52,9 +52,8 @@ class SlideController extends Controller
         $slide->description = $request->desc;
         $slide->link = $request->link;
         $slide->user_id = Auth::user()->id;
-
         if($request->hasFile('image')){
-            $file  = 'public/slides/';
+            $file = $request->image->store('slides/');
             $slide->image = $request->image->hashName();
             $slide->save();
         }
