@@ -11,10 +11,10 @@
 		    </p>
 		@endif   
 	</div>
-	<div class="col-md-12">
+	<div class="col-md-10">
 		<table class="table table-striped">
 			<thead>
-				<th>#</th>
+				<th>No</th>
 				<th>Name</th>
 				<th>Description</th>
 				<th>Link</th>

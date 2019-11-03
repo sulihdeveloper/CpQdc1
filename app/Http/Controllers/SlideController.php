@@ -6,7 +6,7 @@ use App\Slide;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\File;
+use Illuminate\Http\file;
 use Illuminate\Support\Str;
 
 
@@ -52,11 +52,13 @@ class SlideController extends Controller
         $slide->description = $request->desc;
         $slide->link = $request->link;
         $slide->user_id = Auth::user()->id;
+
         if($request->hasFile('image')){
-            $file = $request->image->store('slides/');
+            $file  = 'public/slides/';
             $slide->image = $request->image->hashName();
             $slide->save();
         }
+
         return redirect()->route('slide.index')->with('success','new slide created');
     }
 

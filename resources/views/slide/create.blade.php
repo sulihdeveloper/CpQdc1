@@ -11,6 +11,7 @@
 				<form method="POST"  class="form-horizontal" action="{{route('slide.store')}}" enctype="multipart/form-data">
 					{{ csrf_field() }}
 					<div class="form-group">
+						<table class="table table-striped">
 					  <label for="title" class="col-md-3 control-label">Title</label>
 					  <div class="col-md-9">
 					  	<input class="form-control" id="title" type="text" name="title" placeholder="slide title"value={{old('title')}}>
@@ -35,6 +36,7 @@
 				    	<p class="help-block">image in png, jpg, bmp</p>
 				    </div>
 				  </div>
+				</table>
 				  <div class="form-group">
 				  	<div class="col-md-4 col-md-offset-5">
 				  		<button class="btn btn-success" type="submit">save</button> &nbsp;
