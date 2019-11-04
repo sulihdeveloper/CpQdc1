@@ -156,7 +156,7 @@
                      <br>
                      <abbr title="Phone"><i class="fa fa-phone"> </i>:</abbr> (021) 79193333
                      <br>
-                     <abbr title="email"><i class="fas fa-envelope"> </i>:</abbr> info@qdc.co.id
+                     <abbr title="email"><i class="fa fa-envelope"> </i>:</abbr> info@qdc.co.id
                    </address>
                  </div>
                </div>
@@ -164,10 +164,10 @@
                <div class="col-md-12 social">
                  <h5>Follow Us</h5>
                    <ul class="list-inline">
-                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                     <a href="#"><i class="fa fa-facebook"></i></a>
+                     <a href="#"><i class="fa fa-twitter"></i></a>
+                     <a href="#"><i class="fa fa-instagram"></i></a>
+                     <a href="#"><i class="fa fa-linkedin"></i></a>
                    </ul>
                </div>
              </div>
