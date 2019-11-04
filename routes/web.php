@@ -11,16 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
 
 Auth::routes();
+Route::get('/', 'FrontController@index');
+Route::get('/landing', 'SoonController@index');
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
-
-
-
 
     Route::resource('slide', 'SlideController');
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);

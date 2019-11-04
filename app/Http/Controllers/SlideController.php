@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Slide;
 use Auth;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\file;
@@ -18,7 +19,7 @@ class SlideController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $slide= Slide::paginate(10);
         return view('slide.index',compact('slide'))->with('i');
     }
@@ -53,7 +54,7 @@ class SlideController extends Controller
         $slide->link = $request->link;
         $slide->user_id = Auth::user()->id;
         if($request->hasFile('image')){
-            $file = $request->image->store('slides/');
+            $file ="/public/slides";
             $slide->image = $request->image->hashName();
             $slide->save();
         }
@@ -95,7 +96,7 @@ class SlideController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $this->validate($request, [
             'title' => 'required|max:100',
             'desc' => 'required',
@@ -104,14 +105,14 @@ class SlideController extends Controller
             ]);
         $update = Slide::findOrFail($id);
         $update->title = $request->title;
-        $update->description = $request->desc;                  
+        $update->description = $request->desc;
         if($request->hasFile('image')){
-            Storage::delete('slides/'.$request->oldimage);           
+            Storage::delete('slides/'.$request->oldimage);
             $file = $request->image->store('slides/');
-            $update->image = $request->image->hashName(); 
-            // echo $request->oldimage;           
-        }        
-        $update->save(); 
+            $update->image = $request->image->hashName();
+            // echo $request->oldimage;
+        }
+        $update->save();
         return redirect()->route('slide.index')->with('success','slide updated');
     }
 
