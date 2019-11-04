@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">	
-		<div class="col-md-12">
-		<h1>Product categories</h1> 
+<div class="container" id="content">
+		<div class="col-md-10">
+		<h1>Product categories</h1>
 		<p class="text-center"></p>
 		@if (session('success'))
 		    <p class="alert alert-success">
 		        {{ session('success') }}
 		    </p>
-		@endif   
-	</div>	
+		@endif
+	</div>
 	<div class="col-md-12">
 	<p><a href="{{route('category.create')}}" class="btn btn-xs btn-success">create</a></p>
 		<table class="table table-striped">
 			<thead>
-				<th>#</th>
+				<th>No</th>
 				<th>name</th>
 				<th>action</th>
 			</thead>
@@ -34,7 +34,7 @@
 				</tr>
 			@endforeach
 			</tbody>
-		</table>	
+		</table>
 	</div>
 </div>
 @endsection
