@@ -31,13 +31,13 @@
 
    </div>
    <div class="section" id="ab">
-    <div class="col-md-12">
+    <div class="col-md-10">
       <div class="container">
         <div class="content">
          <h1>About Us</h1>
          <hr>
           @foreach($about as $ab)
-         <div class="col-md-12">
+         <div class="col-md-10">
            <div class="row">
              <div class="col-md-4">
                <h4>Who we are</h4>
@@ -62,7 +62,7 @@
    <div class="section" id="vimis">
      <div class="container">
        <div class="content">
-           <div class="col-md-12">
+           <div class="col-md-10">
            <h1>Vision and Misson</h1>
            @foreach($vision as $vis)
            <hr>
@@ -90,7 +90,7 @@
      </div>
 
      <div class="section" id="prod">
-      <div class="col-md-12">
+      <div class="col-md-10">
          <div class="container">
            <div class="content">
              <h1>Products</h1>
@@ -130,17 +130,17 @@
       </div>
      </div>
      <div class="section" id="conts">
-      <div class="col-md-12">
+      <div class="col-md-10">
        <div class="container">
          <div class="content">
              <h1>Contact us</h1>
              <hr>
-             <div class="col-md-12">
+             <div class="col-md-10">
                <p class="text-center">
                  Fixie flexitarian irony yr bitters occupy schlitz, kale chips tbh you probably haven't heard of them normcore hexagon locavore copper mug.
                </p><br><br>
              </div>
-             <div class="col-md-12">
+             <div class="col-md-10">
                <div class="row">
                  <div class="col-md-6  col-md-offset-1">
                    <div class="map-responsive">
@@ -161,7 +161,7 @@
                  </div>
                </div>
                <br>
-               <div class="col-md-12 social">
+               <div class="col-md-10 social">
                  <h5>Follow Us</h5>
                    <ul class="list-inline">
                      <a href="#"><i class="fa fa-facebook"></i></a>

@@ -18,7 +18,6 @@
     <link href="{{asset('css/app1.css')}}" rel="stylesheet">
     <link href="{{asset('css/style1.css')}}" rel="stylesheet">
     <link href="{{asset('css/jquery.fullpage.min.css')}}" rel="stylesheet">
-    <link href="{{asset('js/main.js')}}" rel="stylesheet">
 
 
 
@@ -54,6 +53,6 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    <script src="{{asset('js/jquery.fullpage.min.js')}}"></script>
    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-   <script src="{{asset('js/main.js')}}"></script>
+   <script src="{{asset('js/main1.js')}}"></script>
   </body>
 </html>
