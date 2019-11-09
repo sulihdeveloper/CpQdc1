@@ -49,16 +49,21 @@ class SlideController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
         $slide = new Slide;
+
         $slide->title = $request->title;
         $slide->description = $request->desc;
         $slide->link = $request->link;
         $slide->user_id = Auth::user()->id;
-        if($request->hasFile('image')){
-            $file =$request->image->store('slides/');
-            $slide->image = $request->image->hashName();
-            $slide->save();
-        }
+        if($request->hasFile('image'))
+        {
+            $image = $request->file('image');
+            $filename =  time().','.$image->getClientOriginalName();
+            $location = public_path('slides/',$filename);
+            //$slide::make($image)->resize(800,400)->save($location);
+            $slide->image = $filename;
 
+        }
+        $slide->save();
         return redirect()->route('slide.index')->with('success','new slide created');
     }
 
