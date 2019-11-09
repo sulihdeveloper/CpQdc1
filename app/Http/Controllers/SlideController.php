@@ -20,7 +20,7 @@ class SlideController extends Controller
      */
     public function index()
     {
-        $slide= Slide::paginate(10);
+        $slide= Slide::paginate(4);
         return view('slide.index',compact('slide'))->with('i');
     }
 
@@ -54,7 +54,7 @@ class SlideController extends Controller
         $slide->link = $request->link;
         $slide->user_id = Auth::user()->id;
         if($request->hasFile('image')){
-            $file ="/public/slides";
+            $file =$request->image->store('slides/');
             $slide->image = $request->image->hashName();
             $slide->save();
         }
