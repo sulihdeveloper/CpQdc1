@@ -7,8 +7,7 @@ use Auth;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\file;
-use Illuminate\Support\Str;
+
 
 
 class SlideController extends Controller
@@ -20,7 +19,7 @@ class SlideController extends Controller
      */
     public function index()
     {
-        $slide= Slide::paginate(4);
+        $slide= Slide::paginate(10);
         return view('slide.index',compact('slide'))->with('i');
     }
 
@@ -50,16 +49,16 @@ class SlideController extends Controller
             ]);
         $slide = new Slide;
 
-        $slide->title = $request->title;
-        $slide->description = $request->desc;
-        $slide->link = $request->link;
-        $slide->user_id = Auth::user()->id;
-        if($request->hasFile('image'))
+            $slide->title = $request->title;
+            $slide->description = $request->desc;
+            $slide->link = $request->link;
+            $slide->user_id = Auth::user()->id;
+            if($request->hasFile('image'))
         {
             $image = $request->file('image');
-            $filename =  time().','.$image->getClientOriginalName();
-            $location = public_path('slides/',$filename);
-            //$slide::make($image)->resize(800,400)->save($location);
+            $filename =  time().','.$image->getClientOriginalExtension();
+            $location = public_path('img/',$filename);
+            //$slide::make($image)->save($location);
             $slide->image = $filename;
 
         }
