@@ -15,8 +15,8 @@
 					  <label for="title" class="col-md-3 control-label">Title</label>
 					  <div class="col-md-9">
 					  	<input class="form-control" id="title" type="text" name="title" placeholder="slide title"value={{old('title')}}>
-					  </div>				  
-					</div>
+					  </div>
+
 					<div class="form-group">
 					  <label for="desc" class="col-md-3 control-label">Description</label>
 					  <div class="col-md-9">
@@ -43,8 +43,7 @@
 				  		<a class="btn btn-warning" href="{{route('slide.index')}}">cancel</a>	
 				  	</div>				  	
 				  </div>  				  			
-				</form>			
-			</div>	
+			</div>
 			<div class="col-md-5">
 				@if (count($errors) > 0)
 				    <div class="alert alert-danger">
@@ -59,5 +58,4 @@
 		</div>
 	</div>	    
 </div>
-
 @endsection

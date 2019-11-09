@@ -33,6 +33,11 @@ class SlideController extends Controller
        return view('slide.create');
     }
 
+
+    public function upload(){
+        $image = Slide::get();
+        return view('upload',['image' => $image]);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -53,15 +58,16 @@ class SlideController extends Controller
             $slide->description = $request->desc;
             $slide->link = $request->link;
             $slide->user_id = Auth::user()->id;
+
             if($request->hasFile('image'))
         {
             $image = $request->file('image');
             $filename =  time().','.$image->getClientOriginalExtension();
-            $location = public_path('img/',$filename);
+            $location = public_path('slides/',$filename);
             //$slide::make($image)->save($location);
             $slide->image = $filename;
-
         }
+
         $slide->save();
         return redirect()->route('slide.index')->with('success','new slide created');
     }
