@@ -27,7 +27,9 @@
 					<td>{{$row->title}}</td>
 					<td>{{ str_limit($row->description, 60)}}</td>
 					<td>{{$row->link}}</td>
-					<td><a href="{{route('product.show',$row->id)}}" class="btn btn-success btn-xs">show</a> <a href="{{route('product.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
+					<td>
+					<a href="{{route('product.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
+					<a href="{{route('product.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
 					<form class="inline" method="POST" action="{{route('product.destroy',$row->id)}}">
 						{{ csrf_field() }}
 						{{ method_field('DELETE') }}
