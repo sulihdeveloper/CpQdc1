@@ -1,16 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">	
+	<div class="container">
+		<div class="row justify-content-center">
+	</div>
+	<div class="container" id="content">
 		<div class="col-md-12">
-		<h1>Slides section</h1> 
-		<p class="text-center"><a href="{{route('slide.create')}}" class="btn btn-md btn-success">add new slide</a></p>
+		<h1>Slides section</h1>
+		</div>
+	</div>
 		@if (session('success'))
 		    <p class="alert alert-success">
 		        {{ session('success') }}
 		    </p>
 		@endif   
-	</div>
+
+		<div class="float-right">
+			<p class="text-center"><a href="{{route('slide.create')}}" class="btn btn-md btn-success">add new slide</a></p>
+		</div>
 	<div class="col-md-12">
 		<table class="table table-striped">
 			<thead>

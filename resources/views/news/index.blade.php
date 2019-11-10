@@ -18,8 +18,9 @@
                         </div>
 
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('news.create') }}"> Post baru</a>
+                            <a class="btn btn-primary" href="{{ route('news.create') }}"> Create</a>
                         </div>
+
 
                         <table class="table table-striped">
                             <thead>
@@ -50,6 +51,7 @@
                                         </div>
                                     </td>
                                 </tr>
+
                             @endforeach
                             </tbody>
                         </table>
