@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- BASICS -->
     <meta charset="utf-8">
@@ -28,27 +27,30 @@
                 <span class="fa fa-bars color-white"></span>
             </button>
             <div class="navbar-logo">
-                <a href="index.html"><img data-0="width:155px;" data-300=" width:120px;" src="img1/pp-removebg-preview.png" alt=""></a>
+                <a href="#"><img data-0="width:155px;" data-300=" width:120px;" src="img1/pp-removebg-preview.png" alt=""></a>
             </div>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#section-about">About</a></li>
-                <li><a href="#section-works">Portfolio</a></li>
-                <li><a href="#section-contact">Contact</a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Capabilities</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Carrers</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
         <!--/.navbar-collapse -->
     </div>
 </div>
 
+)
 <section id="intro">
     <div class="intro-content">
-        <h2>....</h2>
-        <h3>...</h3>
+        <h2></h2>
+        <h3></h3>
         <div>
-            <a href="#section-services" class="btn-get-started scrollto">....</a>
+        <a href="" class="btn btn-default page-scroll">More</a>
         </div>
     </div>
 </section>
@@ -57,7 +59,6 @@
 <!-- services -->
 <section id="section-services" class="section pad-bot30 bg-white">
     <div class="container">
-
         <div class="row mar-bot40">
             <div class="col-lg-4">
                 <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
@@ -550,12 +551,7 @@
             </div>
         </div>
         <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Vlava
-            -->
+
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
         </div>
     </div>
