@@ -13,7 +13,7 @@
 		    <p class="alert alert-success">
 		        {{ session('success') }}
 		    </p>
-		@endif   
+		@endif
 
 		<div class="float-right">
 			<p class="text-center"><a href="{{route('slide.create')}}" class="btn btn-md btn-success">add new slide</a></p>
@@ -34,7 +34,8 @@
 					<td>{{$row->title}}</td>
 					<td>{{ str_limit($row->description, 60)}}</td>
 					<td>{{$row->link}}</td>
-					<td><a href="{{route('slide.show',$row->id)}}" class="btn btn-success btn-xs">show</a> <a href="{{route('slide.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
+					<td><a href="{{route('slide.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
+                    <a href="{{route('slide.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
 					<form class="inline" method="POST" action="{{route('slide.destroy',$row->id)}}">
 						{{ csrf_field() }}
 						{{ method_field('DELETE') }}
@@ -43,11 +44,11 @@
 					</td>
 				</tr>
 			@endforeach
-			</tbody>			
+			</tbody>
 		</table>
 		{{ $slide->links() }}
 
-	</div>		    
+	</div>
 </div>
 
 @endsection
