@@ -1,4 +1,4 @@
-(function($) {
+ (function($) {
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -114,7 +114,6 @@
 
 
   if (isMobile == false && ($('#parallax1').length || isMobile == false && $('#parallax2').length || isMobile == false && $('#testimonials').length)) {
-
 
     $(window).stellar({
       responsive: true,
