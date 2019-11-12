@@ -44,7 +44,6 @@
     </div>
 </div>
 
-)
 <section id="intro">
     <div class="intro-content">
         <h2></h2>

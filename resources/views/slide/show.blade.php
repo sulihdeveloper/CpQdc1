@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">
+<div class="container" >
 
 		<div class="col-md-12">
 		<h1>Slide name: {{$show->title}}</h1>
@@ -19,11 +19,10 @@
 	</div>
 	<div class="com-md-4">
 		<p><b>image</b></p>
-		<!--<img src="{{url('slides/'.$show->image)}}" class="img-responsive">-->
-		<img src="slides/<?php echo $show['image']; ?>" class="img-responsive">
+		<td><img src="{{ URL::to('/') }}/slides/{{ $show->image }}" class="img-thumbnail" width="75" /></td>
 
 
-	</div>
+    </div>
 
 </div>
 
