@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 Route::get('/capability', 'HomeController@capability');
+Route::get('/home', 'HomeController@home');
 
     Route::resource('slide', 'SlideController');
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);

@@ -36,7 +36,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{!! url('/slide') !!}"><i class="fa fa-circle-o"></i> Gambar Slide</a></li>
                     <li class="active"><a href="{!! url('/about') !!}"><i class="fa fa-circle-o"></i> Abaout</a></li>
-                    <li class="active"><a href="{!! url('/#') !!}"><i class="fa fa-circle-o"></i> Contact</a></li>
+                    <li class="active"><a href="{!! url('/contact') !!}"><i class="fa fa-circle-o"></i> Contact</a></li>
                     <li class="active"><a href="{!! url('/news') !!}"><i class="fa fa-circle-o"></i> News</a></li>
                     <li class="active"><a href="{!! url('/vision') !!}"><i class="fa fa-circle-o"></i> Visi Misi</a></li>
                     <li><a href="{!! url('/product') !!}"><i class="fa fa-circle-o"></i> Product</a></li>

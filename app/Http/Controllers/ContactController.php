@@ -70,7 +70,7 @@ class ContactController extends Controller
     public function show($id)
     {
         $data = Contact::findOrFail($id);
-        return view('contact.view', compact('data'));
+        return view('contact.show', compact('data'));
     }
 
     /**

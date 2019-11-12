@@ -13,7 +13,7 @@
 		<div class="col-md-12">
 		<h1>Create Slides</h1>
 		</div>
-		<div class="col-md-12">
+		<div cphp lass="col-md-12">
 			<div class="col-md-7">
 				<form method="post" action="{{route('slide.store')}}" enctype="multipart/form-data">
                     @csrf
