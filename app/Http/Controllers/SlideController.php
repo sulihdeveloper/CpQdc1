@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Slide;
-use Auth;
-use DB;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 
 
@@ -19,8 +16,8 @@ class SlideController extends Controller
      */
     public function index()
     {
-        $slide= Slide::paginate(10);
-        return view('slide.index',compact('slide'))->with('i');
+        $slide = Slide::paginate(10);
+        return view('slide.index', compact('slide'))->with('i');
     }
 
     /**
@@ -30,48 +27,44 @@ class SlideController extends Controller
      */
     public function create()
     {
-       return view('slide.create');
+        return view('slide.create');
     }
 
 
-    public function upload(){
+    public function upload()
+    {
         $image = Slide::get();
-        return view('upload',['image' => $image]);
+        return view('upload', ['image' => $image]);
     }
+
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $this->validate($request, [
             'title' => 'required|max:100',
-            'desc' => 'required',
+            'description' => 'required',
             'link' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            ]);
-        $slide = new Slide;
+        ]);
+        $image = $request->file('image');
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('slides'), $new_name);
+        $form_data = array(
+            'title' => $request->title,
+            'description' => $request->description,
+            'link' => $request->link,
+            'image' => $new_name
+        );
 
-            $slide->title = $request->title;
-            $slide->description = $request->desc;
-            $slide->link = $request->link;
-            $slide->user_id = Auth::user()->id;
+        Slide::create($form_data);
 
-            if($request->hasFile('image'))
-        {
-            $image = $request->file('image');
-            $filename =  time().','.$image->getClientOriginalExtension();
-            $location = public_path('slides/',$filename);
-            //$slide::make($image)->save($location);
-            $slide->image = $filename;
-        }
-
-        $slide->save();
-        return redirect()->route('slide.index')->with('success','new slide created');
+        return redirect('slide')->with('success', 'Data Added successfully.');
     }
-
 
     /**
      * Display the specified resource.

@@ -16,11 +16,11 @@ class CreateSlidesTable extends Migration
         Schema::create('slides', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('title',100);
-            $table->mediumText('description');
+            $table->Text('description');
             $table->string('link');
-            $table->text('image');
+            $table->string('image');
             $table->timestamps();
-            });
+        });
     }
 
     /**
@@ -30,6 +30,6 @@ class CreateSlidesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('slides');
+        Schema::dropIfExists('slides');
     }
 }

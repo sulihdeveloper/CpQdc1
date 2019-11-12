@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" >
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+
+        <div class="container" id="content" >
 
 		<div class="col-md-12">
 		<h1>Slide name: {{$show->title}}</h1>
