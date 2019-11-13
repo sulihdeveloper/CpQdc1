@@ -43,13 +43,14 @@
         <!--/.navbar-collapse -->
     </div>
 </div>
+</body>
 
 <section id="intro">
     <div class="intro-content">
         <h2></h2>
         <h3></h3>
         <div>
-        <a href="" class="btn btn-default page-scroll">More</a>
+        <a href=" " class="btn btn-default page-scroll">More</a>
         </div>
     </div>
 </section>
@@ -294,6 +295,7 @@
     </div>
 </section>
 
+
 <!-- section works -->
 <section id="section-works" class="section appear clearfix">
     <div class="container">
@@ -435,33 +437,43 @@
 
     </div>
 </section>
-<section id="clients" class="section clearfix bg-white">
+
+<!--==========================
+  Clients Section
+============================-->
+<section id="clients" class="section-bg" class="justify-conten-center">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo1.png">
-                    </div>
+        <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
+        </div>
 
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo2.png">
-                    </div>
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+            <div class="col-lg-2 col-md-4 col-xs-4">
+                <div class="client-logo">
+                    <img src="img1/clients/pln.png" width="100px" height="120px" class="img-fluid" alt="">
+                </div>
+            </div>
 
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo3.png">
-                    </div>
+            <div class="col-lg-2 col-md-4 col-xs-4">
+                <div class="client-logo">
+                    <img src="img1/clients/telk.png" width="100px" height="120px" class="img-fluid" alt="">
+                </div>
+            </div>
 
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo4.png">
-                    </div>
+            <div class="col-lg-2 col-md-4 col-xs-4">
+                <div class="client-logo">
+                    <img src="img1/clients/sch.png" width="100px" height="120px" class="img-fluid" alt="">
+                </div>
+            </div>
 
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo5.png">
-                    </div>
-                    <div class="col-sm-2 align-center">
-                        <img alt="logo" src="img1/clients/logo6.png">
-                    </div>
+            <div class="col-lg-2 col-md-4 col-xs-4">
+                <div class="client-logo">
+                    <img src="img1/clients/t-re.png" width="125px" height="120px" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-4">
+                <div class="client-logo">
+                    <img src="img1/clients/ew.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -470,8 +482,7 @@
 
 <!-- map -->
 <section id="section-map" class="clearfix">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-</section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1718602850483!2d106.8241704138113!3d-6.241067295482373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3dc5aaef733%3A0x7064d74d810c5e76!2sPT%20Qdc%20Technologies!5e0!3m2!1sid!2sid!4v1573635247003!5m2!1sid!2sid" width="1999" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></section>
 
 <!-- contact -->
 <section id="section-contact" class="section appear clearfix">

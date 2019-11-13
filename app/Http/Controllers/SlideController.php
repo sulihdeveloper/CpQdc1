@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Slide;
+use App\Home;
 use Illuminate\Http\Request;
 
 class SlideController extends Controller
@@ -102,9 +103,9 @@ class SlideController extends Controller
         {
             $request->validate([
                 'title' => 'required',
-                'description' => 'required|max:100',
+                'description' => 'required',
                 'link' => 'required',
-                'image' =>  'required|image|:jpeg,jpg,png,gif|max:1000000',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -114,9 +115,9 @@ class SlideController extends Controller
         {
             $request->validate([
                 'title' => 'required',
-                'description' => 'required|max:100',
+                'description' => 'required',
                 'link' => 'required',
-                'image' =>  'required|image|:jpeg,jpg,png,gif|max:1000000',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
         }
 
@@ -129,7 +130,7 @@ class SlideController extends Controller
 
         Slide::whereId($id)->update($form_data);
 
-        return redirect('slide')->with('success', 'Data is successfully updated');
+        return redirect('slide.index')->with('success', 'Data is successfully updated');
     }
 
     /**

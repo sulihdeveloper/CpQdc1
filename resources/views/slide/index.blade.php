@@ -34,7 +34,8 @@
 					<td>{{$row->title}}</td>
 					<td>{{ str_limit($row->description, 60)}}</td>
 					<td>{{$row->link}}</td>
-					<td><a href="{{route('slide.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
+					<td>
+                    <a href="{{route('slide.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
                     <a href="{{route('slide.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
 					<form class="inline" method="POST" action="{{route('slide.destroy',$row->id)}}">
 						{{ csrf_field() }}

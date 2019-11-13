@@ -554,12 +554,7 @@ section.featured.inner {
 
 .flex-direction-nav .flex-next {
 	right: -70px;
-	background: url(../img/arrow_large_right.png) no-repeat top left;
-}
-
-.flex-direction-nav .flex-prev {
-	left: -70px;
-	background: url(../img/arrow_large_left.png) no-repeat top left;
+	background: url(../img/testi-bg.jpg) no-repeat top left;
 }
 
 .flex-direction-nav a.flex-next:before {
@@ -569,6 +564,54 @@ section.featured.inner {
 /* removing default arrows */
 .flex-direction-nav a:before {
 	content: none !important;
+}
+
+/* Clients Section
+--------------------------------*/
+
+#clients {
+    padding: 60px 0;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+#clients .clients-wrap {
+    border-top: 1px solid #d6eaff;
+    border-left: 1px solid #d6eaff;
+    margin-bottom: 30px;
+}
+
+#clients .client-logo {
+    padding:1px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 1px solid #d6eaff;
+    border-bottom: 1px solid #d6eaff;
+    overflow: hidden;
+    background: #fff;
+    height: 160px;
+}
+
+#clients .client-logo:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#clients img {
+    transition: all 0.4s ease-in-out;
+}
+
+.section-bg {
+    background: #ecf5ff;
 }
 
 /*==========================
@@ -852,18 +895,6 @@ div.cform-response-output {
 #google-map {
   height: 315px;
 }
-
-/*====================
-  Clients
-==================== */
-#clients img {
-	opacity: 0.7;
-}
-
-#clients img:hover {
-	opacity: 1;
-}
-
 
 /*=========================
   Footer
