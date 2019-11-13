@@ -440,37 +440,37 @@
 <!--==========================
   Clients Section
 ============================-->
-<section id="clients" class="section-bg" class="justify-conten-center">
+<section id="clients" class="section-bg"        >
     <div class="container">
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
         </div>
 
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-            <div class="col-lg-2 col-md-4 col-xs-4">
+            <div class="col-lg-3 col-md-2 col-xs-3">
                 <div class="client-logo">
                     <img src="img1/clients/pln.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-xs-4">
+            <div class="col-lg-3 col-md-2 col-xs-3">
                 <div class="client-logo">
                     <img src="img1/clients/telk.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-xs-4">
+            <div class="col-lg-3 col-md-2 col-xs-3">
                 <div class="client-logo">
                     <img src="img1/clients/sch.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-xs-4">
+            <div class="col-lg-3 col-md-2 col-xs-3">
                 <div class="client-logo">
                     <img src="img1/clients/t-re.png" width="125px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-xs-4">
+            <div class="col-lg-3 col-md-2 col-xs-3">
                 <div class="client-logo">
                     <img src="img1/clients/ew.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
