@@ -16,7 +16,7 @@ class CreateSlidesTable extends Migration
         Schema::create('slides', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('title',100);
-            $table->Text('description');
+            $table->Text('description|max:500');
             $table->string('link');
             $table->string('image');
             $table->timestamps();

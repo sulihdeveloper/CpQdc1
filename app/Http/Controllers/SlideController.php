@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Slide;
 use Illuminate\Http\Request;
 
-
-
 class SlideController extends Controller
 {
     /**
@@ -46,7 +44,7 @@ class SlideController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:100',
+            'title' => 'required',
             'description' => 'required',
             'link' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -99,24 +97,39 @@ class SlideController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $this->validate($request, [
-            'title' => 'required|max:100',
-            'desc' => 'required',
-            'link' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $image = $request->file('image');
+        if($image != '')
+        {
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required|max:100',
+                'link' => 'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:1000000',
             ]);
-        $update = Slide::findOrFail($id);
-        $update->title = $request->title;
-        $update->description = $request->desc;
-        if($request->hasFile('image')){
-            Storage::delete('slides/'.$request->oldimage);
-            $file = $request->image->store('slides/');
-            $update->image = $request->image->hashName();
-            // echo $request->oldimage;
+
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('slides'), $image_name);
         }
-        $update->save();
-        return redirect()->route('slide.index')->with('success','slide updated');
+        else
+        {
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required|max:100',
+                'link' => 'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:1000000',
+            ]);
+        }
+
+        $form_data = array(
+            'title'       =>   $request->title,
+            'description' =>   $request->description,
+            'link'        =>   $request->link,
+            'image'       =>   $image_name
+        );
+
+        Slide::whereId($id)->update($form_data);
+
+        return redirect('slide')->with('success', 'Data is successfully updated');
     }
 
     /**
