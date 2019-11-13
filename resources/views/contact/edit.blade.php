@@ -63,7 +63,7 @@
         </div>
         <br /><br /><br />
         <div class="form-group text-center">
-            <input type="submit" name="edit" class="btn btn-primary input-lg" value="Edit" />
+            <input type="submit" name="save" class="btn btn-primary input-lg" value="save" />
         </div>
     </form>
 

@@ -94,7 +94,6 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image_name = $request->hidden_image;
         $image = $request->file('image');
         if($image != '')
         {
@@ -103,7 +102,7 @@ class ContactController extends Controller
                 'email'=>  'required',
                 'subject'=>  'required',
                 'message'=>  'required',
-                'image' =>  'required|image|jpg,jpeg,png,max:2048'
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -116,7 +115,7 @@ class ContactController extends Controller
                 'email'=>  'required',
                 'subject'=>  'required',
                 'message'=>  'required',
-                'image' =>  'required|image|jpg,jpeg,png,max:2048'
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
         }
 
@@ -130,7 +129,7 @@ class ContactController extends Controller
 
         Contact::whereId($id)->update($form_data);
 
-        return redirect('contact.index')->with('success', 'Data is successfully updated');
+        return redirect('contact')->with('success', 'Data is successfully updated');
     }
 
     /**
