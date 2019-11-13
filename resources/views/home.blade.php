@@ -40,8 +40,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <!--/.navbar-collapse -->
-    </div>
+</div>
 </div>
 </body>
 
@@ -557,12 +556,8 @@
         </div>
         <div class="row align-center copyright">
             <div class="col-sm-12">
-                <p>Copyright &copy; All rights reserved</p>
+                <p>&copy; Departemen IT, QDC Technologies</p>
             </div>
-        </div>
-        <div class="credits">
-
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
         </div>
     </div>
 
