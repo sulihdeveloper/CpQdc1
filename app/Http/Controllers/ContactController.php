@@ -99,11 +99,11 @@ class ContactController extends Controller
         if($image != '')
         {
             $request->validate([
-                'name'    =>  'required',
-                'email'     =>  'required',
-                'subject'     =>  'required',
-                'message'     =>  'required',
-                'image'         =>  'required|image|jpg,jpeg,png,max:2048'
+                'name'=>  'required',
+                'email'=>  'required',
+                'subject'=>  'required',
+                'message'=>  'required',
+                'image' =>  'required|image|jpg,jpeg,png,max:2048'
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -112,8 +112,11 @@ class ContactController extends Controller
         else
         {
             $request->validate([
-                'name'    =>  'required',
-                'email'     =>  'required'
+                'name' =>  'required',
+                'email'=>  'required',
+                'subject'=>  'required',
+                'message'=>  'required',
+                'image' =>  'required|image|jpg,jpeg,png,max:2048'
             ]);
         }
 
@@ -127,8 +130,7 @@ class ContactController extends Controller
 
         Contact::whereId($id)->update($form_data);
 
-        return redirect('contact.crud')->with('success', 'Data is successfully updated');
-
+        return redirect('contact.index')->with('success', 'Data is successfully updated');
     }
 
     /**
@@ -142,7 +144,7 @@ class ContactController extends Controller
         $data = Contact::findOrFail($id);
         $data->delete();
 
-        return redirect('contact.crud')->with('success', 'Data is successfully deleted');
+        return redirect('contact.index')->with('success', 'Data is successfully deleted');
     }
 }
 

@@ -6,7 +6,7 @@
         </div>
         <div class="container" id="content">
             <div class="col-md-12">
-                <h1>Slides section</h1>
+                <h1>contact</h1>
             </div>
         </div>
         @if (session('success'))
@@ -38,16 +38,18 @@
                 <td>{{ $row->message }}</td>
                 <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
                 <td>
-                </form>
-                </td>
-            </tr>
-            @endforeach
+                <td>
 
+                    <a href="{{route('contact.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button type="submit" class="btn btn-danger btn-xs">delete</button>
+                    </form>
                 </td>
+                @endforeach
             </tr>
-    </table>
+            </table>
         </div>
     </div>
-
     {!! $data->links() !!}
 @endsection

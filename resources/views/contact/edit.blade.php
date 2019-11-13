@@ -11,10 +11,10 @@
         </div>
     @endif
     <div align="right">
-        <a href="{{ route('crud.index') }}" class="btn btn-default">Back</a>
+        <a href="{{ route('contact.index') }}" class="btn btn-default">Back</a>
     </div>
     <br />
-    <form method="post" action="{{ route('crud.update', $data->id) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('contact.update', $data->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
         <div class="form-group">
