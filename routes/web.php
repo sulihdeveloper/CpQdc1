@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 Route::get('/capability', 'HomeController@capability');
-Route::get('/home', 'HomeController@home');
+Route::get('/contacts', 'HomeController@contacts');
 
     Route::resource('slide', 'SlideController');
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);
@@ -32,11 +32,6 @@ Route::get('/home', 'HomeController@home');
     Route::resource('contact','ContactController',['except' => [
         'destroy','show'
     ]]);
-
-    Route::resource('client','ClientController',['except' => [
-        'destroy','show'
-    ]]);
-
 
 Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('product', 'ProductController');

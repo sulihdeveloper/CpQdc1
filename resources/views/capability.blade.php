@@ -45,7 +45,7 @@
 </div>
 
 
-<section id="intro">
+<section id="intro2">
     <div class="intro-content">
         <h2>Capabilities</h2>
     </div>
@@ -54,17 +54,17 @@
 <!-- about -->
 <section id="section-about" class="section appear clearfix">
     <div class="container">
-        <div class="row mar-bot40">
+        <div class="row mar-bot">
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
-                    <p>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</p>
+                    <h1>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="row mar-bot40">
+        <div class="row mar-bot">
             <div class="col-lg-4">
                 <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                     <div class="float-left mar-right20">

@@ -489,7 +489,13 @@ section.section {
     background-size: cover;
 }
 
-
+#intro3 {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: url(../img/benner2.jpg) top center;
+    background-size: cover;
+}
 
 @media (min-width: 1024px) {
 	#intro {
