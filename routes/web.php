@@ -33,7 +33,12 @@ Route::get('/home', 'HomeController@home');
         'destroy','show'
     ]]);
 
-    Route::resource('category', 'CategoryController',['except'=>['show']]);
+    Route::resource('client','ClientController',['except' => [
+        'destroy','show'
+    ]]);
+
+
+Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('product', 'ProductController');
     Route::resource('news','NewsController');
 

@@ -49,7 +49,7 @@
         <h2></h2>
         <h3></h3>
         <div>
-        <a href=" " class="btn btn-default page-scroll">More</a>
+        <a href="" class="btn btn-default page-scroll">More</a>
         </div>
     </div>
 </section>
@@ -294,6 +294,34 @@
     </div>
 </section>
 
+<!--==========================
+      Services Section
+    ============================-->
+<section id="news" class="section-bg">
+    <div class="container">
+        <header class="section-header">
+            <h2>News</h2>
+            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+        <div class="row">
+            <div class="col-md-7 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+                <div class="box">
+                    <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+                    <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                </div>
+            </div>
+            <div class="col-md-7 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+                <div class="box">
+                    <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
+                    <h4 class="title"><a href="">Dolor Sitema</a></h4>
+                    <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- #services -->
+
 
 <!-- section works -->
 <section id="section-works" class="section appear clearfix">
@@ -447,30 +475,30 @@
         </div>
 
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-            <div class="col-lg-3 col-md-2 col-xs-3">
+            <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
                     <img src="img1/clients/pln.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-2 col-xs-3">
+            <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
                     <img src="img1/clients/telk.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-2 col-xs-3">
+            <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
                     <img src="img1/clients/sch.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-2 col-xs-3">
+            <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
-                    <img src="img1/clients/t-re.png" width="125px" height="120px" class="img-fluid" alt="">
+                    <img src="img1/clients/lucent.png" width="125px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
-            <div class="col-lg-3 col-md-2 col-xs-3">
+            <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
                     <img src="img1/clients/ew.png" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
@@ -578,9 +606,6 @@
 <script src="js1/stellar.js"></script>
 <script src="js1/jquery.appear.js"></script>
 <script src="js1/jquery.flexslider-min.js"></script>
-
-<!-- Contact Form JavaScript File -->
-<script src="contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
 <script src="js1/main.js"></script>

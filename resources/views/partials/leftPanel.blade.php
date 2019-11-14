@@ -34,14 +34,15 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{!! url('/slide') !!}"><i class="fa fa-circle-o"></i> Gambar Slide</a></li>
-                    <li class="active"><a href="{!! url('/about') !!}"><i class="fa fa-circle-o"></i> Abaout</a></li>
+                    <li><a href="{!! url('/slide') !!}"><i class="fa fa-circle-o"></i>Slide</a></li>
+                    <li class="active"><a href="{!! url('/about') !!}"><i class="fa fa-circle-o"></i> About</a></li>
                     <li class="active"><a href="{!! url('/contact') !!}"><i class="fa fa-circle-o"></i> Contact</a></li>
                     <li class="active"><a href="{!! url('/news') !!}"><i class="fa fa-circle-o"></i> News</a></li>
                     <li class="active"><a href="{!! url('/vision') !!}"><i class="fa fa-circle-o"></i> Visi Misi</a></li>
                     <li><a href="{!! url('/product') !!}"><i class="fa fa-circle-o"></i> Product</a></li>
                     <li class="active"><a href="{!! url('/category') !!}"><i class="fa fa-circle-o"></i> Category</a></li>
-                    <li class="active"><a href="{!! url('/manage') !!}"><i class="fa fa-circle-o"></i> Manager</a></li>
+                    <li class="active"><a href="{!! url('/client') !!}"><i class="fa fa-circle-o"></i> Client</a></li>
+                    <li class="active"><a href="{!! url('/manage') !!}"><i class="fa fa-circle-o"></i> User</a></li>
                 </ul>
             </li>
     </section>
