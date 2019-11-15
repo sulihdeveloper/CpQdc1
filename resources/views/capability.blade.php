@@ -58,7 +58,7 @@
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
-                    <h1>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h1>
+                    <h4>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h4>
                 </div>
             </div>
         </div>
@@ -153,8 +153,8 @@
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Optical Fibre</h2>
-                    <p class="justify-content-center">Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.
-                        Radio Networks.</p>
+                    <h4 class="justify-content-center">Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.
+                        Radio Networks.</h4>
                 </div>
             </div>
         </div>

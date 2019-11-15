@@ -53,6 +53,8 @@
         </div>
     </div>
 </section>
+<br>
+<br>
 
 <!--==========================
       About Us Section
@@ -60,9 +62,10 @@
 <section id="about">
     <div class="container">
         <header class="section-header">
-            <h3>About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>About Us</h2>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
         </header>
+        <br>
         <div class="row about-container">
             <div class="col-lg-6 content order-lg-1 order-2">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -84,9 +87,10 @@
                 </div>
             </div>
             <div class="col-lg-4 background order-lg-3 order-2 ">
-                <img src="img/about-img.svg" class="img-fluid" alt="">
+                <img src="img/about-removebg-preview.png" width=”50″ height=”40″ class="img-fluid" alt="">
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- #about -->
@@ -238,7 +242,7 @@
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Behind Vlava</h2>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</h4>
                 </div>
             </div>
         </div>
@@ -337,7 +341,7 @@
     <div class="container">
         <header class="section-header">
             <h2>News</h2>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+            <h4>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</h4>
         </header>
         <div class="row">
             <div class="col-md-7 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
@@ -367,7 +371,7 @@
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</h4>
                 </div>
             </div>
         </div>
