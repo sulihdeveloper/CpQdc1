@@ -1,16 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Carrer;
+
 use Illuminate\Http\Request;
+use App\Carrer;
 
 class CarrerController extends Controller
 {
     public function index()
     {
-        $data = Carrer::latest()->paginate(5);
-        return view('carrer.index', compact('data'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $carrer = Carrer::latest()->paginate(5);
+        return view('carrer.index', compact('carrer'))->with('i');
     }
 
     public function create()
@@ -46,7 +46,7 @@ class CarrerController extends Controller
 
         Carrer::create($form_data);
 
-        return redirect('carrer.index')->with('success', 'Data Added successfully.');
+        return redirect('carrer')->with('success', 'Data Added successfully.');
     }
 
     public function show($id)

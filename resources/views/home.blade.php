@@ -63,12 +63,12 @@
     <div class="container">
         <header class="section-header">
             <h2>About Us</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+            <h4>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h4>
         </header>
         <br>
         <div class="row about-container">
             <div class="col-lg-6 content order-lg-1 order-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
                     <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
@@ -177,163 +177,6 @@
     </div>
 </section>
 
-<!-- spacer section:testimonial -->
-<section id="testimonials" class="section" data-stellar-background-ratio="0.5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="align-center">
-                    <div class="flexslider testimonials-slider">
-                        <ul class="slides">
-                            <li>
-                                <div class="testimonial clearfix">
-                                    <div class="mar-bot20">
-                                        <img alt="" src="img1/testimonial/testimonial1.png" class="img-circle">
-                                    </div>
-                                    <i class="fa fa-quote-left fa-5x"></i>
-                                    <h5>
-                                        Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-                                    </h5>
-                                    <br/>
-                                    <span class="author">&mdash; SARAH DOE <a href="#">www.siteurl.com</a></span>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="testimonial clearfix">
-                                    <div class="mar-bot20">
-                                        <img alt="" src="img1/testimonial/testimonial2.png" class="img-circle">
-                                    </div>
-                                    <i class="fa fa-quote-left fa-5x"></i>
-                                    <h5>
-                                        Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-                                    </h5>
-                                    <br/>
-                                    <span class="author">&mdash; NICOLE DOE <a href="#">www.siteurl.com</a></span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="testimonial clearfix">
-                                    <div class="mar-bot20">
-                                        <img alt="" src="img1/testimonial/testimonial3.png" class="img-circle">
-                                    </div>
-                                    <i class="fa fa-quote-left fa-5x"></i>
-                                    <h5>
-                                        Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-                                    </h5>
-                                    <br/>
-                                    <span class="author">&mdash; DASON KRUN <a href="#">www.siteurl.com</a></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- about -->
-<section id="section-about" class="section appear clearfix">
-    <div class="container">
-
-        <div class="row mar-bot40">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="section-header">
-                    <h2 class="section-heading animated" data-animation="bounceInUp">Behind Vlava</h2>
-                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-center mar-bot40">
-            <div class="col-md-3">
-                <div class="team-member">
-                    <figure class="member-photo"><img src="img1/team/member1.jpg" alt=""></figure>
-                    <div class="team-detail">
-                        <h4>Jason Doe</h4>
-                        <span>User experiences</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team-member">
-                    <figure class="member-photo"><img src="img1/team/member2.jpg" alt=""></figure>
-                    <div class="team-detail">
-                        <h4>Timothy Clark</h4>
-                        <span>Web developer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team-member">
-                    <figure class="member-photo"><img src="img1/team/member3.jpg" alt=""></figure>
-                    <div class="team-detail">
-                        <h4>Vicky Tan</h4>
-                        <span>Web designer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team-member">
-                    <figure class="member-photo"><img src="img1/team/member4.jpg" alt=""></figure>
-                    <div class="team-detail">
-                        <h4>Kevin Peterson</h4>
-                        <span>UI designer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- /about -->
-
-<!-- spacer section:stats -->
-<section id="parallax1" class="section" data-stellar-background-ratio="0.5">
-    <div class="container">
-        <div class="row appear stats">
-            <div class="col-md-3">
-                <div class="align-center color-white txt-shadow">
-                    <div class="icon">
-                        <i class="fa fa-coffee fa-5x"></i>
-                    </div>
-                    <strong id="counter-coffee" class="number">500</strong><br>
-                    <span class="text">Black Coffee Cups</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="align-center color-white txt-shadow">
-                    <div class="icon">
-                        <i class="fa fa-music fa-5x"></i>
-                    </div>
-                    <strong id="counter-music" class="number">345</strong><br>
-                    <span class="text">MP3 Songs</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="align-center color-white txt-shadow">
-                    <div class="icon">
-                        <i class="fa fa-clock-o fa-5x"></i>
-                    </div>
-                    <strong id="counter-clock" class="number">1235</strong><br>
-                    <span class="text">Hard Minutes</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="align-center color-white txt-shadow">
-                    <div class="icon">
-                        <i class="fa fa-heart fa-5x"></i>
-                    </div>
-                    <strong id="counter-heart" class="number">478</strong><br>
-                    <span class="text">Lovely Clients</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!--==========================
       Services Section
     ============================-->
@@ -341,17 +184,18 @@
     <div class="container">
         <header class="section-header">
             <h2>News</h2>
-            <h4>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</h4>
+        <br/>
+        <br/>
         </header>
         <div class="row">
-            <div class="col-md-7 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
                 <div class="box">
                     <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
                     <h4 class="title"><a href="">Lorem Ipsum</a></h4>
                     <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                 </div>
             </div>
-            <div class="col-md-7 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
                 <div class="box">
                     <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
                     <h4 class="title"><a href="">Dolor Sitema</a></h4>
@@ -363,147 +207,6 @@
 </section><!-- #services -->
 
 
-<!-- section works -->
-<section id="section-works" class="section appear clearfix">
-    <div class="container">
-
-        <div class="row mar-bot40">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="section-header">
-                    <h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
-                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <nav id="filter" class="col-md-12 text-center">
-                <ul>
-                    <li><a href="#" class="current btn btn-small" data-filter="*">All</a></li>
-                    <li><a href="#" class="btn btn-small" data-filter=".webdesign">Web Design</a></li>
-                    <li><a href="#" class="btn btn-small" data-filter=".photography">Photography</a></li>
-                    <li><a href="#" class="btn btn-small" data-filter=".print">Print</a></li>
-                </ul>
-            </nav>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-                        <article class="col-md-4 isotopeItem webdesign">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img1.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img2.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img2.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="col-md-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img3.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img3.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img4.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img4.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img5.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img5.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem webdesign">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img6.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img6.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img7.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img7.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem photography">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img8.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img8.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem print">
-                            <div class="portfolio-item">
-                                <img src="img1/portfolio/img9.jpg" alt="">
-                                <div class="portfolio-desc align-center">
-                                    <div class="folio-info">
-                                        <h5><a href="#">Portfolio name</a></h5>
-                                        <a href="img1/portfolio/img9.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
 
 <!--==========================
   Clients Section

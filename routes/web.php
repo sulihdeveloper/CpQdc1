@@ -33,7 +33,7 @@ Route::get('/contacts', 'HomeController@contacts');
         'destroy','show'
     ]]);
 
-    Route::resource('carrer','CarrerController',['except' => [
+    Route::resource('carrer','CarrerController',['except'=>[
         'destroy','show'
     ]]);
 

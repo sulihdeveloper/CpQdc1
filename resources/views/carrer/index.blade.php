@@ -6,7 +6,7 @@
         </div>
         <div class="container" id="content">
             <div class="col-md-12">
-                <h1>Carrer</h1>
+                <h1> Daftar Carrer</h1>
             </div>
         </div>
         @if (session('success'))
@@ -40,8 +40,8 @@
                         <td>{{ $row->email }}</td>
                         <td>{{ $row->phone }}</td>
                         <td>{{ $row->address }}</td>
-                        <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
-                        <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
+                        <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
+                        <td><img src="{{ URL::to('/') }}/images/{{ $row->file }}" class="img-thumbnail" width="75" /></td>
                         <td>
                         <td>
                             <a href="{{route('carrer.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
