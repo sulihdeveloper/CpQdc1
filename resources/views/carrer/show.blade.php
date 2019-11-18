@@ -11,7 +11,9 @@
                     <div align="right">
                         <a href="{{ route('carrer.index') }}" class="btn btn-default">Back</a>
                     </div>
-                    <br />
+                    <table class="table table-bordered" id="users-table">
+                        <thead>
+                        <tr>
                     <h3>First Name - {{ $data->first_name }} </h3>
                     <h3>Last Name - {{ $data->last_name }} </h3>
                     <h3>Email - {{ $data->email }}</h3>
@@ -21,5 +23,9 @@
                     <td>
                     <img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
                 </div>
+            </div>
+        </div>
+    </div>
+    </table>
 @endsection
 

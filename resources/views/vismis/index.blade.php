@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">	
+<div class="container" id="content">
 		<div class="col-md-12">
-		<h1>Vision and Mission</h1> 
+		<h1>Vision and Mission</h1>
 		<p class="text-center"></p>
 		@if (session('success'))
 		    <p class="alert alert-success">
 		        {{ session('success') }}
 		    </p>
-		@endif   
-	</div>	
+		@endif
+	</div>
 
 		@if($vision->isEmpty())
 			<div class="col-md-10">
 				<p>no data</p>
 				<p><a href="{{route('vision.create')}}" class="btn btn-xs btn-success">create vision Mision</a></p>
-			</div>		
+			</div>
 		@endif
 
 		@foreach($vision as $item)
@@ -24,9 +24,10 @@
 			<a href="{{route('vision.edit',$item->id)}}" class="pull-right btn btn-xs btn-info">edit</a>
 		</div>
 			<div class="col-md-10">
-				<div class="row">
-						<div class="col-md-4">
-							<h4>Vision</h4>
+                <table class="table table-bordered" id="vision-table">
+                    <thead>
+                    <tr>
+                        <h4>Vision</h4>
 							<p>
 								{{$item->section_one}}
 							</p>

@@ -11,6 +11,9 @@
 		<h1>Slide name: {{$show->title}}</h1>
 	</div>
 	<div class="col-md-7">
+        <table class="table table-bordered" id="slide-table">
+            <thead>
+            <tr>
 		<p>
 			<b>description: </b>
 			{{$show->description}}

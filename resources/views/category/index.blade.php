@@ -13,8 +13,9 @@
 	</div>
 	<div class="col-md-12">
 	<p><a href="{{route('category.create')}}" class="btn btn-xs btn-success">create</a></p>
-		<table class="table table-striped">
-			<thead>
+        <table class="table table-bordered" id="category-table">
+            <thead>
+            <tr>
 				<th>No</th>
 				<th>name</th>
 				<th>action</th>

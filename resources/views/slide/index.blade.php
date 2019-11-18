@@ -19,8 +19,9 @@
 			<p class="text-center"><a href="{{route('slide.create')}}" class="btn btn-md btn-success">add new slide</a></p>
 		</div>
 	<div class="col-md-12">
-		<table class="table table-striped">
-			<thead>
+        <table class="table table-bordered" id="slide-table">
+            <thead>
+            <tr>
 				<th>No</th>
 				<th>Name</th>
 				<th>Description</th>

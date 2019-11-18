@@ -6,6 +6,9 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-body">
+                        <table class="table table-bordered" id="contact-table">
+                            <thead>
+                            <tr>
                         <h2>{{ $news->judul }}</h2>
                         <p>{{ $news->isi }}</p>
 

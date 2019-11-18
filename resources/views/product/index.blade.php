@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">	
+<div class="container" id="content">
 		<div class="col-md-12">
-		<h1>Product lists</h1> 
+		<h1>Product lists</h1>
 		<p class="text-center"><a href="{{route('product.create')}}" class="btn btn-md btn-success">add new product</a></p>
 		@if (session('success'))
 		    <p class="alert alert-success">
 		        {{ session('success') }}
 		    </p>
-		@endif   
+		@endif
 	</div>
 	<div class="col-md-12">
-		<table class="table table-striped">
-			<thead>
+        <table class="table table-bordered" id="product-table">
+            <thead>
+            <tr>
 				<th>#</th>
 				<th>Name</th>
 				<th>Description</th>
@@ -38,11 +39,11 @@
 					</td>
 				</tr>
 			@endforeach
-			</tbody>			
+			</tbody>
 		</table>
 		{{ $product->links() }}
 
-	</div>		    
+	</div>
 </div>
 
 @endsection

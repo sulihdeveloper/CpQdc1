@@ -22,8 +22,9 @@
                         </div>
 
 
-                        <table class="table table-striped">
+                        <table class="table table-bordered" id="news-table">
                             <thead>
+                            <tr>
                                 <th>No.</th>
                                 <th>Judul</th>
                                 <th>Isi</th>

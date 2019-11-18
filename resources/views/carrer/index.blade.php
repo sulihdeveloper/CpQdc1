@@ -19,7 +19,8 @@
             <p class="text-center"><a href="{{route('Carrer.create')}}" class="btn btn-md btn-success">Create</a></p>
         </div>
         <div class="col-md-12">
-            <table class="table table-striped">
+            <table class="table table-bordered" id="carrer-table">
+                <thead>
                 <tr>
                     <th>No</th>
                     <th>First name</th>
