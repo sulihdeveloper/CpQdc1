@@ -33,6 +33,10 @@ Route::get('/contacts', 'HomeController@contacts');
         'destroy','show'
     ]]);
 
+    Route::resource('carrer','CarrerController',['except' => [
+        'destroy','show'
+    ]]);
+
 Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('product', 'ProductController');
     Route::resource('news','NewsController');
