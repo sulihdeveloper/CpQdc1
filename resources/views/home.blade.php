@@ -51,7 +51,7 @@
         <h2>{{$sl->title}}</h2>
         <h3>{{$sl->description}}</h3>
         <div>
-        <a href="{{$sl->link}}" class="btn btn-default page-scroll">More</a>
+        <a href="{{$sl->link}}" class="btn-get-started scrollto">More</a>
         </div>
     </div>
     @endforeach
@@ -65,8 +65,8 @@
 <section id="about">
     <div class="container">
         <header class="section-header">
-            <h2>About Us</h2>
-            <h4>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h4>
+            <h2>PT. Qdc Technologies</h2>
+            <h4> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h4>
         </header>
         <br>
         <div class="row about-container">
