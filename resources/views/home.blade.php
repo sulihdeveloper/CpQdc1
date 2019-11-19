@@ -108,6 +108,7 @@
                     <h2 class="section-heading animated" data-animation="bounceInUp">News</h2>
                 </div>
             </header>
+
             @foreach($news as $k=>$nw)
                 <div class="row">
                     <div class="col-md-6 col-lg-4 offset-lg-5 wow bounceInUp" data-wow-duration="1.4s">
