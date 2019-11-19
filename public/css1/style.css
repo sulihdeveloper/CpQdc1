@@ -807,9 +807,28 @@ nav#filter a {
 
 
 
-.portfolio-item .portfolio-desc .folio-info h5 {
-	text-transform: uppercase;
+.h5 {
+    text-transform: uppercase;
 }
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+
+
 .portfolio-item .portfolio-desc .folio-info p {
 	color: #ffffff;
 	font-size: 12px;

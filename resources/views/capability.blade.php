@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app1')
+
+@section('content')
     <!-- BASICS -->
     <meta charset="utf-8">
     <title>QDC Technologies</title>
@@ -52,13 +52,13 @@
 </section>
 
 <!-- about -->
-<section id="section-about" class="section appear clearfix">
+<section id="about" class="section appear clearfix">
     <div class="container">
         <div class="row mar-bot">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="col-md-offset-1 col-md-9">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
-                    <h4>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h4>
+                    <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
                 </div>
             </div>
         </div>
@@ -150,11 +150,11 @@
 <section id="section-about" class="section appear clearfix">
     <div class="container">
         <div class="row mar-bot40">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="col-md-offset-1 col-md-9">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Optical Fibre</h2>
-                    <h4 class="justify-content-center">Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.
-                        Radio Networks.</h4>
+                    <h5>Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.
+                        Radio Networks.</h5>
                 </div>
             </div>
         </div>
@@ -295,6 +295,4 @@
 <script src="js1/main.js"></script>
 
 </body>
-
-</html>
-
+@endsection

@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app1')
+
+@section('content')
     <!-- BASICS -->
     <meta charset="utf-8">
     <title>QDC Technologies</title>
@@ -19,6 +19,7 @@
 </head>
 
 <body>
+<div id="fullpage"></div>
 <section id="header" class="appear"></section>
 <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
     <div class="container">
@@ -34,7 +35,7 @@
             <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
+                <li><a href="">Capabilities</a></li>
                 <li><a href="">News</a></li>
                 <li><a href="#">Carrers</a></li>
                 <li><a href="#">Contact</a></li>
@@ -45,13 +46,15 @@
 </body>
 
 <section id="intro">
+    @foreach($slide as $sl)
     <div class="intro-content">
-        <h2></h2>
-        <h3></h3>
+        <h2>{{$sl->title}}</h2>
+        <h3>{{$sl->description}}</h3>
         <div>
-        <a href="" class="btn btn-default page-scroll">More</a>
+        <a href="{{$sl->link}}" class="btn btn-default page-scroll">More</a>
         </div>
     </div>
+    @endforeach
 </section>
 <br>
 <br>
@@ -299,7 +302,4 @@
 
 <!-- Template Main Javascript File -->
 <script src="js1/main.js"></script>
-
-</body>
-
-</html>
+@endsection
