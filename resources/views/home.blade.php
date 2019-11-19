@@ -190,21 +190,16 @@
         <br/>
         <br/>
         </header>
+        @foreach($news as $k=>$nw)
         <div class="row">
             <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
                 <div class="box">
                     <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-                    <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                    <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-                <div class="box">
-                    <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
-                    <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                    <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section><!-- #services -->

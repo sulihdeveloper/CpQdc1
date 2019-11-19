@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\slide;
+use App\news;
 
 
 class HomeController extends Controller
@@ -12,7 +13,13 @@ class HomeController extends Controller
     public function index()
     {
         $slide = Slide::paginate(10);
-        return view('slide.index', compact('slide'))->with('i');
+        return view('slide', compact('slide'))->with('i');
+    }
+
+    public function data()
+    {
+        $slide = news::paginate(10);
+        return view('news', compact('news'))->with('i');
     }
 
     /**

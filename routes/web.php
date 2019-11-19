@@ -1,14 +1,20 @@
 <?php
 
 use App\Slide;
+use App\news;
+
 
 Route::get('/', function () {
     $slide = Slide::paginate(1);
+    $news = News::paginate(6);
     $data = [
         'slide' => $slide,
+        'news' => $news,
     ];
     return view('home',$data);
 });
+
+
 
 Auth::routes();
 
