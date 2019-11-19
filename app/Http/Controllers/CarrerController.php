@@ -9,7 +9,7 @@ class CarrerController extends Controller
 {
     public function index()
     {
-        $carrer = Carrer::latest()->paginate(5);
+        $carrer = Carrer::latest()->paginate(10);
         return view('carrer.index', compact('carrer'))->with('i');
     }
 
