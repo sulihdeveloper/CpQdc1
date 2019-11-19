@@ -187,12 +187,11 @@
     <div class="container">
         <header class="section-header">
             <h2>News</h2>
-        <br/>
-        <br/>
+        <br/
         </header>
         @foreach($news as $k=>$nw)
         <div class="row">
-            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="col-md-6 col-lg-4 offset-lg-5 wow bounceInUp" data-wow-duration="1.4s">
                 <div class="box">
                     <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
                     <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
