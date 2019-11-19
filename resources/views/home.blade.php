@@ -98,7 +98,32 @@
 </section>
 <!-- #about -->
 
-<!-- services -->
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="news" class="section-bg">
+        <div class="container">
+            <header class="section-header">
+                <div class="section-header">
+                    <h2 class="section-heading animated" data-animation="bounceInUp">News</h2>
+                </div>
+            </header>
+            @foreach($news as $k=>$nw)
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 offset-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+                            <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                            <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+        </div>
+    </section><!-- #services -->
+
+
+    <!-- services -->
 <section id="section-services" class="section pad-bot30 bg-white">
     <div class="container">
         <div class="row mar-bot40">
@@ -179,31 +204,6 @@
         </div>
     </div>
 </section>
-
-<!--==========================
-      Services Section
-    ============================-->
-<section id="news" class="section-bg">
-    <div class="container">
-        <header class="section-header">
-            <h2>News</h2>
-        <br/
-        </header>
-        @foreach($news as $k=>$nw)
-        <div class="row">
-            <div class="col-md-6 col-lg-4 offset-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-                <div class="box">
-                    <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
-                    <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section><!-- #services -->
-
-
 
 <!--==========================
   Clients Section
