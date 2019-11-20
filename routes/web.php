@@ -7,9 +7,11 @@ use App\news;
 Route::get('/', function () {
     $slide = Slide::paginate(1);
     $news = News::paginate(6);
+    $clien = Clien::paginate(8);
     $data = [
         'slide' => $slide,
         'news' => $news,
+        'clien' =>$clien,
     ];
     return view('home',$data);
 });
@@ -37,6 +39,9 @@ Route::get('/contacts', 'HomeController@contacts');
     Route::resource('carrer','CarrerController',['except'=>[
         'destroy','show'
     ]]);
+    Route::resource('clien','ClienController',['except'=>[
+            'destroy','show'
+        ]]);
 
 Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('product', 'ProductController');

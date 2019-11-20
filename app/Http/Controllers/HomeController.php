@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use http\Client;
 use Illuminate\Http\Request;
 use App\slide;
 use App\news;
+use App\Clien;
 
 
 class HomeController extends Controller
@@ -18,8 +20,14 @@ class HomeController extends Controller
 
     public function data()
     {
-        $slide = news::paginate(10);
+        $ayee = news::paginate(10);
         return view('news', compact('news'))->with('i');
+    }
+
+    public function cara()
+    {
+        $dara = Client::paginate(8);
+        return view('clien', compact('clien'))->with('i');
     }
 
     /**
