@@ -7,11 +7,9 @@ use App\news;
 Route::get('/', function () {
     $slide = Slide::paginate(1);
     $news = News::paginate(6);
-    $clien = Clien::paginate(8);
     $data = [
         'slide' => $slide,
         'news' => $news,
-        'clien' =>$clien,
     ];
     return view('home',$data);
 });

@@ -27,11 +27,11 @@
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
-                @foreach($data as $row)
+                @foreach($dat as $ro)
                     <tr>
                         <td>{{++$i}}</td>
-                        <td>{{ $row->name }}</td>
-                        <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
+                        <td>{{ $ro->name }}</td>
+                        <td><img src="{{ URL::to('/') }}/images/{{ $ro->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
                         <td>
 
