@@ -2,14 +2,17 @@
 
 use App\Slide;
 use App\news;
+use App\Clien;
 
 
 Route::get('/', function () {
     $slide = Slide::paginate(1);
     $news = News::paginate(6);
+    $clien = Clien::paginate(8);
     $data = [
         'slide' => $slide,
         'news' => $news,
+        'clien' => $clien,
     ];
     return view('home',$data);
 });
@@ -30,14 +33,14 @@ Route::get('/contacts', 'HomeController@contacts');
     Route::resource('vision', 'VismisController',['except' => [
         'destroy','show'
     ]]);
-    Route::resource('contact','ContactController',['except' => [
+    Route::resource('contact', 'ContactController',['except' => [
         'destroy','show'
     ]]);
 
-    Route::resource('carrer','CarrerController',['except'=>[
+    Route::resource('carrer', 'CarrerController',['except'=>[
         'destroy','show'
     ]]);
-    Route::resource('clien','ClienController',['except'=>[
+    Route::resource('clien', 'ClienController',['except'=>[
             'destroy','show'
         ]]);
 

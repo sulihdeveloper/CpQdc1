@@ -6,7 +6,7 @@
         </div>
         <div class="container" id="content">
             <div class="col-md-12">
-                <h1>contact</h1>
+                <h1>Client</h1>
             </div>
         </div>
         @if (session('success'))
@@ -27,11 +27,11 @@
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
-                @foreach($dat as $ro)
+                @foreach($clien as $row)
                     <tr>
                         <td>{{++$i}}</td>
-                        <td>{{ $ro->name }}</td>
-                        <td><img src="{{ URL::to('/') }}/images/{{ $ro->photo }}" class="img-thumbnail" width="75" /></td>
+                        <td>{{ $row->name }}</td>
+                        <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
                         <td>
 

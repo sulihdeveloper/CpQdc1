@@ -214,36 +214,14 @@
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
         </div>
-
+        @foreach($clien as $k=>$nw)
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
             <div class="col-lg-3 col-md-4 col-xs-4">
                 <div class="client-logo">
-                    <img src="img1/clients/pln.png" width="100px" height="120px" class="img-fluid" alt="">
+                    <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-4">
-                <div class="client-logo">
-                    <img src="img1/clients/telk.png" width="100px" height="120px" class="img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-4">
-                <div class="client-logo">
-                    <img src="img1/clients/sch.png" width="100px" height="120px" class="img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-4">
-                <div class="client-logo">
-                    <img src="img1/clients/lucent.png" width="125px" height="120px" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-4">
-                <div class="client-logo">
-                    <img src="img1/clients/ew.png" width="100px" height="120px" class="img-fluid" alt="">
-                </div>
-            </div>
+        @endforeach
         </div>
     </div>
 </section>
