@@ -1,19 +1,19 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Clien;
+use App\Contact;
 
-class ClienController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
-        $data = Clien::latest()->paginate(10);
-        return view('clien.index', compact('data'))
+        $data = Contact::latest()->paginate(10);
+        return view('contact.index', compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
     public function create()
     {
-        return view('clien.create');
+        return view('contact.create');
     }
     public function store(Request $request)
     {
@@ -29,17 +29,17 @@ class ClienController extends Controller
             'photo'=>   $new_name
         );
         Clien::create($form_data);
-        return redirect('clien')->with('success', 'Data Added successfully.');
+        return redirect('contact')->with('success', 'Data Added successfully.');
     }
     public function show($id)
     {
         $data = Clien::findOrFail($id);
-        return view('clien.show', compact('data'));
+        return view('contact.show', compact('data'));
     }
     public function edit($id)
     {
         $data = Clien::findOrFail($id);
-        return view('clien.edit', compact('data'));
+        return view('contact.edit', compact('data'));
     }
     public function update(Request $request, $id)
     {
@@ -65,12 +65,12 @@ class ClienController extends Controller
             'photo'     =>   $image_name
         );
         Clien::whereId($id)->update($form_data);
-        return redirect('clien')->with('success', 'Data is successfully updated');
+        return redirect('contact')->with('success', 'Data is successfully updated');
     }
     public function destroy($id)
     {
         $data = Clien::findOrFail($id);
         $data->delete();
-        return redirect('clien.index')->with('success', 'Data is successfully deleted');
+        return redirect('contact.index')->with('success', 'Data is successfully deleted');
     }
 }
