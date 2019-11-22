@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app1')
+
+@section('content')
     <!-- BASICS -->
     <meta charset="utf-8">
     <title>QDC Technologies</title>
@@ -60,7 +60,16 @@
 <!-- map -->
 <section id="section-map" class="clearfix">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1718602850483!2d106.8241704138113!3d-6.241067295482373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3dc5aaef733%3A0x7064d74d810c5e76!2sPT%20Qdc%20Technologies!5e0!3m2!1sid!2sid!4v1573635247003!5m2!1sid!2sid" width="1999" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></section>
-
+</section>
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <!-- contact -->
 <section id="section-contact" class="section appear clearfix">
     <div class="container">
@@ -69,8 +78,7 @@
             <div class="col-md-offset-3 col-md-6">
                 <div class="section-header">
                     <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</h4>
-                </div>
+                   </div>
             </div>
         </div>
         <div class="row">
@@ -78,7 +86,7 @@
                 <div class="cform" id="contact-form">
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div id="errormessage"></div>
-                    <form action="" method="post" class="contactForm">
+                    <form method="post" action="{{ route('contact.store') }}"  class="contactForm">
 
                         <div class="field your-name form-group">
                             <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
@@ -99,7 +107,7 @@
                         </div>
 
                         <div class="send-btn">
-                            <input type="submit" value="SEND MESSAGE" class="btn btn-theme">
+                            <input name="add" type="submit" value="Add" class="btn btn-theme input-lg">
                         </div>
 
                     </form>
@@ -163,3 +171,4 @@
 </body>
 
 </html>
+@endsection

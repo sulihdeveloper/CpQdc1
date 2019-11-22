@@ -39,8 +39,6 @@
                 <td>{{ $row->message }}</td>
                 <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
                 <td>
-                <td>
-
                     <a href="{{route('contact.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}

@@ -37,7 +37,7 @@ class ContactController extends Controller
             'image'=>   $new_name
         );
         Contact::create($form_data);
-        return redirect('contact')->with('success', 'Data Added successfully.');
+        return redirect('contacts')->with('success', 'Data Added successfully.');
     }
 
     public function show($id)
