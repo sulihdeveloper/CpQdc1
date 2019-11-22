@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use http\Client;
 use Illuminate\Http\Request;
 use App\slide;
@@ -28,6 +29,12 @@ class HomeController extends Controller
     {
         $clien = Clien::paginate(10);
         return view('clien', compact('clien'))->with('i');
+    }
+
+    public function about()
+    {
+        $post = Post::paginate(3);
+        return $this->view('post', compact('post'))->with('i');
     }
 
     /**

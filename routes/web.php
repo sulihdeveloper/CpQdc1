@@ -3,16 +3,18 @@
 use App\Slide;
 use App\news;
 use App\Clien;
-
+use App\Post;
 
 Route::get('/', function () {
     $slide = Slide::paginate(1);
     $news = News::paginate(9);
     $clien = Clien::paginate(12);
+    $post = Post::paginate(3);
     $data = [
         'slide' => $slide,
         'news' => $news,
         'clien' => $clien,
+        'post' => $post,
     ];
     return view('home',$data);
 });
