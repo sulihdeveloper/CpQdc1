@@ -64,6 +64,7 @@ class ContactController extends Controller
                 'message'=> 'required',
                 'image'=>   'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
+            $image = $request->file('image');
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $image_name);
         }
@@ -88,7 +89,7 @@ class ContactController extends Controller
         Contact::whereId($id)->update($form_data);
         return redirect('contact')->with('success', 'Data is successfully updated');
     }
-    
+
     public function destroy($id)
     {
         $data = Contact::findOrFail($id);
