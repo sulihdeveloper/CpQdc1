@@ -11,36 +11,47 @@ class ContactController extends Controller
         return view('contact.index', compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
     public function create()
     {
         return view('contact.create');
     }
+
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name'    =>  'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
-        ]);
+            'name'=>  'required',
+            'email'=> 'required',
+            'subject'=>   'required',
+            'message'=> 'required',
+            'image'=>   'required|image|:jpeg,jpg,png,gif|max:100000',
+            ]);
         $image = $request->file('image');
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);
         $form_data = array(
             'name'=>   $request->name,
-            'photo'=>   $new_name
+            'email'=> $request->email,
+            'subject'=>   $request->subject,
+            'message'=> $request->message,
+            'image'=>   $new_name
         );
-        Clien::create($form_data);
+        Contact::create($form_data);
         return redirect('contact')->with('success', 'Data Added successfully.');
     }
+
     public function show($id)
     {
         $data = Clien::findOrFail($id);
         return view('contact.show', compact('data'));
     }
+
     public function edit($id)
     {
         $data = Clien::findOrFail($id);
         return view('contact.edit', compact('data'));
     }
+
     public function update(Request $request, $id)
     {
         $image = $request->file('image');
@@ -48,7 +59,10 @@ class ContactController extends Controller
         {
             $request->validate([
                 'name'=>  'required',
-                'photo' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+                'email'=> 'required',
+                'subject'=>   'required',
+                'message'=> 'required',
+                'image'=>   'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $image_name);
@@ -57,19 +71,27 @@ class ContactController extends Controller
         {
             $request->validate([
                 'name' =>  'required',
-                'photo' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+                'email'=> 'required',
+                'subject'=>   'required',
+                'message'=> 'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
         }
-        $form_data = array(
-            'name'       =>   $request->name,
-            'photo'     =>   $image_name
+        $form_data = array('name'=>   $request->name,
+            'name'=> $request->name,
+            'email'=> $request->email,
+            'subject'=>   $request->subject,
+            'message'=> $request->message,
+            'image'=>   $new_name
+
         );
-        Clien::whereId($id)->update($form_data);
+        Contact::whereId($id)->update($form_data);
         return redirect('contact')->with('success', 'Data is successfully updated');
     }
+    
     public function destroy($id)
     {
-        $data = Clien::findOrFail($id);
+        $data = Contact::findOrFail($id);
         $data->delete();
         return redirect('contact.index')->with('success', 'Data is successfully deleted');
     }
