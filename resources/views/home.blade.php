@@ -216,7 +216,7 @@
         </div>
         @foreach($clien as $k=>$nw)
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-            <div class="col-lg-3 col-md-4 col-xs-4">
+            <div class="col-lg-2 col-md-4 col-xs-10">
                 <div class="client-logo">
                     <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
                 </div>

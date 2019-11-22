@@ -26,7 +26,7 @@ class ClienController extends Controller
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
         ]);
 
-        $image = $request->file('image');
+        $image = $request->file('photo');
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);
         $form_data = array(

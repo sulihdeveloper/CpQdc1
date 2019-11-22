@@ -33,7 +33,6 @@
                         <td>{{ $row->name }}</td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
-                        <td>
                             <a href="{{route('clien.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
