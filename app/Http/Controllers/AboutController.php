@@ -16,7 +16,7 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $about = Post::where('page',1)->get();
         return view('about.index',compact('about'));
     }
@@ -32,9 +32,9 @@ class AboutController extends Controller
        if($about){
         return view('about.index');
        }else{
-        return view('about.create'); 
-       } 
-       
+        return view('about.create');
+       }
+
     }
 
     /**
@@ -45,23 +45,24 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'section_one' => 'required',
             'section_two' => 'required',
-            'image' => 'required|image'
-        ]);
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
+            ]);
 
-        $about = new Post;
-        $about->section_one = $request->section_one;
-        $about->section_two = $request->section_two;
-        $about->user_id = Auth::user()->id;
-        $about->page = 1;
-        if($request->hasFile('image')){
-            $file = $request->image->store('images/');
-            $about->image = $request->image->hashName();
-            $about->save();
-        }
-        return redirect()->route('about.index');
+        $image = $request->file('photo');
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $new_name);
+        $form_data = array(
+            'section_one'=>   $request->section_one,
+            'section_two'=>   $request->section_two,
+            'photo'=>   $new_name
+        );
+
+        Post::create($form_data);
+
+        return redirect('about')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -96,22 +97,36 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
+        $image = $request->file('image');
+        if($image != '')
+        {
+            $request->validate([
+                'section_one' => 'required',
+                'section_two' => 'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+            ]);
+            $image = $request->file('image');
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $image_name);
+        }
+        else
+        {
+            $request->validate([
+                'section_one' => 'required',
+                'section_two' => 'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+            ]);
+        }
+
+        $form_data = array(
             'section_one' => 'required',
             'section_two' => 'required',
-            'image' => 'image',
-            ]);
+            'image'     =>   $image_name
+        );
 
-        $update = Post::findOrFail($id);
-        $update->section_one = $request->section_one;
-        $update->section_two = $request->section_two;
-        if($request->hasFile('image')){
-            Storage::delete('images/'.$request->oldimage);           
-            $file = $request->image->store('images/');
-            $update->image = $request->image->hashName();                  
-        }        
-        $update->save(); 
-        return redirect()->route('about.index')->with('success','about section updated');
+        Post::whereId($id)->update($form_data);
+
+        return redirect('about')->with('success', 'Data is successfully updated');
     }
 
     /**
@@ -121,7 +136,10 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {$data = About::findOrFail($id);
+        $data->delete();
+
+        return redirect('about.index')->with('success', 'Data is successfully deleted');
     }
+
 }

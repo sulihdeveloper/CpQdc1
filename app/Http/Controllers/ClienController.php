@@ -60,7 +60,7 @@ class ClienController extends Controller
                 'name'=>  'required',
                 'photo' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
-            $image = $request->file('image');
+            $image = $request->file('photo');
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $image_name);
         }

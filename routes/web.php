@@ -7,8 +7,8 @@ use App\Clien;
 
 Route::get('/', function () {
     $slide = Slide::paginate(1);
-    $news = News::paginate(6);
-    $clien = Clien::paginate(8);
+    $news = News::paginate(9);
+    $clien = Clien::paginate(12);
     $data = [
         'slide' => $slide,
         'news' => $news,
