@@ -89,6 +89,7 @@
 </section>
 <!-- #about -->
 
+    </br></br>
     <!--==========================
       Services Section
     ============================-->
@@ -116,98 +117,115 @@
 
 
     <!-- services -->
-<section id="section-services" class="section pad-bot30 bg-white">
-    <div class="container">
-        <div class="row mar-bot40">
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-screen">screen</a>
+    <!-- about -->
+    <section id="about" class="section appear clearfix">
+        <div class="container">
+            <div class="row mar-bot">
+                <div class="col-md-offset-1 col-md-9">
+                    <div class="section-header">
+                        <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
+                        <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
                     </div>
                 </div>
-                <h3 class="text-bold">Responsive</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-                <div class="clear"></div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-location">location</a>
-                    </div>
-                </div>
-                <h3 class="text-bold">Multi usage</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-                <div class="clear"></div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-images">images</a>
-                    </div>
-                </div>
-                <h3 class="text-bold">Beautiful</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-                <div class="clear"></div>
-            </div>
-
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-archive">archive</a>
+        <div class="container">
+            <div class="row mar-bot">
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-screen">screen</a>
+                        </div>
                     </div>
+                    <h3 class="text-bold">Feasibility Research</h3>
+                    <p>Before undertaking many projects, it is essential to undertake feasibility studies to ensure the viability of the project. Qdc can offer additional assistance by providing services such as.</p>
+                    <p>
+                        Technology path engineering </p>
+                    Network route selection</p>
+                    Viability of technological alternatives
+                    </p>
+                    <div class="clear"></div>
                 </div>
-                <h3 class="text-bold">Valid HTML5</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
-                <div class="clear"></div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-contract">Mobile</a>
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-list">list</a>
+                        </div>
                     </div>
+                    <h3 class="text-bold">Consultancy</h3>
+                    <p>Qdc provides a range of value added consultancy services including surveys, auditing, testing and contract negotiations. In order to provide the most effective, reliable, customised solution, Qdc can bring together the skills and technologies appropriate to client’s individual needs. Qdc is able to offer a full consultative service grounded in decades of experience and proven expertise.</p>
+
+                    <div class="clear"></div>
                 </div>
-                <h3 class="text-bold">Modern</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
-                <div class="clear"></div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                    <div class="float-left mar-right20">
-                        <a href="#" class="hi-icon hi-icon-clock">Faster</a>
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-images">images</a>
+                        </div>
                     </div>
+                    <h3 class="text-bold">Planning and Design</h3>
+                    <p>The depth of experience and skills within this group enables Qdc to design solutions that are achievable in all prevailing conditions, which meet and often exceed environmental, individual and health expectations. The service includes site surveying from which topographical maps are produced, environmental and heritage aspects researched and authorised, appropriate equipment sourced and project operation documentation is prepared.</p>
+
+                    <div class="clear"></div>
                 </div>
-                <h3 class="text-bold">Fast loading</h3>
-                <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
-                <div class="clear"></div>
             </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-archive">archive</a>
+                        </div>
+                    </div>
+                    <h3 class="text-bold">Project Management</h3>
+                    <p>All aspects of every project are the responsibility of a specific Qdc Project Manager. These responsibilities include delivery on time, on budget, on customer specification and to quality standards equal to the best in the world. Qdc is sufficiently flexible to mirror clients’ differing Project Management practices on a project-by-project basis if required.</p>
 
+                    <div class="clear"></div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-cog">Mobile</a>
+                        </div>
+                    </div>
+                    <h3 class="text-bold">Material Management</h3>
+                    <p>Qdc has established partnerships for the provision and support of equipment. This is a distinct advantage in ensuring the best possible pricing and full life support of the equipment.</p>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-clock">Faster</a>
+                        </div>
+                    </div>
+                    <h3 class="text-bold">Contract Management</h3>
+                    <p>Qdc Contract Management staffs ensure that the primary task of all parties to the agreement is the management of project deliverables in accordance with the agreed contractual terms and conditions, hence minimising the commercial risk for the client. The meticulous management of all contracts within the project ensures a seamless delivery of projects worldwide.</p>
+
+                    <div class="clear"></div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!--==========================
   Clients Section
 ============================-->
-<section id="clients" class="section-bg"        >
+
+    <section id="clients" class="section-bg"        >
     <div class="container">
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
         </div>
+    </div>
         @foreach($clien as $k=>$nw)
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-            <div class="col-lg-2 col-md-4 col-xs-10">
+            <div class="container">
+            <div class="col-lg-3 col-md-4 col-xs-12">
                 <div class="client-logo">
                     <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
@@ -215,7 +233,7 @@
         @endforeach
         </div>
     </div>
-</section>
+    </section>
 
 
 <section id="footer" class="section footer">
