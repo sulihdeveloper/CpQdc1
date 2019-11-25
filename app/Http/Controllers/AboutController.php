@@ -34,7 +34,6 @@ class AboutController extends Controller
        }else{
         return view('about.create');
        }
-
     }
 
     /**
@@ -119,8 +118,8 @@ class AboutController extends Controller
         }
 
         $form_data = array(
-            'section_one' => 'required',
-            'section_two' => 'required',
+            'section_one'=>   $request->section_one,
+            'section_two'=>   $request->section_two,
             'image'     =>   $image_name
         );
 
