@@ -27,7 +27,6 @@
             <th>email</th>
             <th>subject</th>
             <th>message</th>
-            <th>Image</th>
             <th>Action</th>
         </tr>
         @foreach($data as $row)
@@ -37,7 +36,6 @@
                 <td>{{ $row->email }}</td>
                 <td>{{ $row->subject }}</td>
                 <td>{{ $row->message }}</td>
-                <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
                 <td>
                     <a href="{{route('contact.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                         {{ csrf_field() }}

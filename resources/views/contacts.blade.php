@@ -87,7 +87,7 @@
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div id="errormessage"></div>
                     <form method="post" action="{{ route('contact.store') }}"  class="contactForm">
-
+                        @csrf
                         <div class="field your-name form-group">
                             <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                             <div class="validation"></div>

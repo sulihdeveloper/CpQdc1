@@ -24,17 +24,12 @@ class ContactController extends Controller
             'email'=> 'required',
             'subject'=>   'required',
             'message'=> 'required',
-            'image'=>   'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
-        $image = $request->file('image');
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $new_name);
         $form_data = array(
             'name'=>   $request->name,
             'email'=> $request->email,
             'subject'=>   $request->subject,
             'message'=> $request->message,
-            'image'=>   $new_name
         );
         Contact::create($form_data);
         return redirect('contacts')->with('success', 'Data Added successfully.');
@@ -62,12 +57,8 @@ class ContactController extends Controller
                 'email'=> 'required',
                 'subject'=>   'required',
                 'message'=> 'required',
-                'image'=>   'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
-            $image = $request->file('image');
-            $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $image_name);
-        }
+            }
         else
         {
             $request->validate([
@@ -75,7 +66,6 @@ class ContactController extends Controller
                 'email'=> 'required',
                 'subject'=>   'required',
                 'message'=> 'required',
-                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
             ]);
         }
         $form_data = array('name'=>   $request->name,
@@ -83,7 +73,6 @@ class ContactController extends Controller
             'email'=> $request->email,
             'subject'=>   $request->subject,
             'message'=> $request->message,
-            'image'=>   $new_name
 
         );
         Contact::whereId($id)->update($form_data);
