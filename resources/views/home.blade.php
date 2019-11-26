@@ -47,7 +47,7 @@
 
 <section id="intro" class="section-bg">
     <div class="container"></br></br></br></br></br>
-    @foreach($news as $k=>$nw)
+        @foreach($news as $k=>$nw)
             <div class="row">
                 <div class="box">
                     <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>

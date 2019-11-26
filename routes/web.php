@@ -8,7 +8,7 @@ use App\Post;
 
 Route::get('/', function () {
     $slide = Slide::latest()->paginate(9);
-    $news = News::latest()->paginate(6);
+    $news = News::latest()->paginate(3);
     $clien = Clien::latest()->paginate(4);
     $post = Post::latest()->paginate(3);
     $data = [
