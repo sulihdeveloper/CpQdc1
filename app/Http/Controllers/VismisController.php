@@ -17,7 +17,7 @@ class VismisController extends Controller
      */
     public function index()
     {
-        $vision = Post::where('page',2)->get();
+        $vision = Post::latest()->paginate(10);
         return view('vismis.index',compact('vision'));
     }
 
@@ -32,8 +32,8 @@ class VismisController extends Controller
        if($about){
         return view('vismis.index');
        }else{
-        return view('vismis.create'); 
-       } 
+        return view('vismis.create');
+       }
     }
 
     /**
@@ -105,11 +105,11 @@ class VismisController extends Controller
         $update->section_one = $request->section_one;
         $update->section_two = $request->section_two;
         if($request->hasFile('image')){
-            Storage::delete('images/'.$request->oldimage);           
+            Storage::delete('images/'.$request->oldimage);
             $file = $request->image->store('images/');
-            $update->image = $request->image->hashName();                  
-        }        
-        $update->save(); 
+            $update->image = $request->image->hashName();
+        }
+        $update->save();
         return redirect()->route('vision.index')->with('success','vision mission updated');
     }
 

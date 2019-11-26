@@ -15,7 +15,7 @@ class SlideController extends Controller
      */
     public function index()
     {
-        $slide = Slide::paginate(10);
+        $slide = Slide::latest()->paginate(10);
         return view('slide.index', compact('slide'))->with('i');
     }
 

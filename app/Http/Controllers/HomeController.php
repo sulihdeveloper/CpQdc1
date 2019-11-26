@@ -15,9 +15,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $slide = Slide::all(10);
-        $news = news::all(10);
-        $clien = Clien::paginate(10);
+        $slide = Slide::latest()->paginate(10);
+        $news = News::latest()->paginate(6);
+        $clien = Clien::latest()->paginate(10);
         $post = Post::where('page',1)->get();
     return view ('home',compact('clien','contacts','news'));
     }

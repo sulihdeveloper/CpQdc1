@@ -45,20 +45,20 @@
 </div>
 </body>
 
-<section id="intro">
-    @foreach($slide as $sl)
-    <div class="intro-content">
-        <h2>{{$sl->title}}</h2>
-        <h3>{{$sl->description}}</h3>
-        <div>
-        <a href="{{$sl->link}}" class="btn-get-started scrollto">More</a>
-        </div>
+<section id="intro" class="section-bg">
+    <div class="container"></br></br></br></br></br>
+    @foreach($news as $k=>$nw)
+            <div class="row">
+                <div class="box">
+                    <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                    <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
+                </div>
+            </div>
+            @endforeach
     </div>
-    @endforeach
 </section>
-<br>
-<br>
-
+</br></br>
 <!--==========================
       About Us Section
     ============================-->
@@ -107,7 +107,7 @@
                         <div class="box">
                             <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
                             <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
-                            <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
+                            <p class="description">{{ $nw->isi }}.</p>
                         </div>
                     </div>
                     @endforeach
@@ -216,16 +216,14 @@
   Clients Section
 ============================-->
 
-    <section id="clients" class="section-bg"        >
+    <section id="clients" class="section-bg">
     <div class="container">
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
         </div>
     </div>
         @foreach($clien as $k=>$nw)
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-            <div class="container">
-            <div class="col-lg-3 col-md-4 col-xs-12">
+            <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="client-logo">
                     <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
@@ -234,7 +232,7 @@
         </div>
     </div>
     </section>
-
+    </br></br>
 <section id="footer" class="section footer">
     <div class="container">
         <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">

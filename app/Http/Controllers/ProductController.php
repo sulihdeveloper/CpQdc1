@@ -18,8 +18,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $product = Product::paginate(10);
+    {
+        $product = Product::latest()->paginate(10);
         return view('product.index',compact('product'))->with('i');
     }
 
@@ -29,7 +29,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   
+    {
         $cat = Category::all();
         return view('product.create',compact('cat'));
     }
@@ -105,16 +105,16 @@ class ProductController extends Controller
             ]);
         $update = Product::findOrFail($id);
         $update->title = $request->title;
-        $update->description = $request->desc;                  
-        $update->link = $request->link;                  
-        $update->category_id = $request->cat;                  
+        $update->description = $request->desc;
+        $update->link = $request->link;
+        $update->category_id = $request->cat;
         if($request->hasFile('image')){
-            Storage::delete('products/'.$request->oldimage);           
+            Storage::delete('products/'.$request->oldimage);
             $file = $request->image->store('products/');
-            $update->image = $request->image->hashName(); 
-            // echo $request->oldimage;           
-        }        
-        $update->save(); 
+            $update->image = $request->image->hashName();
+            // echo $request->oldimage;
+        }
+        $update->save();
         return redirect()->route('product.index')->with('success','product updated');
     }
 

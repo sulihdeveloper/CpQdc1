@@ -5,16 +5,12 @@ use App\news;
 use App\Clien;
 use App\Post;
 
-$query = "SELECT * FROM slide ORDER BY created_at DESC";
-$query = "SELECT * FROM news ORDER BY created_at DESC";
-$query = "SELECT * FROM clien ORDER BY created_at DESC";
-$query = "SELECT * FROM post ORDER BY created_at DESC";
 
 Route::get('/', function () {
-    $slide = Slide::paginate(1);
-    $news = News::paginate(9);
-    $clien = Clien::paginate(12);
-    $post = Post::paginate(3);
+    $slide = Slide::latest()->paginate(9);
+    $news = News::latest()->paginate(6);
+    $clien = Clien::latest()->paginate(4);
+    $post = Post::latest()->paginate(3);
     $data = [
         'slide' => $slide,
         'news' => $news,

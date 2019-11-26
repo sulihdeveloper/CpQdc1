@@ -14,7 +14,7 @@ class ManageController extends Controller
      */
     public function index()
     {
-        $user = Manage::all();
+        $user = Manage::latest()->paginate(10);
         return view('manage.index',compact('user'))->with('i');
     }
 
