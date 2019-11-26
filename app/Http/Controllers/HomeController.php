@@ -15,26 +15,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        $slide = Slide::paginate(10);
-        return view('slide', compact('slide'))->with('i');
-    }
-
-    public function data()
-    {
-        $news = news::paginate(10);
-        return view('news', compact('news'))->with('i');
-    }
-
-    public function view()
-    {
+        $slide = Slide::all(10);
+        $news = news::all(10);
         $clien = Clien::paginate(10);
-        return view('clien', compact('clien'))->with('i');
-    }
-
-    public function about()
-    {
-        $post = Post::paginate(3);
-        return $this->view('post', compact('post'))->with('i');
+        $post = Post::where('page',1)->get();
+    return view ('home',compact('clien','contacts','news'));
     }
 
     /**
