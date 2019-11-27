@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
-          <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
+                    <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                     <h6 class="created_at">{{ $nw->created_at }}</h6>
           </div>
           </div>
@@ -95,13 +95,11 @@
                 <img src="{{url('images/'.$item->image)}}" width=”50″ height=”40″ class="img-fluid" alt="">
             </div>
         </div>
-        @endforeach
     </div>
+        @endforeach
     </div>
 </section>
 <!-- #about -->
-
-    </br></br></br></br></br></br>
 
     <!-- about -->
     <section id="about" class="section appear clearfix">
@@ -109,9 +107,11 @@
             <div class="row mar-bot">
                 <div class="col-md-offset-1 col-md-9">
                     <div class="section-header">
-                        <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
-                        <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
-                    </div>
+                        <div class="section-header">
+                            <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
+                            <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -231,14 +231,8 @@
                 </ul>
             </div>
         </div>
-        <div class="row align-center mar-bot20">
-            <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Get in touch</a></li>
-            </ul>
-        </div>
+
+    </br></br>
         <div class="row align-center copyright">
             <div class="col-sm-12">
                 <p>&copy; Departemen IT, QDC Technologies</p>
