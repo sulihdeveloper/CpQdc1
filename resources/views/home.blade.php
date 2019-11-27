@@ -45,14 +45,13 @@
 </div>
 </body>
 
-<section id="intro" class="section-bg">
-    <div class="container"></br></br></br></br></br></br></br></br></br></br></br>
-        <section id="news" class="section-bg">
+<section id="intro">
+    </br></br></br></br></br></br></br></br></br>
+    <section id="news" >
             <div class="section-header">
-                <div class="container">
                 @foreach($news as $k=>$nw)
                 <div class="float-center mar-right20">
-                <div class="col-lg-4 col-md-6 col-xs-12 wow bounceInUp" data-wow-duration="9.4s">
+                <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
                 <div class="row">
                 <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
@@ -60,7 +59,7 @@
                                 <a href="#" class="fa fa-newspaper-o">News</a>
                             </div>
                         </div>
-                        <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                     <h6 class="created_at">{{ $nw->created_at }}</h6>
           </div>
@@ -69,6 +68,7 @@
           </div>
     @endforeach
     </div>
+</section>
 </section>
 
     <!--==========================

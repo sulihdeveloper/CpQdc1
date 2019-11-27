@@ -249,25 +249,13 @@
                     <li><a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>                </ul>
             </div>
         </div>
-        <div class="row align-center mar-bot20">
-            <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Get in touch</a></li>
-            </ul>
-        </div>
+        </br></br>
         <div class="row align-center copyright">
             <div class="col-sm-12">
-                <p>Copyright &copy; All rights reserved</p>
+                <p>&copy; Departemen IT, QDC Technologies</p>
             </div>
         </div>
-        <div class="credits">
-
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
-        </div>
     </div>
-
 </section>
 <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
