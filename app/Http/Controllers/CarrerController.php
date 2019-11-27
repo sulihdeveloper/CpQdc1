@@ -27,7 +27,7 @@ class CarrerController extends Controller
             'phone'     =>  'required',
             'address'     =>  'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'file' => 'required|pdf|max:2048',
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:2048',
         ]);
 
         $image = $request->file('photo');
@@ -73,7 +73,7 @@ class CarrerController extends Controller
                 'phone'     =>  'required',
                 'address'     =>  'required',
                 'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'file' => 'required|pdf|max:2048',
+                'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:2048',
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -88,7 +88,7 @@ class CarrerController extends Controller
                 'phone'     =>  'required',
                 'address'     =>  'required',
                 'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'file' => 'required|pdf|max:2048',
+                'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:2048',
             ]);
         }
 
