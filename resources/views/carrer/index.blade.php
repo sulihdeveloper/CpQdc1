@@ -45,8 +45,7 @@
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->file }}" class="img-thumbnail" width="75" /></td>
                         <td>
-                            <a href="{{route('carrer.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-                            {{ csrf_field() }}
+
                             {{ method_field('DELETE') }}
                             <button type="submit" class="btn btn-danger btn-xs">delete</button>
                             </form>
