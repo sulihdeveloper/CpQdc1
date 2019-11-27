@@ -46,20 +46,32 @@
 </body>
 
 <section id="intro" class="section-bg">
-    <div class="container"></br></br></br></br></br>
-        @foreach($news as $k=>$nw)
-            <div class="row">
+    <div class="container"></br></br></br></br></br></br></br></br></br></br></br>
+        <section id="news" class="section-bg">
+            <div class="section-header">
+                <div class="container">
+                @foreach($news as $k=>$nw)
+                <div class="float-center mar-right20">
+                <div class="col-lg-4 col-md-6 col-xs-12 wow bounceInUp" data-wow-duration="9.4s">
+                <div class="row">
                 <div class="box">
-                    <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
-                    <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
-                </div>
-            </div>
-            @endforeach
+                        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                            <div class="float-left mar-right20">
+                                <a href="#" class="fa fa-newspaper-o">News</a>
+                            </div>
+                        </div>
+                        <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+          <p class="description">{{ str_limit($nw->isi, $limit = 250, $end = '...') }}.</p>
+                    <h6 class="created_at">{{ $nw->created_at }}</h6>
+          </div>
+          </div>
+          </div>
+          </div>
+    @endforeach
     </div>
 </section>
-</br></br>
-<!--==========================
+
+    <!--==========================
       About Us Section
     ============================-->
 <section id="about">
@@ -89,34 +101,8 @@
 </section>
 <!-- #about -->
 
-    </br></br>
-    <!--==========================
-      Services Section
-    ============================-->
-    <section id="news" class="section-bg">
-        <div class="container">
-            <header class="section-header">
-                <div class="section-header">
-                    <h2 class="section-heading animated" data-animation="bounceInUp">News</h2>
-                </div>
-            </header>
+    </br></br></br></br></br></br>
 
-            @foreach($news as $k=>$nw)
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 offset-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-                        <div class="box">
-                            <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-                            <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
-                            <p class="description">{{ $nw->isi }}.</p>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-        </div>
-    </section><!-- #services -->
-
-
-    <!-- services -->
     <!-- about -->
     <section id="about" class="section appear clearfix">
         <div class="container">

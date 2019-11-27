@@ -1,5 +1,4 @@
 <?php
-
 use App\Slide;
 use App\news;
 use App\Clien;
