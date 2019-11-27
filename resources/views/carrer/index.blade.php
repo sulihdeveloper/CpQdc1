@@ -16,9 +16,7 @@
         @endif
     </div>
     @if($carrer->isEmpty())
-        <div class="float-right">
-            <p class="text-center"><a href="{{route('Carrer.create')}}" class="btn btn-md btn-success">Create</a></p>
-        </div>
+
     @endif
         <div class="col-md-12">
             <table class="table table-bordered" id="carrer-table">
