@@ -46,12 +46,9 @@
 
 <section id="intro3">
     <div class="intro-content">
-        <h2></h2>
+        <h2>Contact</h2>
         <h3></h3>
-        <div>
-            <a href="" class="btn btn-default page-scroll">More</a>
         </div>
-    </div>
 </section>
 
 <br>

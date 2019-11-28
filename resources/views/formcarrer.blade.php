@@ -54,12 +54,12 @@
 
     <section id="news" >
         <div class="float-center mar-right20">
-            <div class="col-lg-5 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
+            <div class="col-lg-4 col-md-8 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
                 <div class="row">
                     <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                             <div class="float-left mar-right20">
-                                <a href="#" class="fa fa-newspaper-o">News</a>
+                                <a href="#" class="fa fa-graduation-cap">Carrers</a>
                             </div>
                         </div>
                         <h4><a href=""></a></h4>
@@ -69,9 +69,9 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
-
+    </div>
+    </div>
 
 
     <section id="footer" class="section footer">
