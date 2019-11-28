@@ -46,7 +46,7 @@
 </body>
 
 <section id="intro">
-    </br></br></br></br></br></br></br></br></br>
+    </br></br></br></br></br></br></br></br></br></br></br></br></br>
     <section id="news" >
             <div class="section-header">
                 @foreach($news as $k=>$nw)
