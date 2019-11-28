@@ -58,10 +58,8 @@
                 <div class="row">
                     <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                            <div class="float-left mar-right20">
-                                <a href="#" class="fa fa-graduation-cap">Carrers</a>
+                                <a href="#">Carrers</a>
                             </div>
-                        </div>
                         <h4><a href=""></a></h4>
                         <p></p></br>
                         <h6></h6>
