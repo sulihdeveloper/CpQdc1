@@ -93,7 +93,7 @@
             </div>
             <div class="col-lg-4 background order-lg-3 order-2 ">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ya9kj2-FyFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            </div>
         </div>
     </div>
         @endforeach
