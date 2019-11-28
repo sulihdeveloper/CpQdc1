@@ -49,4 +49,8 @@ class HomeController extends Controller
     {
         return view('contacts');
     }
+    public function formcarrer()
+    {
+        return view('formcarrer');
+    }
 }
