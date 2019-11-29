@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\slide;
 use App\news;
 use App\Clien;
-
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -19,8 +19,10 @@ class HomeController extends Controller
         $news = News::latest()->paginate(6);
         $clien = Clien::latest()->paginate(10);
         $post = Post::where('page',1)->get();
-    return view ('home',compact('clien','contacts','news'));
+        $category = formcarrer::latest()->paginate();
+    return view ('home',compact('clien','contacts','news','formcarrer'));
     }
+
 
     /**
      * Create a new controller instance.
@@ -48,9 +50,5 @@ class HomeController extends Controller
     public function contacts()
     {
         return view('contacts');
-    }
-    public function formcarrer()
-    {
-        return view('formcarrer');
     }
 }

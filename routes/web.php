@@ -3,6 +3,8 @@ use App\Slide;
 use App\news;
 use App\Clien;
 use App\Post;
+use App\Category;
+use App\Product;
 
 
 Route::get('/', function () {
@@ -16,9 +18,8 @@ Route::get('/', function () {
         'clien' => $clien,
         'post' => $post,
     ];
-    return view('home',$data);
+    return view('home', $data);
 });
-
 
 
 Auth::routes();
@@ -26,7 +27,7 @@ Auth::routes();
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 Route::get('/capability', 'HomeController@capability');
 Route::get('/contacts', 'HomeController@contacts');
-Route::get('/formcarrer', 'HomeController@formcarrer');
+Route::get('/formcarrer', 'formcarrerController@index');
 
 
     Route::resource('slide', 'SlideController');

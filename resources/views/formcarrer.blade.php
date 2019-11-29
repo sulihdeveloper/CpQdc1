@@ -59,6 +59,7 @@
                     <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                                 <h4 href="#"></h4>
+                            <h6></h6>
                         </div>
                     </div>
                 </div>
