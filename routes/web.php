@@ -21,13 +21,22 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
+Route::get('formcarrer',function (){
+    return view('formcarrer');
+});
+
+Route::get('contacts',function (){
+    return view('contacts');
+});
+
+Route::get('capability',function (){
+    return view('capability');
+});
+
 
 Auth::routes();
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
-Route::get('/capability', 'HomeController@capability');
-Route::get('/contacts', 'HomeController@contacts');
-Route::get('/formcarrer', 'formcarrerController@index');
 
 
     Route::resource('slide', 'SlideController');
