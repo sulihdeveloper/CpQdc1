@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use date;
 use App\Category;
 use Auth;
-use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -39,9 +40,11 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:100',
+            'closing_date' => 'date|required|max:100',
             ]);
         $store = new Category;
         $store->name = $request->name;
+        $store->closing_date = $request->closing_date;
         $store->user_id = Auth::user()->id;
 
         $store->save();
@@ -82,9 +85,12 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
             'name'=>'required|max:100',
+            'closing_date' => 'date|required|max:100',
+
             ]);
         $update = Category::findOrFail($id);
         $update->name = $request->name;
+        $update->closing_date = $request->closing_date;
         $update->user_id = Auth::user()->id;
         $update->save();
 

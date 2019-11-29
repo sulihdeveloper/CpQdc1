@@ -4,7 +4,7 @@
 
 	<div id="content" class="container">
 		<div class="col-md-12">
-		<h1>Edit category: {{$show->name}}</h1> 		
+		<h1>Edit category: {{$show->name}}</h1>
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-7">
@@ -15,16 +15,22 @@
 					  <label for="name" class="col-md-3 control-label">Category name</label>
 					  <div class="col-md-9">
 					  	<input class="form-control" id="title" type="text" name="name" placeholder="category name"value="{{old('name',$show->name)}}">
-					  </div>				  
-					</div>					
-				  <div class="form-group">
+					  </div>
+					</div>
+            <div class="form-group">
+                <label for="closing_date" class="col-md-3 control-label">Closing Date</label>
+                <div class="col-md-9">
+                    <input class="form-control" id="closing_date" type="date" name="closing_date" placeholder="Closing Date" value={{old('closing_date')}}>
+                </div>
+            </div>
+            <div class="form-group">
 				  	<div class="col-md-4 col-md-offset-5">
 				  		<button class="btn btn-success" type="submit">save</button> &nbsp;
-				  		<a class="btn btn-warning" href="{{route('category.index')}}">cancel</a>	
-				  	</div>				  	
-				  </div>  				  			
-				</form>			
-			</div>	
+				  		<a class="btn btn-warning" href="{{route('category.index')}}">cancel</a>
+				  	</div>
+				  </div>
+				</form>
+			</div>
 			<div class="col-md-5">
 				@if (count($errors) > 0)
 				    <div class="alert alert-danger">
@@ -35,9 +41,9 @@
 				        </ul>
 				    </div>
 				@endif
-			</div>			
+			</div>
 		</div>
-	</div>	    
+	</div>
 
 
 @endsection

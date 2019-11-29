@@ -17,20 +17,23 @@
             <thead>
             <tr>
 				<th>No</th>
-				<th>name</th>
-				<th>action</th>
+				<th>Name</th>
+                <th>Closing Date</th>
+				<th>Action</th>
 			</thead>
 			<tbody>
 			@foreach($category as $item)
 				<tr>
 					<td>{{++$i}}</td>
 					<td>{{$item->name}}</td>
-					<td><a href="{{route('category.edit',$item->id)}}" class="btn btn-xs btn-info">edit </a>
-					<form class="form-inline" method="POST" action="{{route('category.destroy',$item->id)}}">
+                    <td>{{$item->closing_date}}</td>
+					<td>
+                    <a href="{{route('category.edit',$item->id)}}" class="btn btn-xs btn-info">edit</a>
+					<a class="form-inline" method="POST" action="{{route('category.destroy',$item->id)}}">
 						{{ csrf_field() }}
 						{{ method_field('DELETE') }}
 						<button type="submit" class="btn btn-danger btn-xs">delete</button>
-					</form>
+					</a>
 					</td>
 				</tr>
 			@endforeach

@@ -54,15 +54,12 @@
 
     <section id="news" >
         <div class="float-center mar-right20">
-            <div class="col-lg-4 col-md-8 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
+            <div class="col-lg-3 col-md-6 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
                 <div class="row">
                     <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                                <a href="#">Carrers</a>
-                            </div>
-                        <h4><a href=""></a></h4>
-                        <p></p></br>
-                        <h6></h6>
+                                <h4 href="#"></h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,7 +67,6 @@
     </section>
     </div>
     </div>
-
 
     <section id="footer" class="section footer">
         <div class="container">
