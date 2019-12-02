@@ -41,7 +41,7 @@
 
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
                                         <a href="{{route('news.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
-                                        <form action="{{ route('news.destroy',$data->id) }}" method="POST">
+                                        <a action="{{ route('news.destroy',$data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <input type="hidden" name="judul" value="{{ $data->judul }}">

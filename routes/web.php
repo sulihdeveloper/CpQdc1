@@ -22,7 +22,11 @@ Route::get('/', function () {
 });
 
 Route::get('formcarrer',function (){
-    return view('formcarrer');
+    $category = Category::latest()->paginate(10);
+    $loc = [
+      'category' => $category,
+    ];
+    return view('formcarrer', $loc);
 });
 
 Route::get('contacts',function (){

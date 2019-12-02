@@ -72,12 +72,12 @@
         <div class="form-group">
             <label class="col-md-4 text-right">Select Document </label>
             <div class="col-md-8">
-                <input type="file" name="file" />
+                <input type="file" name="file" accept="application/pdf, application/vnd.ms-excel" />
             </div>
         </div>
         <br /><br /><br />
         <div class="form-group text-center">
-            <input type="submit" name="add" class="btn btn-primary input-lg" value="Add" />
+            <input type="submit" name="add" class="btn btn-primary input-lg" value="Submit" />
         </div>
     </form>
 @endsection

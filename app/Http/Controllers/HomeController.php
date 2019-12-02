@@ -53,6 +53,7 @@ class HomeController extends Controller
     }
     public function formcarrer()
     {
+        $category = Category::latest()->paginate(10);
         return view('formcarrer');
     }
 }
