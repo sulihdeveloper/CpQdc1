@@ -53,24 +53,22 @@
     </section>
 
         <section id="clients" class="section-bg">
-            <div class="container" >
+         <div class="container">
         @foreach($category as $item)
                     <div class="float-center mar-right20">
                     <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
                     <div class="row">
                     <div class="box">
-                    <h4 href="">{{$item->name}}</h4>
-                    <h6> Closing Date : {{$item->closing_date}} / by Human Resource Department </h6>
+                    <h4 class="name"><a href="">{{$item->name}}</h4>
+                    <h6> Closing Date : {{$item->closing_date}} / by Human Resource Department </h6><br/>
                     </div>
-                </div>
-                </div>
-                </div>
-              @endforeach
+                    </div>
+                    </div>
+                    </div>
+                  @endforeach
            </div>
          </div>
-        </div>
-    </section>
-</br></br></br></br></br></br></br></br></br></br></br></br>
+        </section>
 
     <section id="footer" class="section footer">
         <div class="container">
@@ -94,6 +92,7 @@
         </div>
 
     </section>
+
     <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Javascript Library Files -->

@@ -43,23 +43,20 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:100',
+            'responsibilities' => 'required|max:10000',
+            'requerments' => 'required|max:10000',
             'desc' => 'required',
-            'link' => 'required',
-            'image' => 'required|image',
             'cat' => 'required'
             ]);
         $product = new Product;
-        $product->title = $request->title;
+        $product->responsibilities = $request->responsibilities;
+        $product->requerments = $request->requerments;
         $product->description = $request->desc;
-        $product->link = $request->link;
         $product->category_id = $request->cat;
         $product->user_id = Auth::user()->id;
-        if($request->hasFile('image')){
-            $file = $request->image->store('products/');
-            $product->image = $request->image->hashName();
-            $product->save();
-        }
+
+        $product->save();
+
         return redirect()->route('product.index')->with('success','new product created');
     }
 
@@ -97,23 +94,18 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required|max:100',
+            'responsibilities' => 'required|max:10000',
+            'requerments' => 'required|max:10000',
             'desc' => 'required',
-            'link' => 'required',
-            'cat' => 'required',
-            'image' => 'image',
-            ]);
+            'cat' => 'required'
+        ]);
+
+
         $update = Product::findOrFail($id);
-        $update->title = $request->title;
+        $update->responsibilities = $request->responsibilities;
+        $update->requerments = $request->requerments;
         $update->description = $request->desc;
-        $update->link = $request->link;
         $update->category_id = $request->cat;
-        if($request->hasFile('image')){
-            Storage::delete('products/'.$request->oldimage);
-            $file = $request->image->store('products/');
-            $update->image = $request->image->hashName();
-            // echo $request->oldimage;
-        }
         $update->save();
         return redirect()->route('product.index')->with('success','product updated');
     }
