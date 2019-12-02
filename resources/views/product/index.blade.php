@@ -26,6 +26,7 @@
 			@foreach($product as $row)
 				<tr>
 					<td>{{++$i}}</td>
+                    <td>{{$row->category_id}}</td>
                     <td>{{$row->responsibilities}}</td>
 					<td>{{$row->requerments}}</td>
 					<td>{{ str_limit($row->description, 60)}}</td>

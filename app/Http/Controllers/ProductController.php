@@ -106,6 +106,7 @@ class ProductController extends Controller
         $update->requerments = $request->requerments;
         $update->description = $request->desc;
         $update->category_id = $request->cat;
+
         $update->save();
         return redirect()->route('product.index')->with('success','product updated');
     }

@@ -51,25 +51,15 @@
             <h3></h3>
             </div>
     </section>
+    <br/>
 
-        <section id="clients" class="section-bg">
-         <div class="container">
-        @foreach($category as $item)
-                    <div class="float-center mar-right20">
-                    <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
-                    <div class="row">
-                    <div class="box">
-                    <h4 class="name"><a href="">{{$item->name}}</h4>
-                    <h6> Closing Date : {{$item->closing_date}} / by Human Resource Department </h6><br/>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                  @endforeach
-           </div>
-         </div>
-        </section>
+    @foreach($category as $item)
+        <div class="col-sm-12 align-center">
+        <ul class="list-group-item disabled"><a href="">{{$item->name}}</a></ul>
+        </div>
+    @endforeach
 
+</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <section id="footer" class="section footer">
         <div class="container">
             <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
