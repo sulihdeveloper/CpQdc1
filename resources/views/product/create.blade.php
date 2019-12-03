@@ -4,11 +4,10 @@
 <div class="container">
 	<div id="content">
 		<div class="col-md-12">
-		<h1>New Product</h1>
+		<h1>Carrer</h1>
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-7">
-				<form method="POST" class="form-horizontal" action="{{route('product.store')}}" enctype="multipart/form-data">
 					{{ csrf_field() }}
                     <div class="form-group">
                         <label for="cat" class="col-md-3 control-label">Category</label>
@@ -21,22 +20,21 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="responsibilities" class="col-md-3 control-label">Responsibilities</label>
+                        <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
                         <div class="col-md-9">
-                            <textarea class="form-control col-md-9" name="responsibilities" cols="3" rows="5" placeholder="responsibilities">{{old('responsibilities')}}</textarea>
+                            <text class="form-control col-md-9" name="responsibilities" placeholder="responsibilities">{{old('responsibilities')}}</text>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="requerments" class="col-md-3 control-label">Requerments</label>
+                        <label for="requerments" placeholder="requerments" class="col-md-3 control-label">Requerments</label>
                         <div class="col-md-9">
-                            <textarea class="form-control col-md-9" name="requerments" cols="3" rows="5" placeholder="requerments">{{old('requerments')}}</textarea>
+                            <text class="form-control col-md-9" name='requerments' placeholder="requerments">{{old('requerments')}}</text>
                         </div>
                     </div>
-
                     <div class="form-group">
 					  <label for="desc" class="col-md-3 control-label">Description</label>
 					  <div class="col-md-9">
-					  	<textarea class="form-control col-md-9" name="desc" cols="3" rows="5" placeholder="description">{{old('desc')}}</textarea>
+					  	<textarea class="form-control col-md-9" name="desc"  placeholder="description">{{old('desc')}}</textarea>
 					  </div>
 					</div>
 				  <div class="form-group">
@@ -46,7 +44,8 @@
 				  	</div>
 				  </div>
 				</form>
-			</div>
+
+            </div>
 			<div class="col-md-5">
 				@if (count($errors) > 0)
 				    <div class="alert alert-danger">
@@ -61,5 +60,5 @@
 		</div>
 	</div>
 </div>
-
 @endsection
+

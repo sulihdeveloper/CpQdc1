@@ -23,8 +23,10 @@ Route::get('/', function () {
 
 Route::get('formcarrer',function (){
     $category = Category::latest()->paginate(10);
+    $product = Product::latest()->paginate(10);
     $loc = [
       'category' => $category,
+      'product' => $product,
     ];
     return view('formcarrer', $loc);
 });

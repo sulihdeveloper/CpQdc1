@@ -9,6 +9,7 @@ use App\slide;
 use App\news;
 use App\Clien;
 use App\Category;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -54,6 +55,7 @@ class HomeController extends Controller
     public function formcarrer()
     {
         $category = Category::latest()->paginate(10);
+        $product = Product::latest()->paginate(10);
         return view('formcarrer');
     }
 }

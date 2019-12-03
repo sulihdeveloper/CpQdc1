@@ -52,14 +52,40 @@
             </div>
     </section>
     <br/>
+    @if (session('success'))
+        <p class="alert alert-success">
+            {{ session('success') }}
+        </p>
+        @endif
 
     @foreach($category as $item)
         <div class="col-sm-12 align-center">
-        <ul class="list-group-item disabled"><a href="">{{$item->name}}</a></ul>
+            <p>
+                <a class="btn" data-toggle="collapse" href="#category_id" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    {{$item->name}}</a>
+            </p>
         </div>
-    @endforeach
+            @endforeach
+            <div class="col-sm-12 align-left">
+            <div class="collapse" id="category_id">
+                <div class="card card-body">
+                @foreach($product as $row)
+                    <p><b>Responsibilities : &#8226;</b></p>
+                    {{$row->responsibilities}}<br/>
+                    <br/><p><b>Requerments :</b></p>
+                    {{$row->requerments}}<br/>
+                    <br/><p><b>Description : </b></p>
+                    {{$row->description}}
+                        <br/><br/>
+                        <td>
+                            <a href="{{ route('carrer.create',$row->id) }}" class="btn btn-info btn-xs">APPLY</a>
+                        </td>
+                </div>
+                </div>
+                @endforeach
+            </div>
 
-</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <section id="footer" class="section footer">
         <div class="container">
             <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
