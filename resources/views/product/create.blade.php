@@ -24,13 +24,13 @@
                     <div class="form-group">
                         <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
                         <div class="col-md-9">
-                            <text class="form-control col-md-9" name="responsibilities" placeholder="responsibilities">{{old('responsibilities')}}</text>
+                            <textarea class="form-control col-md-9" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="requerments" placeholder="requerments" class="col-md-3 control-label">Requerments</label>
                         <div class="col-md-9">
-                            <text class="form-control col-md-9" name='requerments' placeholder="requerments">{{old('requerments')}}</text>
+                            <textarea class="form-control col-md-9" name="requerments"  placeholder="requerments">{{old('requerments')}}</textarea>
                         </div>
                     </div>
                     <div class="form-group">

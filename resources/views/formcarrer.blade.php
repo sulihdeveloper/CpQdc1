@@ -60,8 +60,10 @@
 
     @foreach($category as $item)
         <div class="col-sm-12 align-center">
+            <p>
                 <a class="btn" data-toggle="collapse" href="#category_id" role="button"  aria-controls="collapseExample">
-                    {{$item->name}}</a>
+                    {{$item->name,$item->id}}</a>
+            </p>
         </div>
             @endforeach
             <div class="col-sm-12 align-left">
@@ -69,11 +71,11 @@
                 <div class="card card-body">
                 @foreach($product as $row)
                     <p><b>Responsibilities : &#8226;</b></p>
-                    {{$row->responsibilities}}<br/>
+                    {{$row->responsibilities,$row->category_id}}<br/>
                     <br/><p><b>Requerments :</b></p>
-                    {{$row->requerments}}<br/>
+                    {{$row->requerments,$row->category_id}}<br/>
                     <br/><p><b>Description : </b></p>
-                    {{$row->description}}
+                    {{$row->description,$row->category_id}}
                         <br/><br/>
                         <td>
                             <a href="{{ route('carrer.create',$row->id) }}" class="btn btn-info btn-xs">APPLY</a>
