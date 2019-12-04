@@ -8,7 +8,9 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-7">
-					{{ csrf_field() }}
+                <form action="{{ route('product.store') }}" method="POST">
+
+                {{ csrf_field() }}
                     <div class="form-group">
                         <label for="cat" class="col-md-3 control-label">Category</label>
                         <div class="col-md-9">

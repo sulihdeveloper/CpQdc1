@@ -60,10 +60,8 @@
 
     @foreach($category as $item)
         <div class="col-sm-12 align-center">
-            <p>
-                <a class="btn" data-toggle="collapse" href="#category_id" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn" data-toggle="collapse" href="#category_id" role="button"  aria-controls="collapseExample">
                     {{$item->name}}</a>
-            </p>
         </div>
             @endforeach
             <div class="col-sm-12 align-left">

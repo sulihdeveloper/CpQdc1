@@ -6,8 +6,6 @@ use Auth;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\File;
 
 
 class ProductController extends Controller
@@ -30,6 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        $product = Product::latest()->paginate(10);
         $cat = Category::all();
         return view('product.create',compact('cat'));
     }
