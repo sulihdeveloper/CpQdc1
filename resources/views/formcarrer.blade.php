@@ -59,31 +59,27 @@
         @endif
 
     @foreach($category as $item)
-        <div class="col-sm-12 align-center">
-            <p>
-                <a class="btn" data-toggle="collapse" href="#category_id" role="button"  aria-controls="collapseExample">
-                    {{$item->name,$item->id}}</a>
-            </p>
-        </div>
+        <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">{{$item->name,$item->id}}</div>
             @endforeach
-            <div class="col-sm-12 align-left">
-            <div class="collapse" id="category_id">
-                <div class="card card-body">
-                @foreach($product as $row)
-                    <p><b>Responsibilities : &#8226;</b></p>
-                    {{$row->responsibilities,$row->category_id}}<br/>
-                    <br/><p><b>Requerments :</b></p>
-                    {{$row->requerments,$row->category_id}}<br/>
-                    <br/><p><b>Description : </b></p>
-                    {{$row->description,$row->category_id}}
-                        <br/><br/>
-                        <td>
-                            <a href="{{ route('carrer.create',$row->id) }}" class="btn btn-info btn-xs">APPLY</a>
-                        </td>
-                </div>
-                </div>
-                @endforeach
+            @foreach($product as $row)
+            <div class="panel-body">
+                <p><b>Responsibilities : &#8226;</b></p>
+                {{$row->responsibilities,$row->category_id}}<br/>
+                <br/><p><b>Requerments :</b></p>
+                {{$row->requerments,$row->category_id}}<br/>
+                <br/><p><b>Description : </b></p>
+                {{$row->description,$row->category_id}}
             </div>
+        @endforeach
+        <!-- List group -->
+    </div>
+          <td>
+                 <a href="{{ route('carrer.create',$row->id) }}" class="btn btn-info btn-xs">APPLY</a>
+          </td>
+    </div>
+    </div>
 
         </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <section id="footer" class="section footer">
