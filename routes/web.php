@@ -39,6 +39,14 @@ Route::get('capability',function (){
     return view('capability');
 });
 
+Route::get('berita',function (){
+    $news = News::latest()->paginate(10);
+    $ber = [
+        'news' => $news,
+    ];
+    return view('berita',$ber);
+});
+
 
 Auth::routes();
 

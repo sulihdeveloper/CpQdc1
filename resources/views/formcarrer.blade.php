@@ -58,30 +58,15 @@
         </p>
         @endif
 
-    @foreach($category as $item)
-        <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">{{$item->name,$item->id}}</div>
-            @endforeach
-            @foreach($product as $row)
-            <div class="panel-body">
-                <p><b>Responsibilities : &#8226;</b></p>
-                {{$row->responsibilities,$row->category_id}}<br/>
-                <br/><p><b>Requerments :</b></p>
-                {{$row->requerments,$row->category_id}}<br/>
-                <br/><p><b>Description : </b></p>
-                {{$row->description,$row->category_id}}
-            </div>
-        @endforeach
-        <!-- List group -->
-    </div>
-          <td>
-                 <a href="{{ route('carrer.create',$row->id) }}" class="btn btn-info btn-xs">APPLY</a>
-          </td>
-    </div>
+    <div class="card w-75">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
     </div>
 
-        </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <section id="footer" class="section footer">
         <div class="container">
             <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">

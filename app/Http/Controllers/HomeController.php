@@ -52,6 +52,10 @@ class HomeController extends Controller
     {
         return view('contacts');
     }
+    public function berita()
+    {
+        return view('berita');
+    }
     public function formcarrer()
     {
         $category = Category::latest()->paginate(10);
