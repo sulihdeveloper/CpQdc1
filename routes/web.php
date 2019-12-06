@@ -47,6 +47,14 @@ Route::get('berita',function (){
     return view('berita',$ber);
 });
 
+Route::get('bout',function (){
+    $post = Post::latest()->paginate(3);
+    $item =[
+        'post' => $post,
+     ];
+    return view('bout',$item);
+});
+
 
 Auth::routes();
 

@@ -56,6 +56,11 @@ class HomeController extends Controller
     {
         return view('berita');
     }
+    public function bout()
+    {
+        $post = Post::where('page',1)->get();
+        return view('bout');
+    }
     public function formcarrer()
     {
         $category = Category::latest()->paginate(10);
