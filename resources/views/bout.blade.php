@@ -33,11 +33,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                     <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li class="active"><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="#">Carrers</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{!! url('/berita') !!}">News</a></li>
+                    <li><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
+                    <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
     <section id="intro3">
         <div class="intro-content">
-            <h2>Contact</h2>
+            <h2>About Us</h2>
             <h3></h3>
         </div>
     </section>
