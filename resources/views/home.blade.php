@@ -84,7 +84,7 @@
         @foreach($post as $item)
         <div class="row about-container">
             <div class="col-lg-6 content order-lg-1 order-2">
-                <p>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
+                <p>Began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
                     <h4 class="title"><a href=""> {{$item->section_one}}</a></h4>
@@ -218,13 +218,14 @@
         </div>
     </div>
     </section>
-
+<br/><br/><br/><br/><br/><br/>
     <!--==========================
       Footer
     ============================-->
     <section id="footer" class="section-footer">
         <div class="footer-top">
             <div class="container">
+                <br/><br/><br/>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 footer-info">
                         <p>About Us</p>
@@ -245,7 +246,7 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <p>Contact Us</p>
                         <p>
-                            Gedung Graha Qdc Blok C
+                            Gedung Graha Qdc Blok C</br>
                             Jl. Mampang Prapatan Raya No.28 Jakarta Selatan 12790</br>
                             <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
                             <strong>Email:</strong> info@qdc.co.id<br>

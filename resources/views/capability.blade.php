@@ -234,33 +234,35 @@
     </div>
 </section>
 
+<br/><br/><br/><br/><br/><br/>
 <!--==========================
   Footer
 ============================-->
 <section id="footer" class="section-footer">
     <div class="footer-top">
         <div class="container">
+            <br/><br/><br/>
             <div class="row">
                 <div class="col-lg-4 col-md-6 footer-info">
-                    <h3>About Us</h3>
+                    <p>About Us</p>
                     <p>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <p>Useful Links</p>
                     <ul>
                         <li><a href="{!! url('/home') !!}">Home</a></li>
                         <li><a href="{!! url('/bout') !!}">About us</a></li>
                         <li><a href="{!! url('/capability') !!}">Capability</a></li>
-                        <li><a href="{!! url('/berita') !!}"">News</a></li>
+                        <li><a href="{!! url('/berita') !!}">News</a></li>
                         <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h4>Contact Us</h4>
+                    <p>Contact Us</p>
                     <p>
-                        Gedung Graha Qdc Blok C
+                        Gedung Graha Qdc Blok C</br>
                         Jl. Mampang Prapatan Raya No.28 Jakarta Selatan 12790</br>
                         <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
                         <strong>Email:</strong> info@qdc.co.id<br>
@@ -276,7 +278,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
+                    <p>Our Newsletter</p>
                     <p>You can trust us. we only send promo offers, not a single spam.</p>
                     <form action="" method="post">
                         <input type="email" name="email"><input type="submit"  value="Send">
