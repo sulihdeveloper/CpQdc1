@@ -75,30 +75,76 @@
         </section>
     </section>
 
-<br/><br/><br/><br/><br/><br/>
-    <section id="footer" class="section footer">
-    <div class="container">
-        <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
-            <div class="col-sm-12 align-center">
-                <ul class="social-network social-circle">
-                    <li><a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                </ul>
+    <!--==========================
+      Footer
+    ============================-->
+    <section id="footer" class="section-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h3>About Us</h3>
+                        <p>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="{!! url('/home') !!}">Home</a></li>
+                            <li><a href="{!! url('/bout') !!}">About us</a></li>
+                            <li><a href="{!! url('/capability') !!}">Capability</a></li>
+                            <li><a href="{!! url('/berita') !!}"">News</a></li>
+                            <li><a href="{!! url('/contacts') !!}">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Gedung Graha Qdc Blok C
+                            Jl. Mampang Prapatan Raya No.28 Jakarta Selatan 12790</br>
+                            <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
+                            <strong>Email:</strong> info@qdc.co.id<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>You can trust us. we only send promo offers, not a single spam.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit"  value="Send">
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        </br></br>
-        <div class="row align-center copyright">
-            <div class="col-sm-12">
-                <p>&copy; Departemen IT, QDC Technologies</p>
+        <div class="container">
+            <div class="copyright">
+                COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
+            </div>
+            <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+                -->
             </div>
         </div>
-    </div>
+    </section>
+    <!-- #footer -->
 
-</section>
-<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- Javascript Library Files -->
 <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
