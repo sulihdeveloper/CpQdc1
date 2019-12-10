@@ -110,22 +110,18 @@
                             <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
                             <strong>Email:</strong> info@qdc.co.id<br>
                         </p>
-
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                        </div>
-
                     </div>
-
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <p>Our Newsletter</p>
-                        <p>You can trust us. we only send promo offers, not a single spam.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit"  value="Send">
-                        </form>
+                        <div class="col-lg-3 col-md-6 footer-newsletter">
+                            <p>Follow </p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
+                            </div>
+                            </form>
+                        </div>
+          </form>
                     </div>
 
                 </div>
