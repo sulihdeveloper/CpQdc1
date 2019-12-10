@@ -58,9 +58,10 @@
         </p>
         @endif
     <br/>
-    <div class="col-xs-12" data-wow-duration="2.4s">
-    <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
-    </div>
+        <header class="section-header">
+        <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
+        </header>
+
         <section id="news" >
         <div class="section-header">
                 <div class="float-center mar-right20">
@@ -68,10 +69,10 @@
                     <div class="col-lg-3 col-md-6 col-xs-12" data-wow-duration="2.4s">
                         <div class="row">
                             <div class="box">
-                                <h4 class="title"><a href="">{{ $item->name }}</a></h4>
-                                <p class="description">Closing Date.&nbsp;{{ $item->closing_date }}</p></br>
-
+                                <h4 class="title"><a href="">{{$item->name}}</a></h4>
+                                <p class="description">Closing Date.&nbsp;{{$item->closing_date}}</p></br>
                             </div>
+
                                 </div>
                             </div>
                     @endforeach

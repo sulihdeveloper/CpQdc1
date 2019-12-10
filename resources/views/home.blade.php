@@ -59,9 +59,9 @@
                                 <a href="#" class="fa fa-newspaper-o">News</a>
                             </div>
                         </div>
-                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                    <h4 class="title"><a href="">{{ str_limit($nw->judul,$limit = 15, $end = '...')  }}</a></h4>
                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
-                    <h6 class="created_at">{{ $nw->created_at }}</h6>
+                    <h6 class="created_at">{{ $nw->created_at}}</h6>
           </div>
           </div>
           </div>
@@ -78,7 +78,7 @@
     <div class="container">
         <header class="section-header">
             <h2>PT. Qdc Technologies</h2>
-            <h4> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h4>
+            <h5> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h5>
         </header>
         <br>
         @foreach($post as $item)

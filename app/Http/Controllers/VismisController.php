@@ -121,6 +121,7 @@ class VismisController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Vismis::findOrFail($id)->delete();
+        return redirect()->route('vismis.index')->with('success','delete success');
     }
 }

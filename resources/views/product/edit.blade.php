@@ -43,7 +43,7 @@
                 <div class="form-group">
 			  	<div class="col-md-4 col-md-offset-5">
 			  		<button class="btn btn-success" type="submit">save</button> &nbsp;
-			  		<a class="btn btn-warning" href="{{route('contact.index')}}">cancel</a>
+			  		<a class="btn btn-warning" href="{{route('product.index')}}">cancel</a>
 			  	</div>
 			  </div>
 			</form>

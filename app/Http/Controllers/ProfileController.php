@@ -6,6 +6,7 @@ use Auth;
 use App\Manage;
 use Illuminate\Http\Request;
 use Hash;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class ProfileController extends Controller
 {
@@ -58,14 +59,14 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   
+    {
         if($id == Auth::user()->id){
             $show = Manage::findOrFail($id);
-            return view('profile.edit_pass',compact('show'));    
+            return view('profile.edit_pass',compact('show'));
         }else{
             return redirect()->route('home');
         }
-        
+
     }
 
     /**
@@ -79,7 +80,7 @@ class ProfileController extends Controller
     {
        $this->validate($request,[
         'newpass' => 'required|min:5',
-        'passconf' => 'required|min:5|same:newpass',        
+        'passconf' => 'required|min:5|same:newpass',
         ]);
 
        $update = Manage::findOrFail($id);
@@ -98,6 +99,7 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Profile::findOrFail($id)->delete();
+        return redirect()->route('profile.index')->with('success','delete success');
     }
 }

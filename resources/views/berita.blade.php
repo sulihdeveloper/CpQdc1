@@ -63,7 +63,7 @@
                                             <a href="#" class="fa fa-newspaper-o">News</a>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="">{{ $nw->judul }}</a></h4>
+                                    <h4 class="title"><a href="">{{ str_limit($nw->judul,$limit = 15, $end = '...')  }}</a></h4>
                                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                                     <h6 class="created_at">{{ $nw->created_at }}</h6>
                                 </div>
