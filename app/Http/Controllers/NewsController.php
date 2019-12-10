@@ -98,10 +98,9 @@ class NewsController extends Controller
      */
     public function destroy(Request $request, News $news)
     {
+        $news = News::findOrFail($news);
         $news->delete();
 
-        $request->session()->flash('pesan','News '.$request['judul'].' berhasil dihapus.');
-
-        return redirect()->route('news.index');
+        return redirect('news.index')->with('success', 'Data is successfully deleted');
     }
 }
