@@ -86,7 +86,3 @@ Route::resource('category', 'CategoryController',['except'=>['show']]);
 
 
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);
-
-Route::get('dynamic-field', 'DynamicFieldController@index');
-
-Route::post('dynamic-field/insert', 'DynamicFieldController@insert')->name('dynamic-field.insert');
