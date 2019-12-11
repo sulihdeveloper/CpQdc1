@@ -23,16 +23,24 @@ Route::get('/', function () {
 
 Route::get('formcarrer',function (){
     $category = Category::latest()->paginate(10);
-    $product = Product::latest()->paginate(10);
     $loc = [
       'category' => $category,
-      'product' => $product,
     ];
     return view('formcarrer', $loc);
 });
 
 Route::get('contacts',function (){
     return view('contacts');
+});
+
+Route::get('carrer1',function (){
+    $product = Product::latest()->paginate(6);
+    $category = Category::latest()->paginate(10);
+    $dta = [
+        'product' => $product,
+        'category' => $category,
+    ];
+    return view('carrer1',$dta);
 });
 
 Route::get('capability',function (){
