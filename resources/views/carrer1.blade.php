@@ -43,31 +43,23 @@
             </div>
         </div>
     </div>
-    </body>
+
     <br/><br/><br/><br/><br/><br/>
-
-    @foreach($product as $row)
-    <section id="news" id="category_id"  name="cat">
-        <div class="section-header">
-            <div class="float-center mar-right20">
-                @foreach($category as $c)
-                <h4><strong>{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</strong></h4>
-                @endforeach
-                <br/>
-                <h4><strong>Responsibilities :</strong></h4><br/>
-                <h5>{{$row->responsibilities}}</h5>
-                <h4><strong>Requerments :</strong></h4><br/>
-                <h5>{{$row->requerments}}</h5>
-                <h4><strong>Description :</strong></h4><br/>
-                <h5>{{ $row->description}}</h5>
+    <div class="row">
+        <div class="container">
+        <div class="col-lx-12">
+            @foreach($category as $c)
+            <div class="list-group" id="category_id" name="cat" >
+                <div class="list-group-item list-group-action active" id="#category_id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
+                <p class="description">Closing Date.&nbsp;{{$c->closing_date}}</p></br>
             </div>
+            @endforeach
         </div>
-        @endforeach
-    </section>
+    </div>
+    </div>
+    </body>
 
-
-
-                <br/><br/><br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/><br/>
     <!--==========================
       Footer
     ============================-->
@@ -125,7 +117,6 @@
     </section>
     <!-- #footer -->
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Javascript Library Files -->
     <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -144,4 +135,5 @@
 
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
+
 @endsection
