@@ -123,10 +123,19 @@
             <div class="copyright">
                 COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
             </div>
+            <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+                -->
+            </div>
         </div>
     </section>
     <!-- #footer -->
 
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Javascript Library Files -->
     <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -145,5 +154,5 @@
 
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
-
 @endsection
+

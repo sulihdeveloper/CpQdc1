@@ -15,8 +15,7 @@
         <table class="table table-bordered" id="product-table">
             <thead>
             <tr>
-				<th>No</th>
-                <th>Categories</th>
+				<th>No Categories</th>
 				<th>Responsibilities</th>
 				<th>Requerments</th>
 				<th>Description</th>
@@ -25,8 +24,7 @@
 			<tbody>
 			@foreach($product as $row)
 				<tr>
-					<td>{{++$i}}</td>
-                    <td>{{$row->category_id}}</td>
+					<td>{{$row->category_id}}</td>
                     <td>{{$row->responsibilities}}</td>
 					<td>{{$row->requerments}}</td>
 					<td>{{ str_limit($row->description, 60)}}</td>
