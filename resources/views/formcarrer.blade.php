@@ -57,22 +57,26 @@
             {{ session('success') }}
         </p>
         @endif
-    <br/>
         <header class="section-header">
         <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
         </header>
-    <div class="row">
-        <div class="container">
-            <div class="col-lx-12">
-                @foreach($category as $c)
-                    <div class="list-group" id="category_id" name="cat" >
-                        <div class="list-group-item list-group-action active" id="#category_id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
-                        <p class="description">Closing Date.&nbsp;{{$c->closing_date}}</p></br>
+
+    <section id="news" class="section-header" >
+        @foreach($category as $c)
+            <div class="float-center mar-right20">
+                <div class="col-lg-4 col-md-4 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
+                    <div class="row">
+                        <div class="box">
+                            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                               <h4 class="title"><a href="{!! url('/carrer1') !!}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
+                            <p class="description">Closing Date.&nbsp;{{$c->closing_date}}</p></br>
+                            </div>
                     </div>
-                @endforeach
+                </div>
             </div>
-        </div>
-    </div>
+        @endforeach
+    </section>
+    </section>
 
 
 
@@ -162,3 +166,4 @@
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
 @endsection
+

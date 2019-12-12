@@ -51,8 +51,7 @@
         </div>
     </section>
 
-        <section id="news" >
-            <div class="section-header">
+        <section id="news" class="section-header" >
                 @foreach($news as $k=>$nw)
                     <div class="float-center mar-right20">
                         <div class="col-lg-3 col-md-6 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
@@ -71,7 +70,6 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
         </section>
     </section>
 
