@@ -61,6 +61,7 @@
             <p><strong>Description</strong></p>
                     <td><strong>{{ str_limit($row->description, 60)}}</strong></td>
             </div>
+                <a href="{{route('carrer.create',$row->id)}}" class="btn btn-success btn-xs">APLY</a>
             @endforeach
         </div>
     </div>
