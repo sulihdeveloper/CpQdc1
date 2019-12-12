@@ -61,13 +61,14 @@
             <p><strong>Description</strong></p>
                  <td><strong>{{ str_limit($row->description, 60)}}</strong></td>
             </div>
+            @endforeach
+            <br/>
             @csrf
             @method('PATCH')
             <form method="post" action="{{route('carrer.create',$row->id)}}" class="btn btn-success btn-xs">APLY</form>
             @endforeach
         </div>
     </div>
-     @endforeach
     </div>
     </body>
 

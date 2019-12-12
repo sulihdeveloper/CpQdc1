@@ -69,7 +69,7 @@
                         <div class="box">
                             <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                                <h4 class="title"><a href="{!! url('/carrer1',$c->id)!!}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
-                            <p class="description">Closing Date.&nbsp;{{$c->closing_date}}</p></br>
+                            <p class="description">Closing Date.&nbsp;{{$c->closing_date,$c->id}}</p></br>
                             </div>
                     </div>
                 </div>

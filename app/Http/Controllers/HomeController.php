@@ -66,8 +66,9 @@ class HomeController extends Controller
         $category = Category::latest()->paginate(10);
         return view('formcarrer');
     }
-    public function carrer1()
+    public function carrer1($id)
     {
+        DB::table('product')->where('id', $id)->show();
         $product = Product::latest()->paginate(10);
         return view('carrer1');
     }
