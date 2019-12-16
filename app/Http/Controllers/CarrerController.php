@@ -7,19 +7,21 @@ use App\Carrer;
 
 class CarrerController extends Controller
 {
+
     public function index()
     {
         $carrer = Carrer::latest()->paginate(10);
         return view('carrer.index', compact('carrer'))->with('i');
     }
 
-    public function create()
+    public function create(Request $request)
     {
         return view('carrer.create');
     }
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'first_name'    =>  'required',
             'last_name'    =>  'required',

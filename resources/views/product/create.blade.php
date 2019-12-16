@@ -24,19 +24,19 @@
                     <div class="form-group">
                         <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
                         <div class="col-md-9">
-                            <textarea class="form-control col-md-9" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</textarea>
+                            <text class="form-control col-md-9" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</text>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="requerments" placeholder="requerments" class="col-md-3 control-label">Requerments</label>
                         <div class="col-md-9">
-                            <textarea class="form-control col-md-9" name="requerments"  placeholder="requerments">{{old('requerments')}}</textarea>
+                            <text class="form-control col-md-9" name="requerments"  placeholder="requerments">{{old('requerments')}}</text>
                         </div>
                     </div>
                     <div class="form-group">
 					  <label for="desc" class="col-md-3 control-label">Description</label>
 					  <div class="col-md-9">
-					  	<textarea class="form-control col-md-9" name="desc"  placeholder="description">{{old('desc')}}</textarea>
+					  	<text class="form-control col-md-9" name="desc"  placeholder="description">{{old('desc')}}</text>
 					  </div>
 					</div>
 				  <div class="form-group">

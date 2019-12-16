@@ -50,36 +50,37 @@
             <h3></h3>
         </div>
     </section>
+<br/><br/>
 
-    <section id="about">
+        <section id="news" id="id">
         <div class="container">
             <header class="section-header">
                 <h2>PT. Qdc Technologies</h2>
                 <h5> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h5>
             </header>
-            <br>
-    @foreach($news as $k=>$nw)
-        <div class="row about-container">
-            <div class="col-lg-6 content order-lg-1 order-md-12">
+            <br/>
+            @foreach($news as $k=>$nw)
+        <div class="row about-container" id="id">
+            <div class="col-lg-4 content order-lg-1 order-md-2">
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                    <h4 class="title"><strong>{{$nw->judul}}</strong></h4>
-                    <p align=”justify” class="description">{{$nw->isi}} </p>
-                    <p align=”justify” class="description">{{$nw->created_at}}&nbsp;/ Admin QDC Technologies  </p>
+                    <h4 name="judul" id="id"> <strong>{{$nw->judul}}</strong></h4>
+                    <p name="isi" id="id">{{$nw->isi}} </p>
+                    <p name="created_at" id="id">{{$nw->created_at}}&nbsp;/ Admin QDC Technologies  </p>
                 </div>
             </div>
-            @endforeach
         </div>
         </div>
     </section>
         </div>
     </section>
+    @endforeach
 
 
-                <br/><br/><br/><br/><br/><br/>
-                <!--==========================
-                  Footer
-                ============================-->
+    <br/><br/><br/><br/><br/><br/>
+     <!--==========================
+        Footer
+    ============================-->
                 <section id="footer" class="section-footer">
                     <div class="footer-top">
                         <div class="container">
