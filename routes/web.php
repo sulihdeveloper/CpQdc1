@@ -33,7 +33,7 @@ Route::get('contacts',function (){
     return view('contacts');
 });
 
-Route::get('/carrer1/{id}',function (){
+Route::get('/carrer1',function (){
     $product = Product::latest()->paginate(6);
     $category = Category::latest()->paginate(10);
     $dta = [
@@ -47,7 +47,7 @@ Route::get('capability',function (){
     return view('capability');
 });
 
-Route::get('berita',function (){
+Route::get('/berita',function (){
     $news = News::latest()->paginate(10);
     $ber = [
         'news' => $news,

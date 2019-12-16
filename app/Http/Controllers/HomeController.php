@@ -54,6 +54,7 @@ class HomeController extends Controller
     }
     public function berita()
     {
+        $news = News::latest()->paginate(10);
         return view('berita');
     }
     public function bout()

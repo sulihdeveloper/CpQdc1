@@ -57,6 +57,7 @@
             {{ session('success') }}
         </p>
         @endif
+
         <header class="section-header">
         <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
         </header>
@@ -75,7 +76,7 @@
                 </div>
             </div>
         @endforeach
-    </section>
+        </section>
     </section>
 
 

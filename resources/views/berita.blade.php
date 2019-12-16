@@ -51,76 +51,79 @@
         </div>
     </section>
 
-        <section id="news" class="section-header" >
-                @foreach($news as $k=>$nw)
-                    <div class="float-center mar-right20">
-                        <div class="col-lg-3 col-md-6 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
-                            <div class="row">
-                                <div class="box">
-                                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                                        <div class="float-left mar-right20">
-                                            <a href="#" class="fa fa-newspaper-o">News</a>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="">{{ str_limit($nw->judul,$limit = 15, $end = '...')  }}</a></h4>
-                                    <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
-                                    <h6 class="created_at">{{ $nw->created_at }}</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-        </section>
-    </section>
-
-    <br/><br/><br/><br/><br/><br/>
-    <!--==========================
-      Footer
-    ============================-->
-    <section id="footer" class="section-footer">
-        <div class="footer-top">
-            <div class="container">
-                <br/><br/><br/>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 footer-info">
-                        <p>About Us</p>
-                        <p>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <p>Useful Links</p>
-                        <ul>
-                            <li><a href="{!! url('/home') !!}">Home</a></li>
-                            <li><a href="{!! url('/bout') !!}">About us</a></li>
-                            <li><a href="{!! url('/capability') !!}">Capability</a></li>
-                            <li><a href="{!! url('/berita') !!}">News</a></li>
-                            <li><a href="{!! url('/contacts') !!}">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <p>Contact Us</p>
-                        <p>
-                            Gedung Graha Qdc Blok C</br>
-                            Jl. Mampang Prapatan Raya No.28 Jakarta Selatan 12790</br>
-                            <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
-                            <strong>Email:</strong> info@qdc.co.id<br>
-                        </p>
-                    </div>
-                        <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <p>Follow </p>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                            </div></form>
-                        </div>
-</form>
-                    </div>
-
+    <section id="about">
+        <div class="container">
+            <header class="section-header">
+                <h2>PT. Qdc Technologies</h2>
+                <h5> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h5>
+            </header>
+            <br>
+    @foreach($news as $k=>$nw)
+        <div class="row about-container">
+            <div class="col-lg-6 content order-lg-1 order-md-12">
+                <div class="icon-box wow fadeInUp">
+                    <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+                    <h4 class="title"><strong>{{$nw->judul}}</strong></h4>
+                    <p align=”justify” class="description">{{$nw->isi}} </p>
+                    <p align=”justify” class="description">{{$nw->created_at}}&nbsp;/ Admin QDC Technologies  </p>
                 </div>
             </div>
+            @endforeach
+        </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+
+                <br/><br/><br/><br/><br/><br/>
+                <!--==========================
+                  Footer
+                ============================-->
+                <section id="footer" class="section-footer">
+                    <div class="footer-top">
+                        <div class="container">
+                            <br/><br/><br/>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 footer-info">
+                                    <p>About Us</p>
+                                    <p>PT. Qdc Technologies began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</p>
+                                </div>
+
+                                <div class="col-lg-2 col-md-6 footer-links">
+                                    <p>Useful Links</p>
+                                    <ul>
+                                        <li><a href="{!! url('/home') !!}">Home</a></li>
+                                        <li><a href="{!! url('/bout') !!}">About us</a></li>
+                                        <li><a href="{!! url('/capability') !!}">Capability</a></li>
+                                        <li><a href="{!! url('/berita') !!}">News</a></li>
+                                        <li><a href="{!! url('/contacts') !!}">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-contact">
+                                    <p>Contact Us</p>
+                                    <p>
+                                        Gedung Graha Qdc Blok C</br>
+                                        Jl. Mampang Prapatan Raya No.28 Jakarta Selatan 12790</br>
+                                        <strong>Phone:</strong> (021) 79191234 / (021) 79193333<br>
+                                        <strong>Email:</strong> info@qdc.co.id<br>
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-6 footer-newsletter">
+                                    <p>Follow </p>
+                                    <div class="social-links">
+                                        <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                        <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
+                                    </div></form>
+                                </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
         </div>
 
         <div class="container">
@@ -141,21 +144,22 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- Javascript Library Files -->
-<script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-<script src="js1/jquery.js"></script>
-<script src="js1/jquery.easing.1.3.js"></script>
-<script src="js1/bootstrap.min.js"></script>
-<script src="js1/jquery.isotope.min.js"></script>
-<script src="js1/jquery.nicescroll.min.js"></script>
-<script src="js1/fancybox/jquery.fancybox.pack.js"></script>
-<script src="js1/skrollr.min.js"></script>
-<script src="js1/jquery.scrollTo.min.js"></script>
-<script src="js1/jquery.localScroll.min.js"></script>
-<script src="js1/stellar.js"></script>
-<script src="js1/jquery.appear.js"></script>
-<script src="js1/jquery.flexslider-min.js"></script>
+    <!-- Javascript Library Files -->
+    <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js1/jquery.js"></script>
+    <script src="js1/jquery.easing.1.3.js"></script>
+    <script src="js1/bootstrap.min.js"></script>
+    <script src="js1/jquery.isotope.min.js"></script>
+    <script src="js1/jquery.nicescroll.min.js"></script>
+    <script src="js1/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js1/skrollr.min.js"></script>
+    <script src="js1/jquery.scrollTo.min.js"></script>
+    <script src="js1/jquery.localScroll.min.js"></script>
+    <script src="js1/stellar.js"></script>
+    <script src="js1/jquery.appear.js"></script>
+    <script src="js1/jquery.flexslider-min.js"></script>
 
-<!-- Template Main Javascript File -->
-<script src="js1/main.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="js1/main.js"></script>
 @endsection
+

@@ -47,27 +47,27 @@
     <br/><br/><br/><br/><br/><br/>
 
     <body>
-    @foreach($category as $c)
     <div class="row">
+        @foreach($category as $c)
         <div class="container">
         <div class="col-lx-12">
             <div class="list-group" id="id" name="cat" >
                 <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
                 @foreach($product as $row)
-            <p><strong>Responsibilities</strong></p>
-                <td>{{$row->responsibilities}}</td><br/>
-            <p><strong>Requerments</strong></p>
-                <td>{{$row->requerments}}</td><br/>
-            <p><strong>Description</strong></p>
-                 <td><strong>{{ str_limit($row->description, 60)}}</strong></td>
+            <p id="id"><strong>Responsibilities</strong></p>
+                <td id="id">{{$row->responsibilities}}</td><br/>
+            <p id="id"><strong>Requerments</strong></p>
+                <td id="id">{{$row->requerments}}</td><br/>
+            <p id="id"><strong>Description</strong></p>
+                 <td id="id"><strong>{{ str_limit($row->description, 60)}}</strong></td>
             </div>
-            @endforeach
             <br/>
-            @csrf
+                @csrf
             @method('PATCH')
             <form method="post" action="{{route('carrer.create',$row->id)}}" class="btn btn-success btn-xs">APLY</form>
             @endforeach
         </div>
+            @endforeach
     </div>
     </div>
     </body>
