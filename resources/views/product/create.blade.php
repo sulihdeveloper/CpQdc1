@@ -2,8 +2,6 @@
 @extends('layouts.app')
 
 @section('content')
-    {{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}
-    {{ asset('vendor/unisharp/laravel-ckeditor/adapters/jquery.js') }}
     <div class="container">
 	<div id="content">
 		<div class="col-md-12">
@@ -27,7 +25,7 @@
 
                     <div class="form-group">
                         <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
-                        <div class="col-md-9">
+                        <div class="col-md-12">
                             <textarea id="content" class="form-control" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</textarea>
                         </div>
                     </div>
@@ -64,7 +62,11 @@
 				@endif
 			</div>
 		</div>
-	</div>
+        <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'responsibilities' );
+        </script>
+    </div>
 </div>
 @endsection
 
