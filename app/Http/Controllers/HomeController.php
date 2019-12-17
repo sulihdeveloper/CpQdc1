@@ -13,7 +13,6 @@ use App\Product;
 
 class HomeController extends Controller
 {
-
     public function index()
     {
         $slide = Slide::latest()->paginate(10);

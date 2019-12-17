@@ -1,7 +1,10 @@
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+    {{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}
+    {{ asset('vendor/unisharp/laravel-ckeditor/adapters/jquery.js') }}
+    <div class="container">
 	<div id="content">
 		<div class="col-md-12">
 		<h1>Carrer</h1>
@@ -21,22 +24,23 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
                         <div class="col-md-9">
-                            <text class="form-control col-md-9" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</text>
+                            <textarea id="content" class="form-control" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="requerments" placeholder="requerments" class="col-md-3 control-label">Requerments</label>
                         <div class="col-md-9">
-                            <text class="form-control col-md-9" name="requerments"  placeholder="requerments">{{old('requerments')}}</text>
+                            <textarea id="content" class="form-control" name="requerments"  placeholder="requerments">{{old('requerments')}}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
 					  <label for="desc" class="col-md-3 control-label">Description</label>
 					  <div class="col-md-9">
-					  	<text class="form-control col-md-9" name="desc"  placeholder="description">{{old('desc')}}</text>
+					  	<textarea id="content" class="form-control col-md-9" name="desc"  placeholder="description">{{old('desc')}}</textarea>
 					  </div>
 					</div>
 				  <div class="form-group">

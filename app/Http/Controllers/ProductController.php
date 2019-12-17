@@ -72,6 +72,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $show = Product::findOrFail($id);
+        $cat = Category::all($id);
         return view('product.show',compact('show'));
     }
 
@@ -82,7 +83,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   $cat = Category::all();
+    {
+        $cat = Category::all();
         $row = Product::findOrFail($id);
         return view('product.edit',compact('row','cat'));
     }

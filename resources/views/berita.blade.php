@@ -61,7 +61,7 @@
             <br/>
             @foreach($news as $k=>$nw)
         <div class="row about-container" id="id">
-            <div class="col-lg-4 content order-lg-1 order-md-2">
+            <div class="col-lg-4 content order-lg-1 order-md-2 ">
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
                     <h4 name="judul" id="id"> <strong>{{$nw->judul}}</strong></h4>
