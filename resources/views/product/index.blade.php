@@ -16,8 +16,6 @@
             <thead>
             <tr>
 				<th>No Categories</th>
-				<th>Responsibilities</th>
-				<th>Requerments</th>
 				<th>Description</th>
 				<th>Action</th>
 			</thead>
@@ -25,9 +23,7 @@
 			@foreach($product as $row)
 				<tr>
 					<td>{{$row->category_id}}</td>
-                    <td>{{$row->responsibilities}}</td>
-					<td>{{$row->requerments}}</td>
-					<td>{{ str_limit($row->description, 60)}}</td>
+                	<td>{{$row->description}}</td>
 					<td>
 					<a href="{{route('product.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
 					<a href="{{route('product.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>

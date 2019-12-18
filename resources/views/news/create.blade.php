@@ -6,7 +6,7 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-body">
-                        <h2>Post baru</h2>
+                        <h2>News baru</h2>
 
                         @if ($errors->any())
                             <div class="alert alert-danger">
@@ -43,11 +43,14 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
-
                     </div>
                     </form>
                 </div>
             </div>
+            <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+            <script>
+                CKEDITOR.replace( 'isi' );
+            </script>
         </div>
     </div>
     </div>

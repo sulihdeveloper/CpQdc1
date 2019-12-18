@@ -11,18 +11,9 @@
             <thead>
                 <p><b>category: </b>{{$show->category_id}}</p>
                 <p>
-                    <b>Responsibilities: </b>
-                    {{$show->responsibilities}}
+                <b>description: </b>
+                {{$show->description}}
                 </p>
-                <p>
-                    <b>requerments: </b>
-                    {{$show->requerments}}
-                </p>
-
-                <p>
-			<b>description: </b>
-			{{$show->description}}
-		</p>
 			<a href="{{route('product.edit',$show->id)}}" class="btn btn-success btn-xs">edit</a>
 			<a href="{{route('product.index')}}" class="btn btn-info btn-xs">back</a>
 		</p>

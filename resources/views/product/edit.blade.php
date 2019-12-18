@@ -22,19 +22,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="responsibilities" class="col-md-3 control-label">Responsibilities</label>
-                    <div class="col-md-9">
-                        <textarea class="form-control col-md-9" name="responsibilities" cols="3" rows="5" placeholder="responsibilities">{{old('responsibilities')}}</textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="requerments" class="col-md-3 control-label">Requerments</label>
-                    <div class="col-md-9">
-                        <textarea class="form-control col-md-9" name="requerments" cols="3" rows="5" placeholder="requerments">{{old('requerments')}}</textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <label for="desc" class="col-md-3 control-label">Description</label>
                     <div class="col-md-9">
                         <textarea class="form-control col-md-9" name="desc" cols="3" rows="5" placeholder="description">{{old('desc')}}</textarea>
@@ -60,5 +47,9 @@
 			@endif
 		</div>
 	</div>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'desc' );
+    </script>
 </div>
 @endsection

@@ -22,19 +22,6 @@
                             </select>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="responsibilities"  placeholder="responsibilities" class="col-md-3 control-label">Responsibilities</label>
-                        <div class="col-md-12">
-                            <textarea id="content" class="form-control" name="responsibilities"  placeholder="responsibilities">{{old('responsibilities')}}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="requerments" placeholder="requerments" class="col-md-3 control-label">Requerments</label>
-                        <div class="col-md-9">
-                            <textarea id="content" class="form-control" name="requerments"  placeholder="requerments">{{old('requerments')}}</textarea>
-                        </div>
-                    </div>
                     <div class="form-group">
 					  <label for="desc" class="col-md-3 control-label">Description</label>
 					  <div class="col-md-9">
@@ -64,7 +51,7 @@
 		</div>
         <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
         <script>
-            CKEDITOR.replace( 'responsibilities' );
+            CKEDITOR.replace( 'desc' );
         </script>
     </div>
 </div>

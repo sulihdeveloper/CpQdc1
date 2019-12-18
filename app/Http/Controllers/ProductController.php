@@ -41,19 +41,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
-        $section = $phpWord->addSection();
-        $text = $section->addText($request->get('responsibilities'));
-        $text = $section->addText($request->get('requerments'));
-        $text = $section->addText($request->get('desc'));
-
-        $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-        $objWriter->save('Appdividend.docx');
-        return response()->download(public_path('phpflow.docx'));
+        request()->validate([
+            'desc' => 'required',
+            'cat' => 'required',
+        ]);
 
         $product = new Product;
-        $product->responsibilities = $request->responsibilities;
-        $product->requerments = $request->requerments;
         $product->description = $request->desc;
         $product->category_id = $request->cat;
         $product->user_id = Auth::user()->id;
@@ -99,16 +92,12 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'responsibilities' => 'required|max:10000',
-            'requerments' => 'required|max:10000',
             'desc' => 'required',
             'cat' => 'required'
         ]);
 
 
         $update = Product::findOrFail($id);
-        $update->responsibilities = $request->responsibilities;
-        $update->requerments = $request->requerments;
         $update->description = $request->desc;
         $update->category_id = $request->cat;
 
