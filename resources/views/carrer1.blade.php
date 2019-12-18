@@ -55,7 +55,7 @@
                 <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
                 @foreach($product as $row)
                 <p><strong>QDC TECHNOLOGIES, PT</strong></p>
-                <td id="id" name="desc">{{$row->description}}</td>
+                <td id="id" name="desc">{!! html_entity_decode($row->description)!!}</td>
             </div>
             <br/>
                 @csrf
