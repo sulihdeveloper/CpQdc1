@@ -59,7 +59,7 @@
                                 <a href="{!! url('/berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
                             </div>
                         </div>
-                    <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = '...')  }}</a></h4>
+                    <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = 'more')  }}</a></h4>
                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                     <h6 class="created_at">{{$nw->created_at->format('d-m-Y')}}</h6>
           </div>

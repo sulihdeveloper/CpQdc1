@@ -89,8 +89,8 @@ Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
         ]]);
 
 Route::resource('category', 'CategoryController',['except'=>['show']]);
-    Route::resource('product', 'ProductController');
-    Route::resource('news','NewsController');
+    Route::resource('/product', 'ProductController');
+    Route::resource('/news','NewsController');
 
 
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);

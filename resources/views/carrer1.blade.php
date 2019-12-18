@@ -54,12 +54,8 @@
             <div class="list-group" id="id" name="cat" >
                 <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
                 @foreach($product as $row)
-            <p id="id"><strong>Responsibilities</strong></p>
-                <td id="id">{{$row->responsibilities}}</td><br/>
-            <p id="id"><strong>Requerments</strong></p>
-                <td id="id">{{$row->requerments}}</td><br/>
-            <p id="id"><strong>Description</strong></p>
-                 <td id="id"><strong>{{ str_limit($row->description, 60)}}</strong></td>
+                <p><strong>QDC TECHNOLOGIES, PT</strong></p>
+                <td id="id" name="desc">{{$row->description}}</td>
             </div>
             <br/>
                 @csrf
@@ -158,4 +154,3 @@
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
 @endsection
-
