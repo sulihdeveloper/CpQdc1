@@ -13,7 +13,7 @@ use App\Product;
 
 class HomeController extends Controller
 {
-    public function index()
+        public function index()
     {
         $slide = Slide::latest()->paginate(10);
         $news = News::latest()->paginate(6);
@@ -22,7 +22,6 @@ class HomeController extends Controller
         $category = formcarrer::latest()->paginate();
     return view ('home',compact('clien','contacts','news','formcarrer'));
     }
-
 
     /**
      * Create a new controller instance.
@@ -73,4 +72,4 @@ class HomeController extends Controller
         return view('carrer1');
     }
 
-}
+    }
