@@ -47,7 +47,7 @@ Route::get('capability',function (){
     return view('capability');
 });
 
-Route::get('/berita/{id}',function (){
+Route::get('/berita',function (){
     $news = News::latest()->paginate(10);
     $ber = [
         'news' => $news,

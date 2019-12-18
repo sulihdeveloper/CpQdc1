@@ -52,30 +52,29 @@
     </section>
 <br/><br/>
 
-        <section id="news" id="id">
-        <div class="container">
-            <header class="section-header">
-                <h2>PT. Qdc Technologies</h2>
-                <h5> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h5>
-            </header>
-            <br/>
-            @foreach($news as $k=>$nw)
-        <div class="row about-container" id="id">
-            <div class="col-lg-4 content order-lg-1 order-md-2 ">
-                <div class="icon-box wow fadeInUp">
-                    <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                    <h4 name="judul" id="id"> <strong>{{$nw->judul}}</strong></h4>
-                    <p name="isi" id="id">{{$nw->isi}} </p>
-                    <p name="created_at" id="id">{{$nw->created_at}}&nbsp;/ Admin QDC Technologies  </p>
-                </div>
+        <section id="news" id="id" >
+            <div class="section-header">
+                @foreach($news as $k=>$nw)
+                    <div class="float-center mar-right20">
+                        <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
+                            <div class="row">
+                                <div class="box">
+                                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                                        <div class="float-left mar-right20">
+                                            <a href="{!! url('/berita') !!}" class="fa fa-newspaper-o">News</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = '...')  }}</a></h4>
+                                    <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
+                                    <h6 class="created_at">{{ $nw->created_at}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-        </div>
-        </div>
+        </section>
     </section>
-        </div>
-    </section>
-    @endforeach
-
 
     <br/><br/><br/><br/><br/><br/>
      <!--==========================
