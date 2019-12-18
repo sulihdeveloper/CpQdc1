@@ -32,7 +32,7 @@
 						<div class="col-md-3">
 							<h4>What we do</h4>
 							<p>
-								{{$item->section_two}}
+								{!! html_entity_decode($item->section_two)!!}
 							</p>
 						</div>
 						<div class="col-md-2">

@@ -36,7 +36,7 @@
                                 <tr>
                                     <td>{{ $news->firstItem() + $k }}</td>
                                     <td>{{ $data->judul }}</td>
-                                    <td>{{ str_limit($data->isi, $limit = 250, $end = '...') }}</td>
+                                    <td>{!! html_entity_decode($data->isi) !!}</td>
                                     <td>
 
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
