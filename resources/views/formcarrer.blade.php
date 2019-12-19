@@ -33,7 +33,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                    <li><a href="">Home</a></li>
+                    <li><a href="{!! url('/home') !!}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
@@ -69,8 +69,8 @@
                     <div class="row">
                         <div class="box">
                             <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                               <h4 class="title"><a href="{!! url('/carrer1')!!}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
-                            <p class="description">Closing Date.&nbsp;{{$c->closing_date,$c->id}}</p></br>
+                               <h4 class="title"><a href="{!! url('/carrer1',$c->id)!!}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
+                            <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date,$c->id}}</p></br>
                             </div>
                     </div>
                 </div>

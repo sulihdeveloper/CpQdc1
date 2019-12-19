@@ -15,7 +15,7 @@
         <table class="table table-bordered" id="product-table">
             <thead>
             <tr>
-				<th>No Categories</th>
+				<th>Carrer</th>
 				<th>Description</th>
 				<th>Action</th>
 			</thead>

@@ -33,7 +33,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                    <li><a href="">Home</a></li>
+                    <li><a href="{!! url('/home') !!}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
@@ -44,26 +44,26 @@
         </div>
     </div>
     </body>
-    <br/><br/><br/><br/><br/><br/>
+
+    @if (session('success'))
+        <p class="alert alert-success">
+            {{ session('success') }}
+        </p>
+    @endif
 
     <body>
     <div class="row">
         @foreach($category as $c)
-        <div class="container">
         <div class="col-lx-12">
-            <div class="list-group" id="id" name="cat" >
+            <div class="list-group" name="cat" >
                 <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
                 @foreach($product as $row)
-                <p><strong>QDC TECHNOLOGIES, PT</strong></p>
-                <td id="id" name="desc">{!! html_entity_decode($row->description)!!}</td>
+                <td id="id" name="desc" class="form-control input-lg">{!! html_entity_decode($row->description)!!}</td>
             </div>
-            <br/>
-                @csrf
-            @method('PATCH')
-            <form method="post" action="{{route('carrer.create',$row->id)}}" class="btn btn-success btn-xs">APLY</form>
+            @endforeach
+            <form method="post" action="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
             @endforeach
         </div>
-            @endforeach
     </div>
     </div>
     </body>
