@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
-Route::get('formcarrer',function (){
+Route::get('/formcarrer',function (){
     $category = Category::latest()->paginate(10);
     $loc = [
       'category' => $category,
