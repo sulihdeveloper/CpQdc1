@@ -62,11 +62,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($path)
     {
-        $show = Product::findOrFail($id)->where('id',$id)->get();
-        $cat = Category::all($id)->where('id',$id)->get();
-        return view('carrer1',compact('carrer1'));
+        $product = Product::where('path', $path)->first();
+        $category = Category::where('path', $path)->first();
+        return view('carrer1',compact('product','category'));
     }
 
     /**

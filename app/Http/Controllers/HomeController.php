@@ -65,11 +65,11 @@ class HomeController extends Controller
         $category = Category::latest()->paginate(10);
         return view('formcarrer');
     }
-    public function carrer1($id)
+    public function carrer1($path)
     {
-        DB::table('product')->where('id', $id)->show();
-        $product = Product::latest()->paginate(10);
-        return view('carrer1');
+        $category = Category::latest($path);
+        $product = Product::latest($path);
+        return view('carrer1','Product','Category');
     }
 
     }
