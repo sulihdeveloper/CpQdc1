@@ -58,7 +58,7 @@
             <div class="list-group" name="cat" >
                 <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
                 @foreach($product as $row)
-                <td id="id" name="desc" class="form-control input-lg">{!! html_entity_decode($row->description)!!}</td>
+                <td id="id" name="desc" class="form-control input-lg">{!! html_entity_decode($row->description,$row->id)!!}</td>
             </div>
             @endforeach
             <form method="post" action="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>

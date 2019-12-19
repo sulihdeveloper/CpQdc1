@@ -64,9 +64,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $show = Product::findOrFail($id);
-        $cat = Category::all($id);
-        return view('product.show',compact('show'));
+        $show = Product::findOrFail($id)->where('id',$id)->get();
+        $cat = Category::all($id)->where('id',$id)->get();
+        return view('carrer1',compact('carrer1'));
     }
 
     /**
