@@ -55,7 +55,7 @@ Route::get('/berita',function (){
     return view('berita',$ber);
 });
 Route::get('/view_berita',function (){
-    $news = News::latest()->paginate(9);
+    $news = News::latest();
     $ber = [
         'news' => $news,
     ];

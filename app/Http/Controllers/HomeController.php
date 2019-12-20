@@ -73,10 +73,10 @@ class HomeController extends Controller
         return view('view_carrer');
     }
 
-    public function view_berita()
+    public function view_berita(News $news)
     {
-        $news = News::latest()->paginate(10);
-        return view('view_berita');
+        $news = News::latest();
+        return view('view_berita',compact('news'));
     }
 
     }

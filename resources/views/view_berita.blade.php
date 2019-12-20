@@ -50,13 +50,28 @@
             {{ session('success') }}
         </p>
     @endif
-    <section id="id" >
+
             @foreach($news as $k=>$nw)
-                                <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ ($nw->judul}}</a></h4>
-                                <p class="description">{{ ($nw->isi}}.</p></br>
-                                <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
-           @endforeach
-    </section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table class="table table-bordered" id="contact-table">
+                                        <thead>
+                                        <tr>
+                                            <h4 class="title">"{{ ($nw->judul}}"</h4>
+                                            <p class="description">{{ ($nw->isi}}.</p>
+                                            <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
+                                        </tr>
+                                        @endforeach
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 

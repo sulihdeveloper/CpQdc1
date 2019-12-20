@@ -17,7 +17,6 @@
                                 <a href="{{ route('news.index') }}" class="btn">Kembali</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
