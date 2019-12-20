@@ -33,14 +33,14 @@ Route::get('contacts',function (){
     return view('contacts');
 });
 
-Route::get('/carrer1/{$id_category}',function (){
+Route::get('/view_carrer',function (){
     $product = Product::latest()->paginate(6);
     $category = Category::latest()->paginate(10);
     $dta = [
         'product' => $product,
         'category' => $category,
     ];
-    return view('carrer1',$dta);
+    return view('view_carrer',$dta);
 });
 
 Route::get('capability',function (){
@@ -48,6 +48,13 @@ Route::get('capability',function (){
 });
 
 Route::get('/berita',function (){
+    $news = News::latest()->paginate(9);
+    $ber = [
+        'news' => $news,
+    ];
+    return view('berita',$ber);
+});
+Route::get('/view_berita',function (){
     $news = News::latest()->paginate(9);
     $ber = [
         'news' => $news,

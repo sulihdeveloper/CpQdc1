@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css1/style.css">
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
-    </head>
+
 
     <body>
     <div id="fullpage"></div>
@@ -45,42 +45,24 @@
     </div>
     </body>
 
-    <section id="intro3">
-        <div class="intro-content">
-            <h2>Carrers</h2>
-            <h3></h3>
-            </div>
-    </section>
-    <br/>
     @if (session('success'))
         <p class="alert alert-success">
             {{ session('success') }}
         </p>
-        @endif
-
-        <header class="section-header">
-        <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
-        </header>
-
-    <section id="news" class="section-header" name="id">
-        @foreach($category as $c)
-            <div class="float-center mar-right20">
-                <div class="col-lg-4 col-md-4 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
-                    <div class="row">
-                        <div class="box">
-                            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                            <h4 class="title" name="title"> <a href="{!! url('/view_carrer') !!}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
-                            <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date}}</p>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        </section>
+    @endif
+    <section id="id" >
+            @foreach($news as $k=>$nw)
+                                <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ ($nw->judul}}</a></h4>
+                                <p class="description">{{ ($nw->isi}}.</p></br>
+                                <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
+           @endforeach
+    </section>
 
 
 
-    <br/><br/><br/><br/><br/><br/>
+
+
+    <br/>
     <!--==========================
       Footer
     ============================-->
@@ -114,33 +96,24 @@
                             <strong>Email:</strong> info@qdc.co.id<br>
                         </p>
                     </div>
-                        <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <p>Follow </p>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                            </div></form>
-                        </div>
-                        </form>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <p>Follow </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
+                        </div></form>
                     </div>
-
+                    </form>
                 </div>
+
             </div>
         </div>
 
         <div class="container">
             <div class="copyright">
                 COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
-            </div>
-            <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-                -->
             </div>
         </div>
     </section>
@@ -166,4 +139,3 @@
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
 @endsection
-

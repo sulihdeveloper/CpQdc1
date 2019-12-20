@@ -62,10 +62,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($path)
+    public function show($id)
     {
-        $product = Product::where('path', $path)->first();
-        $category = Category::where('path', $path)->first();
+        $product = Product::where('id', $id)->first();
+        $category = Category::where('id', $id)->first();
         return view('carrer1',compact('product','category'));
     }
 

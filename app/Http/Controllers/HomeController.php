@@ -55,6 +55,7 @@ class HomeController extends Controller
         $news = News::latest()->paginate(10);
         return view('berita');
     }
+
     public function bout()
     {
         $post = Post::where('page',1)->get();
@@ -65,12 +66,17 @@ class HomeController extends Controller
         $category = Category::latest()->paginate(10);
         return view('formcarrer');
     }
-    public function carrer1($id_category)
+    public function view_carrer($id)
     {
-        $product = DB::table('product')->where('comments.post_id', $category->id_category)
-        ->where('id_category', '==', 0)
-        ->orderBy('id', 'DESC');
-        return view('carrer1');
+        $category = Category::latest()->paginate(10);
+        $product = Product::latest()->paginate(10);
+        return view('view_carrer');
+    }
+
+    public function view_berita()
+    {
+        $news = News::latest()->paginate(10);
+        return view('view_berita');
     }
 
     }

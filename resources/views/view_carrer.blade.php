@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css1/style.css">
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
-    </head>
+
 
     <body>
     <div id="fullpage"></div>
@@ -51,21 +51,22 @@
         </p>
     @endif
 
-    <body>
+    <br/><br/><br/><br/><br/><br/>
     @foreach($category as $c)
+        @foreach($product as $row)
+        <body>
         <div class="row">
         <div class="col-lx-12">
-            <div class="list-group" name="cat" >
-                <div class="list-group-item action active" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div></br>
-            </div>
-            @endforeach
-            @foreach($product as $row)
+            <div class="list-group" name="cat" id="id" >
+            <div class="list-group-item action active" name="cat" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div><br/>
             <td id="id" name="desc" class="form-control input-lg"> {!! html_entity_decode($row->description,$row->id)!!}</td>
+            @endforeach
             </div>
-        <form method="post" action="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
-    </div>
-    @endforeach
-    </body>
+            <form method="post" action="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
+            @endforeach
+            </div>
+        </div>
+        </body>
 
 
     <br/>
@@ -115,7 +116,6 @@
                 </div>
 
             </div>
-        </div>
         </div>
 
         <div class="container">
