@@ -62,15 +62,15 @@
         <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
         </header>
 
-    <section id="news" class="section-header" >
+    <section id="news" class="section-header" name="id_category">
         @foreach($category as $c)
             <div class="float-center mar-right20">
                 <div class="col-lg-4 col-md-4 col-xs-12 wow bounceInUp" data-wow-duration="2.4s">
                     <div class="row">
                         <div class="box">
                             <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                               <h4 class="title" name="title"> <a href=/carrer1/{{$c->path}}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
-                            <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date}}</p></br>
+                            <h4 class="title" name="title"> <a href=/carrer1/{{$c->id_category}}">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</a></h4>
+                            <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date}}</p>
                             </div>
                     </div>
                 </div>

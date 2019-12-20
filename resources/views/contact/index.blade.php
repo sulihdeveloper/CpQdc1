@@ -15,9 +15,6 @@
             </p>
         @endif
 
-        <div class="float-right">
-            <p class="text-center"><a href="{{route('contact.create')}}" class="btn btn-md btn-success">Create</a></p>
-        </div>
         <div class="col-md-12">
             <table class="table table-bordered" id="contact-table">
             <thead>
@@ -37,7 +34,6 @@
                 <td>{{ $row->subject }}</td>
                 <td>{{ $row->message }}</td>
                 <td>
-                    <a href="{{route('contact.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <button type="submit" class="btn btn-danger btn-xs">delete</button>
