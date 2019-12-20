@@ -32,7 +32,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                    <li><a href="">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
                     <li class="active"><a href="{!! url('/berita') !!}">News</a></li>
@@ -61,10 +61,9 @@
                                 <div class="box">
                                     <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                                         <div class="float-left mar-right20">
-                                            <a href="{!! url('/view_berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
+                                        <a href="{!! url('/view_berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
                                         </div>
                                     </div>
-                                    {{ csrf_field() }}
                                     <h4 class="title"><a href="{!! url('/view_berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = '...')  }}</a></h4>
                                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                                     <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
