@@ -57,11 +57,11 @@
                         <div class="col-md-10">
                             <div class="card">
                                 <div class="card-body">
-                                    <table class="table table-bordered" id="contact-table">
+                                    <table class="table table-bordered" id="id">
                                         <thead>
                                         <tr>
-                                            <h4 class="title">"{{ ($nw->judul}}"</h4>
-                                            <p class="description">{{ ($nw->isi}}.</p>
+                                            <h4 name="judul" id="id">"{{ ($nw->judul}}"</h4>
+                                            <p name="isi">{{ ($nw->isi}}.</p>
                                             <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
                                         </tr>
                                         @endforeach
@@ -72,10 +72,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
 
     <br/>
     <!--==========================

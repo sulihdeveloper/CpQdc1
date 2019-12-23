@@ -68,15 +68,16 @@ class HomeController extends Controller
     }
     public function view_carrer($id)
     {
-        $category = Category::latest()->paginate(10);
-        $product = Product::latest()->paginate(10);
+        $category = Category::latest($id)->paginate(10);
+        $product = Product::latest($id)->paginate(10);
         return view('view_carrer');
     }
 
-    public function view_berita(News $news)
+    public function view_berita($id)
     {
+        $news = News::where('id', $id)->firstOrFail();
         $news = News::latest();
-        return view('view_berita',compact('news'));
+        return view('view_berita',compact(['news'=> $id]));
     }
 
     }
