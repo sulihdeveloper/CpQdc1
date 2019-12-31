@@ -62,7 +62,7 @@
             <td id="id" name="desc" class="form-control input-lg"> {!! html_entity_decode($row->description,$row->id)!!}</td>
             @endforeach
             </div>
-            <form method="post" action="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
+            <form method="post" a href="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
             @endforeach
             </div>
         </div>

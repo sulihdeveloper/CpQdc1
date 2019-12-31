@@ -33,9 +33,9 @@ Route::get('contacts',function (){
     return view('contacts');
 });
 
-Route::get('/view_carrer',function (){
-    $product = Product::latest()->paginate(6);
-    $category = Category::latest()->paginate(10);
+Route::get('/view_carrer/{id}',function ($id){
+    $product = Product::where('id', $id)->paginate();
+    $category = Category::where('id', $id)->paginate();
     $dta = [
         'product' => $product,
         'category' => $category,
@@ -48,7 +48,7 @@ Route::get('capability',function (){
 });
 
 Route::get('/berita',function (){
-    $news = News::latest()->paginate(9);
+    $news = News::latest()->paginate();
     $ber = [
         'news' => $news,
     ];

@@ -9,6 +9,7 @@ use App\news;
 use App\Clien;
 use App\Category;
 use App\Product;
+use Illuminate\Http\Response;
 
 class HomeController extends Controller
 {
@@ -35,7 +36,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function dashboardV1()
     {
@@ -67,9 +68,9 @@ class HomeController extends Controller
     }
     public function view_carrer($id)
     {
-        $category = Category::latest($id)->paginate(10);
-        $product = Product::latest($id)->paginate(10);
-        return view('view_carrer');
+        $category = Category::where('id',$id)->firstOrFail();
+        $product = Product::where('id',$id)->firstOrFail();
+        return view('view_carrer',compact(['category','product'=> $product,$category]));
     }
 
     public function view_berita($id)
