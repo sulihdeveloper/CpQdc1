@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use http\Client;
 use Illuminate\Http\Request;
 use App\slide;
 use App\news;
@@ -13,7 +12,7 @@ use App\Product;
 
 class HomeController extends Controller
 {
-        public function index()
+    public function index()
     {
         $slide = Slide::latest()->paginate(10);
         $news = News::latest()->paginate(6);
@@ -61,9 +60,9 @@ class HomeController extends Controller
         $post = Post::where('page',1)->get();
         return view('bout');
     }
-    public function formcarrer()
+    public function formcarrer($id)
     {
-        $category = Category::latest()->paginate(10);
+        $category = Category::latest($id)->paginate(10);
         return view('formcarrer');
     }
     public function view_carrer($id)
@@ -76,8 +75,6 @@ class HomeController extends Controller
     public function view_berita($id)
     {
         $news = News::where('id', $id)->firstOrFail();
-        $news = News::latest();
         return view('view_berita',compact(['news'=> $id]));
     }
-
-    }
+}
