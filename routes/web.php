@@ -54,12 +54,12 @@ Route::get('/berita',function (){
     ];
     return view('berita',$ber);
 });
-Route::get('/view_berita',function (){
-    $news = News::latest();
-    $ber = [
-        'news' => $news,
-    ];
-    return view('berita',$ber);
+Route::get('/view_berita/{id}',function ($id){
+   $news = News::where('id', $id)->paginate();
+   $new = [
+     'news' => $news
+   ];
+    return view('view_berita',$new);
 });
 
 Route::get('bout',function (){

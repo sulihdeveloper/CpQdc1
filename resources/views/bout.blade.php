@@ -94,7 +94,7 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <p>Useful Links</p>
                         <ul>
-                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{!! url('/bout') !!}">About us</a></li>
                             <li><a href="{!! url('/capability') !!}">Capability</a></li>
                             <li><a href="{!! url('/berita') !!}">News</a></li>

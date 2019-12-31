@@ -33,7 +33,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
@@ -60,9 +60,9 @@
                                     <table class="table table-bordered" id="id">
                                         <thead>
                                         <tr>
-                                            <h4 name="judul" id="id">"{{ ($nw->judul}}"</h4>
-                                            <p name="isi">{{ ($nw->isi}}.</p>
-                                            <h6 class="created_at">{{ $nw->created_at->format('d-m-Y')}}</h6>
+                                            <h4>{{$nw->judul}}</h4>
+                                            <p >{!! html_entity_decode($nw->isi)!!}</p>
+                                            <h6>{{$nw->created_at->format('d-m-Y')}}</h6>
                                         </tr>
                                         @endforeach
                                         </thead>
@@ -90,7 +90,7 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <p>Useful Links</p>
                         <ul>
-                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{!! url('/bout') !!}">About us</a></li>
                             <li><a href="{!! url('/capability') !!}">Capability</a></li>
                             <li><a href="{!! url('/berita') !!}">News</a></li>

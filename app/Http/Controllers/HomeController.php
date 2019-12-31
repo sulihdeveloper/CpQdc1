@@ -12,13 +12,13 @@ use App\Product;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $slide = Slide::latest()->paginate(10);
-        $news = News::latest()->paginate(6);
-        $clien = Clien::latest()->paginate(10);
+        $slide = Slide::latest($id)->paginate(10);
+        $news = News::latest($id)->paginate(6);
+        $clien = Clien::latest($id)->paginate(10);
         $post = Post::where('page',1)->get();
-        $category = formcarrer::latest()->paginate();
+        $category = formcarrer::latest($id)->paginate();
     return view ('home',compact('clien','contacts','news','formcarrer'));
     }
 
@@ -75,6 +75,7 @@ class HomeController extends Controller
     public function view_berita($id)
     {
         $news = News::where('id', $id)->firstOrFail();
-        return view('view_berita',compact(['news'=> $id]));
+        return view('view_berita',compact(['news'=> $news]));
+
     }
 }

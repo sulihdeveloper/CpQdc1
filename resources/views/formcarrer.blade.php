@@ -33,7 +33,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
@@ -97,7 +97,7 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <p>Useful Links</p>
                         <ul>
-                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{!! url('/bout') !!}">About us</a></li>
                             <li><a href="{!! url('/capability') !!}">Capability</a></li>
                             <li><a href="{!! url('/berita') !!}">News</a></li>
