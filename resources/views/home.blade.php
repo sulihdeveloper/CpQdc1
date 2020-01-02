@@ -56,10 +56,10 @@
                 <div class="box">
                         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                             <div class="float-left mar-right20">
-                                <a href="{!! url('/berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
+                                <a href="{!! url ('/view_berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
                             </div>
                         </div>
-                    <h4 class="title"><a href="{!! url('/berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = 'more')  }}</a></h4>
+                    <h4 class="title"><a href="{!! url ('/view_berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = 'more')  }}</a></h4>
                     <p class="description">{{ str_limit($nw->isi, $limit = 50, $end = '...') }}.</p></br>
                     <h6 class="created_at">{{$nw->created_at->format('d-m-Y')}}</h6>
           </div>

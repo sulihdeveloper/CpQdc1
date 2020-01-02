@@ -33,16 +33,6 @@ Route::get('contacts',function (){
     return view('contacts');
 });
 
-Route::get('/view_carrer/{id}',function ($id){
-    $product = Product::where('id', $id)->paginate();
-    $category = Category::where('id', $id)->paginate();
-    $dta = [
-        'product' => $product,
-        'category' => $category,
-    ];
-    return view('view_carrer',$dta);
-});
-
 Route::get('capability',function (){
     return view('capability');
 });
@@ -54,12 +44,23 @@ Route::get('/berita',function (){
     ];
     return view('berita',$ber);
 });
+
 Route::get('/view_berita/{id}',function ($id){
    $news = News::where('id', $id)->paginate();
    $new = [
      'news' => $news
    ];
     return view('view_berita',$new);
+});
+
+Route::get('/view_carrer/{id}',function ($id){
+    $product = Product::where('id', $id)->paginate();
+    $category = Category::where('id', $id)->paginate();
+    $dta = [
+        'product' => $product,
+        'category' => $category,
+    ];
+    return view('view_carrer',$dta);
 });
 
 Route::get('bout',function (){
