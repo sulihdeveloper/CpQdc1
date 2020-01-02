@@ -28,7 +28,7 @@
                     <span class="fa fa-bars color-white"></span>
                 </button>
                 <div class="navbar-logo">
-                    <a href="#"><img data-0="width:155px;" data-300=" width:120px;" src="img1/pp-removebg-preview.png" alt=""></a>
+                    <a href="#"><img width="155px" width="120px" src="../img1/pp-removebg-preview.png"></a>
                 </div>
             </div>
             <div class="navbar-collapse collapse">
