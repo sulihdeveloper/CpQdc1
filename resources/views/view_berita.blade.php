@@ -36,8 +36,8 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
                     <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
-                    <li><a href="{!! url('/berita') !!}">News</a></li>
-                    <li class="active"><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
+                    <li class="active"><a href="{!! url('/berita') !!}">News</a></li>
+                    <li><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
                     <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                 </ul>
             </div>
