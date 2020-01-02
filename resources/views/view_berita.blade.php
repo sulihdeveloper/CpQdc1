@@ -6,7 +6,7 @@
     <title>QDC Technologies</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../js1/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" media="screen">
     <link rel="stylesheet" type="text/css" href="../css1/isotope.css" media="screen">
     <!-- Bootstrap -->
     <link href="../css1/bootstrap.css" rel="stylesheet">

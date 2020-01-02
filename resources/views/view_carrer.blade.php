@@ -6,7 +6,7 @@
     <title>QDC Technologies</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="../text/css" href="../js1/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="../text/css" media="screen">
     <link rel="stylesheet" type="../text/css" href="../css1/isotope.css" media="screen">
     <link rel="stylesheet" href="../css1/bootstrap.css" />
     <link rel="stylesheet" href="../css1/flexslider.css" type="../text/css">
@@ -59,7 +59,7 @@
         <div class="col-lx-12">
             <div class="list-group" name="cat" id="id" >
             <div class="list-group-item action active" name="cat" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div><br/>
-            <td  class="form-control input-lg"> {!! html_entity_decode($row->description,$row->id)!!}</td>
+            <td  class="form-control input-lg"> {!! html_entity_decode($row->description)!!}</td>
             @endforeach
             </div>
             <form method="post" a href="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
@@ -110,11 +110,9 @@
                             <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                             <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
                             <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                        </div></form>
+                        </div>
                     </div>
-                    </form>
                 </div>
-
             </div>
         </div>
 
