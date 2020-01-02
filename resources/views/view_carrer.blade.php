@@ -6,16 +6,16 @@
     <title>QDC Technologies</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="js1/rs-plugin/css/settings.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css1/isotope.css" media="screen">
-    <link rel="stylesheet" href="css1/flexslider.css" type="text/css">
-    <link rel="stylesheet" href="js1/fancybox/jquery.fancybox.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css1/bootstrap.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
+    <link rel="stylesheet" type="../text/css" href="../js1/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="../text/css" href="../css1/isotope.css" media="screen">
+    <link rel="stylesheet" href="../css1/bootstrap.css" />
+    <link rel="stylesheet" href="../css1/flexslider.css" type="../text/css">
+    <link rel="stylesheet" href="../js1/fancybox/jquery.fancybox.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
-    <link rel="stylesheet" href="css1/style.css">
+    <link rel="stylesheet" href="../css1/style.css">
     <!-- skin -->
-    <link rel="stylesheet" href="skin/default.css">
+    <link rel="stylesheet" href="../skin/default.css">
 
 
     <body>
@@ -129,21 +129,21 @@
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Javascript Library Files -->
-    <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="js1/jquery.js"></script>
-    <script src="js1/jquery.easing.1.3.js"></script>
-    <script src="js1/bootstrap.min.js"></script>
-    <script src="js1/jquery.isotope.min.js"></script>
-    <script src="js1/jquery.nicescroll.min.js"></script>
-    <script src="js1/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="js1/skrollr.min.js"></script>
-    <script src="js1/jquery.scrollTo.min.js"></script>
-    <script src="js1/jquery.localScroll.min.js"></script>
-    <script src="js1/stellar.js"></script>
-    <script src="js1/jquery.appear.js"></script>
-    <script src="js1/jquery.flexslider-min.js"></script>
+        <script src="../../js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="../../js1/jquery.js"></script>
+        <script src="../../js1/jquery.easing.1.3.js"></script>
+        <script src="../../js1/bootstrap.min.js"></script>
+        <script src="../../js1/jquery.isotope.min.js"></script>
+        <script src="../../js1/jquery.nicescroll.min.js"></script>
+        <script src="../../js1/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="../../js1/skrollr.min.js"></script>
+        <script src="../../js1/jquery.scrollTo.min.js"></script>
+        <script src="../../js1/jquery.localScroll.min.js"></script>
+        <script src="../../js1/stellar.js"></script>
+        <script src="../../js1/jquery.appear.js"></script>
+        <script src="../../js1/jquery.flexslider-min.js"></script>
 
-    <!-- Template Main Javascript File -->
-    <script src="js1/main.js"></script>
+        <!-- Template Main Javascript File -->
+        <script src="../../js1/main.js"></script>
     @endsection
 
