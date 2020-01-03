@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="../text/css" media="screen">
     <link rel="stylesheet" type="../text/css" href="../css1/isotope.css" media="screen">
-    <link rel="stylesheet" href="../css1/bootstrap.css" />
+    <link rel="stylesheet" href="../css1/bootstrap.css" media="screen"/>
     <link rel="stylesheet" href="../css1/flexslider.css" type="../text/css">
     <link rel="stylesheet" href="../js1/fancybox/jquery.fancybox.css" type="text/css" media="screen">
     <link rel="stylesheet" href="../https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
@@ -67,8 +67,6 @@
             </div>
         </div>
         </body>
-
-
     <br/>
     <!--==========================
       Footer
@@ -144,4 +142,3 @@
         <!-- Template Main Javascript File -->
         <script src="../../js1/main.js"></script>
     @endsection
-
