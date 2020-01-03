@@ -62,7 +62,7 @@
                                         <tr>
                                             <h4>{{$nw->judul}}</h4>
                                             <p >{!! html_entity_decode($nw->isi)!!}</p>
-                                            <h6>{{$nw->created_at->format('d-m-Y')}}</h6>
+                                            <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
                                         </tr>
                                         @endforeach
                                         </thead>
