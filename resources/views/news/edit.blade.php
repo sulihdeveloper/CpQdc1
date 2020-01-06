@@ -18,9 +18,9 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('news.update',$news->id) }}" method="POST">
-                            @csrf
-                            @method('PUT')
+                        <form action="{{ route('news.update',$news->id) }}" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            {{ method_field('PATCH') }}
 
                             <div class="form-group row">
                                 <div class="col-md-12">
@@ -31,10 +31,18 @@
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <strong>Isi:</strong>
-                                    <textarea class="form-control" rows="10" name="isi">{{ $news->isi }}</textarea>
+                                    <input type="file" name="image" value={{$news->image}}>
+                                    <p class="help-block">image in png, jpg, bmp</p>
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <strong>Isi:</strong>
+                                    <textarea class="form-control" rows="5" name="isi" value="{{ $news->isi }} placeholder="Isi post"></textarea>
+                                </div>
+                            </div>
+
 
                             <div class="form-group row">
                                 <div class="col-md-6">

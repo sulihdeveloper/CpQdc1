@@ -28,6 +28,7 @@
                                 <th>No.</th>
                                 <th>Judul</th>
                                 <th>Isi</th>
+                                <th>Image</th>
                                 <th>action</th>
                             </thead>
 
@@ -37,6 +38,7 @@
                                     <td>{{ $news->firstItem() + $k }}</td>
                                     <td>{{ $data->judul }}</td>
                                     <td>{!! html_entity_decode($data->isi) !!}</td>
+                                    <td><img src="{{url('images/'.$data->image)}}" width="160" height="115"></td>
                                     <td>
 
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>

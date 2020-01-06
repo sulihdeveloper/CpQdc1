@@ -17,14 +17,20 @@
                                 </ul>
                             </div>
                         @endif
-
-                        <form action="{{ route('news.store') }}" method="POST">
-                            @csrf
+                        <form method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
+                        {{ csrf_field() }}
 
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     <strong>Judul:</strong>
                                     <input type="text" name="judul" class="form-control" placeholder="Judul">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                <input type="file" name="image" value={{old('image')}}>
+                                    <p class="help-block">image in png, jpg, bmp</p>
                                 </div>
                             </div>
 
@@ -44,14 +50,11 @@
                                 </div>
                             </div>
                     </div>
-                    </form>
-                </div>
+                  </div>
             </div>
             <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
             <script>
                 CKEDITOR.replace( 'isi' );
             </script>
         </div>
-    </div>
-    </div>
 @endsection

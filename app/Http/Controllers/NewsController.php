@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Clien;
 use App\News;
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -21,7 +24,7 @@ class NewsController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -31,27 +34,36 @@ class NewsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'judul' => 'required',
-            'isi' => 'required',
+        $this->validate($request, [
+            'judul'    =>  'required',
+            'isi'    =>  'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
         ]);
-        News::create($request->all());
 
-        $request->session()->flash('pesan','ews '.$request['judul'].' berhasil disimpan.');
+        $image = $request->file('image');
+        $new_name = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $new_name);
+        $form_data = array(
+            'judul'=>   $request->judul,
+            'isi'=>   $request->isi,
+            'image'=>   $new_name
+        );
 
-        return redirect()->route('news.index');
+        News::create($form_data);
+
+        return redirect('news')->with('success', 'Data Added successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\News  $news
-     * @return \Illuminate\Http\Response
+     * @param News $news
+     * @return Response
      */
     public function show(News $news)
     {
@@ -61,8 +73,8 @@ class NewsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\News  $news
-     * @return \Illuminate\Http\Response
+     * @param News $news
+     * @return Response
      */
     public function edit(News $news)
     {
@@ -72,29 +84,49 @@ class NewsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\News  $news
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param News $news
+     * @return Response
      */
-    public function update(Request $request, News $news)
+    public function update($id, Request $request)
     {
-        request()->validate([
-            'judul' => 'required',
-            'isi' => 'required',
-        ]);
+        $image = $request->file('image');
+        if($image != '')
+        {
+            $request->validate([
+                'judul'=>  'required',
+                'isi'=>  'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+            ]);
+            $image = $request->file('image');
+            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $image_name);
+        }
+        else
+        {
+            $request->validate([
+                'judul'=>  'required',
+                'isi'=>  'required',
+                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+            ]);
+        }
 
-        $news->update($request->all());
+        $form_data = array(
+            'judul'       =>   $request->judul,
+            'isi'       =>   $request->isi,
+            'image'     =>   $image_name
+        );
 
-        $request->session()->flash('pesan','News '.$request['judul'].' berhasil diperbarui.');
+        News::whereId($id)->update($form_data);
 
-        return redirect()->route('news.index');
+        return redirect('news')->with('success', 'Data is successfully updated');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\News  $news
-     * @return \Illuminate\Http\Response
+     * @param News $news
+     * @return Response
      */
     public function destroy(Request $request, News $news)
     {

@@ -9,6 +9,6 @@ class news extends Model
     protected $table = 'news';
 
     protected $fillable = [
-        'judul', 'isi'
+        'judul', 'isi','image'
     ];
 }

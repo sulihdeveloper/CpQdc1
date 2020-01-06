@@ -10,7 +10,7 @@
                             <thead>
                             <tr>
                         <h2>{{ $news->judul }}</h2>
-                        <p>{{ $news->isi }}</p>
+                        <p>{!! html_entity_decode($news->isi) !!}</p>
 
                         <div class="form-group row">
                             <div class="col-md-6">

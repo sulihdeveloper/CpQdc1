@@ -50,8 +50,8 @@
             {{ session('success') }}
         </p>
     @endif
-<br/><br/><br/><br/><br/><br/>
             @foreach($news as $k=>$nw)
+            <section id="news" class="section-footer"
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
@@ -59,21 +59,21 @@
                                 <div class="card-body">
                                     <table class="table table-bordered" id="id">
                                         <thead>
-                                        <tr>
-                                            <h4>{{$nw->judul}}</h4>
-                                            <p >{!! html_entity_decode($nw->isi)!!}</p>
-                                            <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
-                                        </tr>
+                                        <div class="row about-container">
+                                            <div class="icon-box wow fadeInUp">
+                                                <img src="{{url('images/'.$nw->image)}}" width="560" height="315"><br/>
+                                                <h4>{{$nw->judul}}</h4>
+                                                <p >{!! html_entity_decode($nw->isi)!!}</p>
+                                                <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
+                                            </div>
+                                            </div>
                                         @endforeach
-                                        </thead>
-                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-    <br/>
+                @section()
     <!--==========================
       Footer
     ============================-->
