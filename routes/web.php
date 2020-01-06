@@ -100,5 +100,4 @@ Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('/product', 'ProductController');
     Route::resource('/news','NewsController');
 
-
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);

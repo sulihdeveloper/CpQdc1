@@ -50,8 +50,9 @@
             {{ session('success') }}
         </p>
     @endif
-            @foreach($news as $k=>$nw)
-            <section id="news" class="section-footer"
+    <br/><br/><br/><br/>
+            @foreach($news as $nw)
+            <section id="news" class="section-footer">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
@@ -73,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                @section()
+            </section>
     <!--==========================
       Footer
     ============================-->
