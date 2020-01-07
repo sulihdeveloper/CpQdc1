@@ -16,12 +16,10 @@ class HomeController extends Controller
 {
     public function index($id)
     {
-        $slide = Slide::latest($id)->paginate(10);
         $news = News::latest($id)->paginate(6);
         $clien = Clien::latest($id)->paginate(10);
         $post = Post::where('page',1)->get();
-        $category = formcarrer::latest($id)->paginate();
-    return view ('home',compact('clien','contacts','news','formcarrer'));
+        return view ('home',compact('clien','contacts','news','formcarrer'));
     }
 
     /**
