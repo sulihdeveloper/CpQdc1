@@ -24,20 +24,6 @@
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label for="preview" class="col-md-3 control-label">Image Preview</label>
-			    <div class="col-md-9">
-			    	<img src="{{url('images/'.$edit->image)}}" class="img-responsive">
-			    	<input type="hidden" name="oldimage" value="{{$edit->image}}">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="image" class="col-md-3 control-label">Image</label>
-			    <div class="col-md-9">
-			    	<input type="file" name="image" value={{$edit->image}}>
-			    	<p class="help-block">image in png, jpg, bmp</p>
-			    </div>
-			  </div>
-			  <div class="form-group">
 			  	<div class="col-md-4 col-md-offset-5">
 			  		<button class="btn btn-success" type="submit">save</button> &nbsp;
 			  		<a class="btn btn-warning" href="{{route('about.index')}}">cancel</a>

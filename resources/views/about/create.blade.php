@@ -8,8 +8,8 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-7">
-				<form method="POST" class="form-horizontal" action="{{route('about.store')}}" enctype="multipart/form-data">
-					{{ csrf_field() }}
+                <form action="{{ route('about.store') }}" method="POST">
+                    {{ csrf_field() }}
 					<div class="form-group">
 					  <label for="section_one" class="col-md-3 control-label">Who we are</label>
 					  <div class="col-md-9">
@@ -20,13 +20,6 @@
 				    <label for="section_two" class="col-md-3 control-label">What we do</label>
 				    <div class="col-md-9">
 				    	<textarea class="form-control col-md-9" name="section_two" cols="3" rows="5" placeholder="description">{{old('section_two')}}</textarea>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="image" class="col-md-3 control-label">Image</label>
-				    <div class="col-md-9">
-				    	<input type="file" name="image" value={{old('image')}}>
-				    	<p class="help-block">image in png, jpg, bmp</p>
 				    </div>
 				  </div>
 				  <div class="form-group">

@@ -2,8 +2,10 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Product;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Http\Response;
 
 
 class AboutController extends Controller
@@ -11,7 +13,7 @@ class AboutController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -22,7 +24,7 @@ class AboutController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -37,27 +39,23 @@ class AboutController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        request()->validate([
             'section_one' => 'required',
             'section_two' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
             ]);
 
-        $image = $request->file('photo');
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $new_name);
-        $form_data = array(
-            'section_one'=>   $request->section_one,
-            'section_two'=>   $request->section_two,
-            'photo'=>   $new_name
-        );
+        $posts = new post;
+        $posts->section_one = $request->section_one;
+        $posts->section_two = $request->section_two;
+        $posts->page = Auth::user()->id;
+        $posts->user_id = Auth::user()->id;
 
-        Post::create($form_data);
+        $posts->save();
 
         return redirect('about')->with('success', 'Data Added successfully.');
     }
@@ -66,7 +64,7 @@ class AboutController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -77,7 +75,7 @@ class AboutController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -88,41 +86,23 @@ class AboutController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
-        $image = $request->file('image');
-        if($image != '')
-        {
-            $request->validate([
-                'section_one' => 'required',
-                'section_two' => 'required',
-                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
+        $this->validate($request, [
+            'section_one' => 'required',
+            'section_two' => 'required',
             ]);
-            $image = $request->file('image');
-            $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $image_name);
-        }
-        else
-        {
-            $request->validate([
-                'section_one' => 'required',
-                'section_two' => 'required',
-                'image' =>  'required|image|:jpeg,jpg,png,gif|max:100000',
-            ]);
-        }
 
-        $form_data = array(
-            'section_one'=>   $request->section_one,
-            'section_two'=>   $request->section_two,
-            'image'     =>   $image_name
-        );
 
-        Post::whereId($id)->update($form_data);
+        $posts = Post::findOrFail($id);
+        $posts->section_one = $request->section_one;
+        $posts->section_two = $request->section_two;
 
+        $posts->save();
         return redirect('about')->with('success', 'Data is successfully updated');
     }
 
@@ -130,7 +110,7 @@ class AboutController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {$data = About::findOrFail($id);

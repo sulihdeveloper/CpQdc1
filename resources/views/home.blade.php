@@ -86,8 +86,8 @@
                 <p align=”justify”>Began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                    <h4 class="title"><a href=""> {{$item->section_one}}</a></h4>
-                    <p align=”justify” class="description">{{$item->section_two}} </p>
+                    <h4><a href=""> {{$item->section_one}}</a></h4>
+                    <p>{!! html_entity_decode($item->section_two)!!} </p>
                 </div>
             </div>
             <div class="col-lg-4 background order-lg-3 order-2 ">
