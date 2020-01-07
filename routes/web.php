@@ -5,17 +5,13 @@ use App\Slide;
 use App\news;
 use App\Clien;
 use App\Post;
-use App\Category;
-use App\Product;
 
 
 Route::get('/', function () {
-    $slide = Slide::latest()->paginate(9);
     $news = News::latest()->paginate(3);
     $clien = Clien::latest()->paginate(4);
     $post = Post::latest()->paginate(3);
     $data = [
-        'slide' => $slide,
         'news' => $news,
         'clien' => $clien,
         'post' => $post,
@@ -77,14 +73,12 @@ Auth::routes();
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 
 
-    Route::resource('slide', 'SlideController');
+
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);
     Route::resource('about', 'AboutController',['except' => [
         'destroy','show'
     ]]);
-    Route::resource('vision', 'VismisController',['except' => [
-        'destroy','show'
-    ]]);
+
     Route::resource('contact', 'ContactController',['except' => [
         'destroy','show'
     ]]);
@@ -95,10 +89,10 @@ Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
     Route::resource('clien', 'ClienController',['except'=>[
             'destroy','show'
         ]]);
+    Route::resource('news', 'NewsController',['except'=>[
+            'destroy','show'
+        ]]);
 
-Route::resource('category', 'CategoryController',['except'=>['show']]);
-    Route::resource('/product', 'ProductController');
-    Route::resource('/news','NewsController');
     Route::resource('/lowker','LowkerController');
 
 

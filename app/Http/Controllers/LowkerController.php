@@ -9,7 +9,7 @@ class LowkerController extends Controller
 {
     public function index()
     {
-        $lowker = Lowker::latest()->paginate(10);
+        $lowker = Lowker::latest()->paginate(3);
         return view('lowker.index', compact('lowker'))->with('id');
     }
 
