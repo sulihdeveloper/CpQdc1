@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 use App\slide;
 use App\news;
 use App\Clien;
-use App\Category;
-use App\Product;
 use Illuminate\Http\Response;
 
 class HomeController extends Controller
