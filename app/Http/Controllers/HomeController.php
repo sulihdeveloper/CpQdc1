@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lowker;
 use App\Post;
 use Illuminate\Http\Request;
 use App\slide;
@@ -63,14 +64,13 @@ class HomeController extends Controller
     }
     public function formcarrer($id)
     {
-        $category = Category::latest($id)->paginate(10);
+        $lowker = Lowker::latest($id)->firstOrFail();
         return view('formcarrer');
     }
     public function view_carrer($id)
     {
-        $category = Category::where('id',$id)->firstOrFail();
-        $product = Product::where('id',$id)->firstOrFail();
-        return view('view_carrer',compact(['category','product'=> $product,$category]));
+        $lowker = Lowker::where('id',$id)->firstOrFail();
+        return view('view_carrer',compact(['lowker'=> $lowker]));
     }
 
     public function view_berita($id)

@@ -52,18 +52,18 @@
     @endif
 
     <br/><br/><br/><br/><br/><br/>
-    @foreach($category as $c)
-        @foreach($product as $row)
+        @foreach($lowker as $row)
         <body>
         <div class="row">
         <div class="col-lx-12">
             <div class="list-group" name="cat" id="id" >
-            <div class="list-group-item action active" name="cat" id="id">{{(old('cat')==$c->id ? 'selected = selected' : ' ')}}{{$c->name}}</div><br/>
+            <div class="list-group-item action active" name="cat" id="id">{!! ($row->requerments) !!}</div><br/>
             <td  class="form-control input-lg"> {!! html_entity_decode($row->description)!!}</td>
-            @endforeach
+            <td  class="form-control input-lg"> {!! ($row->closing_date)!!}</td>
             </div>
-            <form method="post" a href="{{route('carrer.create',$c->id)}}" class="btn btn-success btn-xs">APLY</form>
             @endforeach
+            <form method="post" a href="{{route('carrer.create',$row->id)}}" class="btn btn-success btn-xs">APLY</form>
+
             </div>
         </div>
         </body>

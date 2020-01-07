@@ -24,13 +24,13 @@
 			<div class="col-md-8">
 				<div class="row">
 						<div class="col-md-4">
-							<h4>Who we are</h4>
+							<h4>Judul</h4>
 							<p>
 								{{$item->section_one}}
 							</p>
 						</div>
 						<div class="col-md-6">
-							<h4>What we do</h4>
+							<h4>Isi</h4>
 							<p>
 								{!! html_entity_decode($item->section_two)!!}
 							</p>

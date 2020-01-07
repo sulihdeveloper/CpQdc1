@@ -1,4 +1,6 @@
 <?php
+
+use App\Lowker;
 use App\Slide;
 use App\news;
 use App\Clien;
@@ -22,9 +24,9 @@ Route::get('/', function () {
 });
 
 Route::get('/formcarrer',function (){
-    $category = Category::latest()->paginate(10);
+    $lowker = Lowker::latest()->paginate(10);
     $loc = [
-      'category' => $category,
+     'lowker'=> $lowker,
     ];
     return view('formcarrer', $loc);
 });
@@ -54,12 +56,10 @@ Route::get('/view_berita/{id}',function ($id){
 });
 
 Route::get('/view_carrer/{id}',function ($id){
-    $product = Product::where('id', $id)->paginate();
-    $category = Category::where('id', $id)->paginate();
+    $lowker = Lowker::where('id', $id)->paginate(10);
     $dta = [
-        'product' => $product,
-        'category' => $category,
-    ];
+        'lowker' => $lowker
+        ];
     return view('view_carrer',$dta);
 });
 
@@ -99,5 +99,7 @@ Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 Route::resource('category', 'CategoryController',['except'=>['show']]);
     Route::resource('/product', 'ProductController');
     Route::resource('/news','NewsController');
+    Route::resource('/lowker','LowkerController');
+
 
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);
