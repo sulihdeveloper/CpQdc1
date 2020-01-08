@@ -12,31 +12,29 @@
 		@endif
 	</div>
 	@if($about->isEmpty())
-		<div class="col-md-12">
-			<p>no data</p>
-			<p><a href="{{route('about.create')}}" class="btn btn-xs btn-success">create</a></p>
-		</div>
 	@endif
-		@foreach($about as $item)
-		<div class="col-md-8">
-			<a href="{{route('about.edit',$item->id)}}" class="pull-right btn btn-xs btn-info">edit</a>
-		</div>
-			<div class="col-md-8">
-				<div class="row">
-						<div class="col-md-4">
-							<h4>Judul</h4>
-							<p>
-								{{$item->section_one}}
-							</p>
-						</div>
-						<div class="col-md-6">
-							<h4>Isi</h4>
-							<p>
-								{!! html_entity_decode($item->section_two)!!}
-							</p>
-						</div>
-				</div>
-			</div>
-		@endforeach
+
+    <div class="col-md-12">
+        <table class="table table-bordered" id="product-table">
+            <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Isi</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+            @foreach($about as $item)
+            <tr>
+                <td>{{$item->section_one}}</td>
+                <td>{!! html_entity_decode($item->section_two)!!}</td>
+                <td>
+                    <a href="{{route('about.edit',$item->id)}}" class="pull-right btn btn-xs btn-info">edit</a>
+                </td>
+            </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+
 @endsection

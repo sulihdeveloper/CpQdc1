@@ -45,9 +45,14 @@
 </div>
 </body>
 
-<section id="intro">
-    </br></br></br></br></br></br></br></br></br></br></br></br></br>
-    <section id="news" id="id" >
+    <video id="video" width="1370" height="500" autoplay="" controls="controls">
+        <source src="../img/ben.mp4" type="video/mp4"/>
+        <source src="../img/ben.ogg" type="video/ogg"/>
+        <source src="../img/ben.webm" type="video/webm"/>
+    </video>
+
+<section>
+    <section id="news" id="id">
             <div class="section-header">
                 @foreach($news as $k=>$nw)
                 <div class="float-center mar-right20">
