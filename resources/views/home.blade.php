@@ -46,9 +46,9 @@
 </body>
 
     <video id="video" width="1370" height="500" autoplay="" controls="controls">
-        <source src="../img/ben.mp4" type="video/mp4"/>
-        <source src="../img/ben.ogg" type="video/ogg"/>
-        <source src="../img/ben.webm" type="video/webm"/>
+        <source src="../img/ben.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2"/>
+        <source src="../img/ben.ogg" type="video/ogg" codecs="theora, vorbis"/>
+        <source src="../img/ben.webm" type="video/webm" codecs="vp8, vorbis"/>
     </video>
 
 <section>
