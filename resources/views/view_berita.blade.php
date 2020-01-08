@@ -60,23 +60,20 @@
                                 <div class="card-body">
                                     <table class="table table-bordered" id="id">
                                         <thead>
-                                        <div class="row about-container">
-                                            <div class="icon-box wow fadeInUp">
-                                                <img src="{{url('images/'.$nw->image)}}" width="560" height="315">
+                                        <img src="{{url('images/'.$nw->image)}}" width="560" height="315">
                                                 <br/><br/>
                                                 <h4>{{$nw->judul}}</h4>
                                                 <p >{!! html_entity_decode($nw->isi)!!}</p>
                                                 <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
-                                            </div>
-                                        </div>
                                         </thead>
                                     </table>
+                                </div>
                                     @endforeach
                                 </div>
                             </div>
                         </div>
                             </div>
-                        </div>
+                        </
 
     <!--==========================
       Footer

@@ -61,23 +61,28 @@
         <header class="section-header">
         <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
         </header>
-        @foreach($lowker as $c)
-                <div class="col-lg-3 col-md-8 col-xs-12">
-                        <div class="box">
-                            <div class="row">
-                            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                            <h4> <a href="{!! url('/view_carrer',$c->id) !!}">{{$c->requerments}}</a></h4>
-                            <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date}}</p>
+
+
+    <section id="news" id="id" >
+        <div class="section-header">
+            @foreach($lowker as $c)
+                <div class="float-center mar-right20">
+                    <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
+                        <div class="row">
+                            <div class="box">
+                                <h4> <a href="{!! url('/view_carrer',$c->id) !!}">{{$c->requerments}}</a></h4>
+                                <p class="description" name="description">Closing Date.&nbsp;{{$c->closing_date}}</p>
+                            </div>
                         </div>
-                       </div>
+                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </section>
 
 
-
-    <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!--==========================
       Footer
     ============================-->

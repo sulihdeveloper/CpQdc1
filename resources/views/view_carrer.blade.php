@@ -59,11 +59,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <table class="table table-bordered" id="id">
-                                <div class="list-group" name="cat" id="id" >
+                                    <thead>
                                 <div class="list-group-item action active" name="cat" id="id">{!! ($row->requerments) !!}</div><br/>
                                 <div> {!! html_entity_decode($row->description)!!}</div>
                                 <div> {!! ($row->closing_date)!!}</div>
-                                </div>
+                                    </thead>
                                 </table>
                             </div>
                             @endforeach
@@ -71,6 +71,7 @@
                         </div>
                     </div>
                 </div>
+
 
     <br/>
             <!--==========================
