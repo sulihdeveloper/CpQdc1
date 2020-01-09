@@ -47,7 +47,7 @@
 </body>
 <br/><br/><br/><br/><br/>
 
-    <video id="video" width="1370" height="350" class="video-container" autoplay loop controls muted>
+    <video id="video" width="1370" height="350" autoplay loop controls muted>
         <source src="{{URL::asset("../public/img/ben.mp4")}}" type="video/mp4"/>
     </video>
 
