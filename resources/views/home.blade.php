@@ -45,9 +45,9 @@
 </div>
 </div>
 </body>
-
-    <video width="1370" height="500" autoplay="" controls="controls">
-        <source src="video.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2"/>
+<br/><br/><br/><br/><br/>
+    <video width="1370" height="500" autoplay="true" controls="controls">
+        <source src="{{URL::asset("../public/img/ben.mp4")}}" type="video/mp4"/>
     </video>
 
 <section>
