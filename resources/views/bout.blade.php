@@ -43,13 +43,11 @@
         </div>
     </div>
     </body>
+    <video id="video" width="1370" height="568" autoplay loop controls muted>
+        <source src="{{URL::asset("../public/img/ben.mp4")}}" type="video/mp4"/>
+    </video>
 
-    <section id="intro3">
-        <div class="intro-content">
-            <h2>About Us</h2>
-            <h3></h3>
-        </div>
-    </section>
+
     <br/><br/><br/>
     <section id="about">
         <div class="container">

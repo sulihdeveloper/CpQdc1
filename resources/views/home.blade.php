@@ -45,10 +45,9 @@
 </div>
 </div>
 </body>
-<br/><br/><br/><br/><br/>
 
-    <video id="video" width="1370" height="350" autoplay loop controls muted>
-        <source src="{{URL::asset("../public/img/ben.mp4")}}" type="video/mp4"/>
+    <video id="video" width="1370" height="568" autoplay loop controls muted>
+        <source src="{{URL::asset("../public/img/video.mp4")}}" type="video/mp4"/>
     </video>
 
 <section>
