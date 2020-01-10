@@ -47,7 +47,7 @@
 
     <section id="intro3">
         <div class="intro-content">
-            <h2>Carrers</h2>
+            <h2>We're Hiring</h2>
             <h3></h3>
             </div>
     </section>
@@ -61,7 +61,6 @@
         <header class="section-header">
         <h5>Sumber daya manusia merupakan faktor utama penggerak jalannya usaha serta pengembang perusahaan dalam rangka mencapai visi dan misi yang telah ditetapkan.</h5>
         </header>
-
 
     <section id="news" id="id" >
         <div class="section-header">
@@ -84,7 +83,7 @@
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!--==========================
-      Footer
+                Footer
     ============================-->
     <section id="footer" class="section-footer">
         <div class="footer-top">
@@ -116,18 +115,15 @@
                             <strong>Email:</strong> info@qdc.co.id<br>
                         </p>
                     </div>
-                        <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <p>Follow </p>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                            </div></form>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <p>Follow </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
                         </div>
-                        </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -135,14 +131,6 @@
         <div class="container">
             <div class="copyright">
                 COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
-            </div>
-            <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-                -->
             </div>
         </div>
     </section>

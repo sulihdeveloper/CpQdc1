@@ -44,7 +44,7 @@
 </div>
 </body>
 
-<section id="intro3">
+<section id="intro">
     <div class="intro-content">
         <h2>Contact</h2>
         <h3></h3>

@@ -236,8 +236,8 @@
 
 <br/><br/><br/><br/><br/><br/>
 <!--==========================
-  Footer
-============================-->
+                Footer
+    ============================-->
 <section id="footer" class="section-footer">
     <div class="footer-top">
         <div class="container">
@@ -268,18 +268,15 @@
                         <strong>Email:</strong> info@qdc.co.id<br>
                     </p>
                 </div>
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <p>Follow </p>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                        </div></form>
+                <div class="col-lg-3 col-md-6 footer-newsletter">
+                    <p>Follow </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
                     </div>
-                    </form>
                 </div>
-
             </div>
         </div>
     </div>
@@ -288,20 +285,11 @@
         <div class="copyright">
             COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
         </div>
-        <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-            -->
-        </div>
     </div>
 </section>
 <!-- #footer -->
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
 
 <!-- Javascript Library Files -->
 <script src="js1/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -318,11 +306,6 @@
 <script src="js1/jquery.appear.js"></script>
 <script src="js1/jquery.flexslider-min.js"></script>
 
-<!-- Contact Form JavaScript File -->
-<script src="contactform/contactform.js"></script>
-
 <!-- Template Main Javascript File -->
 <script src="js1/main.js"></script>
-
-</body>
 @endsection
