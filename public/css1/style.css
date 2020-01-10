@@ -499,6 +499,13 @@ section.section {
     background: url(../img/carrer.jpg) top center;
     background-size: cover;
 }
+#intro4 {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: url(../img/contac.jpg) top center;
+    background-size: cover;
+}
 
 @media (min-width: 1024px) {
 	#intro {
