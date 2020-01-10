@@ -3,6 +3,7 @@
 @section('content')
     <!-- BASICS -->
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="../public/slides/favicon.png">
     <title>QDC Technologies</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
