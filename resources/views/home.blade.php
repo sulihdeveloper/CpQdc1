@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Feasibility Research</h3>
-                    <p align=”justify”>Before undertaking many projects, it is essential to undertake feasibility studies to ensure the viability of the project. Qdc can offer additional assistance by providing services such as.</p>
+                    <p>Before undertaking many projects, it is essential to undertake feasibility studies to ensure the viability of the project. Qdc can offer additional assistance by providing services such as.</p>
                     <p>
                     Technology path engineering </p>
                     Network route selection</p>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Consultancy</h3>
-                    <p align=”justify”>Qdc provides a range of value added consultancy services including surveys, auditing, testing and contract negotiations. In order to provide the most effective, reliable, customised solution, Qdc can bring together the skills and technologies appropriate to client’s individual needs. Qdc is able to offer a full consultative service grounded in decades of experience and proven expertise.</p>
+                    <p>Qdc provides a range of value added consultancy services including surveys, auditing, testing and contract negotiations. In order to provide the most effective, reliable, customised solution, Qdc can bring together the skills and technologies appropriate to client’s individual needs. Qdc is able to offer a full consultative service grounded in decades of experience and proven expertise.</p>
 
                     <div class="clear"></div>
                 </div>
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Planning and Design</h3>
-                    <p align=”justify”>The depth of experience and skills within this group enables Qdc to design solutions that are achievable in all prevailing conditions, which meet and often exceed environmental, individual and health expectations. The service includes site surveying from which topographical maps are produced, environmental and heritage aspects researched and authorised, appropriate equipment sourced and project operation documentation is prepared.</p>
+                    <p>The depth of experience and skills within this group enables Qdc to design solutions that are achievable in all prevailing conditions, which meet and often exceed environmental, individual and health expectations. The service includes site surveying from which topographical maps are produced, environmental and heritage aspects researched and authorised, appropriate equipment sourced and project operation documentation is prepared.</p>
                     <div class="clear"></div>
                 </div>
 
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Project Management</h3>
-                    <p align=”justify”>All aspects of every project are the responsibility of a specific Qdc Project Manager. These responsibilities include delivery on time, on budget, on customer specification and to quality standards equal to the best in the world. Qdc is sufficiently flexible to mirror clients’ differing Project Management practices on a project-by-project basis if required.</p>
+                    <p>All aspects of every project are the responsibility of a specific Qdc Project Manager. These responsibilities include delivery on time, on budget, on customer specification and to quality standards equal to the best in the world. Qdc is sufficiently flexible to mirror clients’ differing Project Management practices on a project-by-project basis if required.</p>
 
                     <div class="clear"></div>
                 </div>
@@ -180,7 +180,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Material Management</h3>
-                    <p align=”justify”>Qdc has established partnerships for the provision and support of equipment. This is a distinct advantage in ensuring the best possible pricing and full life support of the equipment.</p>
+                    <p>Qdc has established partnerships for the provision and support of equipment. This is a distinct advantage in ensuring the best possible pricing and full life support of the equipment.</p>
                     <div class="clear"></div>
                 </div>
 
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <h3 class="text-bold">Contract Management</h3>
-                    <p align=”justify”>Qdc Contract Management staffs ensure that the primary task of all parties to the agreement is the management of project deliverables in accordance with the agreed contractual terms and conditions, hence minimising the commercial risk for the client. The meticulous management of all contracts within the project ensures a seamless delivery of projects worldwide.</p>
+                    <p>Qdc Contract Management staffs ensure that the primary task of all parties to the agreement is the management of project deliverables in accordance with the agreed contractual terms and conditions, hence minimising the commercial risk for the client. The meticulous management of all contracts within the project ensures a seamless delivery of projects worldwide.</p>
                     <div class="clear"></div>
                 </div>
 
