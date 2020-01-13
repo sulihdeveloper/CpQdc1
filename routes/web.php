@@ -87,7 +87,7 @@ Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
         'destroy','show'
     ]]);
     Route::resource('clien', 'ClienController',['except'=>[
-            'destroy','show'
+            'destroy'
         ]]);
     Route::resource('news', 'NewsController');
 

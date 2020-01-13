@@ -29,6 +29,9 @@
                 <td>{!! html_entity_decode($item->section_two)!!}</td>
                 <td>
                     <a href="{{route('about.edit',$item->id)}}" class="pull-right btn btn-xs btn-info">edit</a>
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn btn-danger btn-xs">delete</button>
                 </td>
             </tr>
             @endforeach
