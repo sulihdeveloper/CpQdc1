@@ -27,11 +27,10 @@
                         <td>{!! html_entity_decode($row->description) !!}</td>
                         <td>{{$row->closing_date}}</td>
                     <td>
-                    <a href="{{route('lowker.show',$row->id)}}" class="btn btn-success btn-xs">show</a>
                     <a href="{{route('lowker.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                     <a class="inline" method="POST" action="{{route('lowker.destroy',$row->id)}}">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
+                        @csrf
+                        @method('delete')
                         <button type="submit" class="btn btn-danger btn-xs">delete</button>
                     </a>
                     </td>

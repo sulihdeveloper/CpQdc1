@@ -34,8 +34,8 @@
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
                             <a href="{{route('clien.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
+                            @csrf
+                            @method('delete')
                             <button type="submit" class="btn btn-danger btn-xs">delete</button>
                         </td>
                         @endforeach

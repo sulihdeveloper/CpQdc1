@@ -34,10 +34,9 @@
                 <td>{{ $row->subject }}</td>
                 <td>{{ $row->message }}</td>
                 <td>
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <button type="submit" class="btn btn-danger btn-xs">delete</button>
-                    </form>
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger btn-xs">delete</button>
                 </td>
                 @endforeach
             </tr>

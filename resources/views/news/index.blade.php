@@ -44,8 +44,8 @@
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
                                         <a href="{{route('news.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
                                         <a action="{{ route('news.destroy',$data->id) }}" method="POST">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
+                                            @csrf
+                                            @method('delete')
                                             <button type="submit" class="btn btn-danger btn-xs">Hapus</button>
                                         </a>
                                         </form>

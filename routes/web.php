@@ -72,8 +72,6 @@ Auth::routes();
 
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 
-
-
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);
     Route::resource('about', 'AboutController',['except' => [
         'destroy','show'
@@ -89,9 +87,9 @@ Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
     Route::resource('clien', 'ClienController',['except'=>[
             'destroy'
         ]]);
+
     Route::resource('news', 'NewsController');
 
     Route::resource('/lowker','LowkerController');
-
 
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);

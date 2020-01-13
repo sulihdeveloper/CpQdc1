@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container">
         <div id="content">
             <div class="col-md-12">
@@ -9,25 +18,25 @@
 
             <div class="col-md-12">
                 <div class="col-md-7">
-                    <form action="{{ route('lowker.update',$lowker->id) }}" method="POST">
+                    <form action="{{ route('lowker.update',$row->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PATCH')}}
                         <div class="form-group">
                             <label for="requerments" class="col-md-3 control-label">Requerments</label>
                             <div class="col-md-9">
-                                <textarea id="content" class="form-control col-md-9" name="requerments"  placeholder="requerments">{{old('requerments')}}</textarea>
+                                <textarea id="content" class="form-control col-md-9" name="requerments"  placeholder="requerments"> value="{{ $row->requerments }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="closing_date" class="col-md-3 control-label">Closing Date</label>
                             <div class="col-md-9">
-                                <input class="form-control" id="closing_date" type="date" name="closing_date" placeholder="Closing Date" value={{old('closing_date')}}>
+                                <input class="form-control" id="closing_date" type="date" name="closing_date" placeholder="Closing Date" value="{{ $row->closing_date }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="description" class="col-md-3 control-label">Description</label>
                             <div class="col-md-9">
-                                <textarea id="content" class="form-control col-md-9" name="description"  placeholder="description">{{old('description')}}</textarea>
+                                <textarea id="content" class="form-control col-md-9" name=""  placeholder="description"> value="{{ $row->description }}"</textarea>
                             </div>
                         </div>
                         <div class="form-group">
