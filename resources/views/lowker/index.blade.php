@@ -28,10 +28,10 @@
                         <td>{{$row->closing_date}}</td>
                     <td>
                     <a href="{{route('lowker.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-                    <a class="inline" method="POST" action="{{route('lowker.destroy',$row->id)}}">
+
                         @csrf
                         @method('delete')
-                        <a href="{{route('lowker.destroy',$row->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
+                        <a href="/lowker/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
                     </a>
                     </td>
                     @endforeach

@@ -34,9 +34,7 @@
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
                             <a href="{{route('clien.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-                            @csrf
-                            @method('delete')
-                            <a href="{{route('clien.destroy',$row->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
+                            <a href="/clien/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
                         </td>
                         @endforeach
                     </tr>

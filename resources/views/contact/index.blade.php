@@ -36,7 +36,7 @@
                 <td>
                     @csrf
                     @method('delete')
-                    <a href="{{route('contact.destroy',$row->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
+                    <a href="/contact/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
                 </td>
                 @endforeach
             </tr>
