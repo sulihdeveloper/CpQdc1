@@ -31,8 +31,7 @@
                     <a href="{{route('about.edit',$item->id)}}" class="pull-right btn btn-xs btn-info">edit</a>
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btn-xs">delete</button>
-                </td>
+                    <a href="{{route('about.destroy',$item->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
             </tr>
             @endforeach
             </tbody>

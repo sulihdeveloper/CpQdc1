@@ -39,18 +39,15 @@
                                     <td>{{ $data->judul }}</td>
                                     <td>{!! html_entity_decode($data->isi) !!}</td>
                                     <td><img src="{{url('images/'.$data->image)}}" width="160" height="115"></td>
-                                    <td>
+
 
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
                                         <a href="{{route('news.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
-                                        <a action="{{ route('news.destroy',$data->id) }}" method="POST">
+
                                             @csrf
                                             @method('delete')
-                                            <button type="submit" class="btn btn-danger btn-xs">Hapus</button>
-                                        </a>
-                                        </form>
-                                                </form>
-                                    </td>
+                                        <a href="{{route('news.destroy',$data->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
+
                                 </tr>
                             @endforeach
                             </tbody>

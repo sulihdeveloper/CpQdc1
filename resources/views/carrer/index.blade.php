@@ -42,11 +42,10 @@
                         <td>{{ $row->address }}</td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->file }}" class="img-thumbnail" width="75" /></td>
-                        <td>
+
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-danger btn-xs">delete</button>
-                          </td>
+                            <a href="{{route('carrer.destroy',$row->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
                         @endforeach
                     </tr>
             </table>

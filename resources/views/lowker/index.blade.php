@@ -31,7 +31,7 @@
                     <a class="inline" method="POST" action="{{route('lowker.destroy',$row->id)}}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger btn-xs">delete</button>
+                        <a href="{{route('lowker.destroy',$row->id)}}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
                     </a>
                     </td>
                     @endforeach
