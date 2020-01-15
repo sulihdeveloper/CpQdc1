@@ -69,7 +69,10 @@ class LowkerController extends Controller
 
     public function destroy($id)
     {
-        Lowker::findOrFail($id)->delete();
-        return redirect()->route('lowker.index')->with('success','delete success');
+        // menghapus data pegawai berdasarkan id yang dipilih
+        DB::table('lowker')->where('id', $id)->delete();
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('lowker.index')->with('success', 'Data is successfully deleted');
     }
-    }
+}

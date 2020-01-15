@@ -31,8 +31,7 @@
 
                         @csrf
                         @method('delete')
-                        <a href="/lowker/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
-                    </a>
+                    <a href="/lowker/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-danger">Delete</a> </td>
                     </td>
                     @endforeach
                 </tbody>

@@ -82,8 +82,10 @@ class ContactController extends Controller
 
     public function destroy($id)
     {
-        $data = Contact::findOrFail($id);
-        $data->delete();
+        // menghapus data pegawai berdasarkan id yang dipilih
+        DB::table('contact')->where('id', $id)->delete();
+
+        // alihkan halaman ke halaman pegawai
         return redirect('contact.index')->with('success', 'Data is successfully deleted');
     }
 }

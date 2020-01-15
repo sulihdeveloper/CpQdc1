@@ -32,25 +32,22 @@
                                 <th>action</th>
                             </thead>
 
-                            <tbody>
+                            <tr>
                             @foreach($news as $k=>$data)
-                                <tr>
+                            <tr>
                                     <td>{{ $news->firstItem() + $k }}</td>
                                     <td>{{ $data->judul }}</td>
                                     <td>{!! html_entity_decode($data->isi) !!}</td>
                                     <td><img src="{{url('images/'.$data->image)}}" width="160" height="115"></td>
-
-
+                            <td>
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
                                         <a href="{{route('news.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
-
                                             @csrf
                                             @method('delete')
-                                        <a href="/news/destroy/{{ $data->id }}" class="pull-right btn btn-xs btn-info">Delete</a> </td>
-
-                                </tr>
+                                        <a href="/news/destroy/{{ $data->id }}" class="pull-right btn btn-xs btn-danger">Delete</a>
+                            </td>
                             @endforeach
-                            </tbody>
+                            </tr>
                         </table>
                         {!! $news->links() !!}
                     </div>

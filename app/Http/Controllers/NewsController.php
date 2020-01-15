@@ -128,11 +128,11 @@ class NewsController extends Controller
      * @param News $news
      * @return Response
      */
-    public function destroy(Request $request, News $news)
+    public function destroy(Request $request, $id)
     {
-        $news = News::findOrFail($news);
-        $news->delete();
+        // menghapus data pegawai berdasarkan id yang dipilih
+        DB::table('news')->where('id', $id)->delete();
 
-        return redirect('news.index')->with('success', 'Data is successfully deleted');
-    }
+        // alihkan halaman ke halaman pegawai
+        return redirect('news.index')->with('success', 'Data is successfully deleted');    }
 }

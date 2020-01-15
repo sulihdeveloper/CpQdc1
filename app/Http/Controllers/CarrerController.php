@@ -111,9 +111,11 @@ class CarrerController extends Controller
 
     public function destroy($id)
     {
-        $data = Carrer::findOrFail($id);
-        $data->delete();
+        // menghapus data pegawai berdasarkan id yang dipilih
+        DB::table('carrer')->where('id', $id)->delete();
 
+        // alihkan halaman ke halaman pegawai
         return redirect('carrer.index')->with('success', 'Data is successfully deleted');
+
     }
 }
