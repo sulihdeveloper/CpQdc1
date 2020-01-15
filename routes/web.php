@@ -80,8 +80,7 @@ Route::get('contacts',function (){
 
     Route::resource('carrer', 'CarrerController')->only(['index', 'store', 'edit', 'update', 'destroy']);
 
-    Route::resource('clien', 'ClienController')->only(['index','create', 'store', 'edit', 'update']);
-    Route::get('/clien/destroy/{id}', 'ClienController@destroy');
+    Route::resource('clien', 'ClienController')->only(['index','create', 'store', 'edit', 'update','destroy']);
 
     Route::resource('news', 'NewsController')->only(['index','create','show', 'store', 'edit', 'update', 'destroy']);
 
