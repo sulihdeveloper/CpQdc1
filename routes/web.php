@@ -73,23 +73,16 @@ Auth::routes();
 Route::get('/dashboard-v1', 'HomeController@dashboardV1')->name('dashboard-v1');
 
     Route::resource('manage','ManageController',['only'=>['update','destroy','index']],['middleware'=>['checkadmin']]);
-    Route::resource('about', 'AboutController',['except' => [
-        'destroy','show'
-    ]]);
+    Route::resource('about', 'AboutController')->only(['index','edit', 'update',]);
 
-    Route::resource('contact', 'ContactController',['except' => [
-        'destroy','show'
-    ]]);
+    Route::resource('contact', 'ContactController')->only(['index', 'create','store', 'edit', 'update', 'destroy']);
 
-    Route::resource('carrer', 'CarrerController',['except'=>[
-        'destroy','show'
-    ]]);
-    Route::resource('clien', 'ClienController',['except'=>[
-            'destroy'
-        ]]);
+    Route::resource('carrer', 'CarrerController')->only(['index', 'store', 'edit', 'update', 'destroy']);
 
-    Route::resource('news', 'NewsController');
+    Route::resource('clien', 'ClienController')->only(['index','create', 'store', 'edit', 'update', 'destroy']);
 
-    Route::resource('/lowker','LowkerController');
+    Route::resource('news', 'NewsController')->only(['index','create','show', 'store', 'edit', 'update', 'destroy']);
+
+    Route::resource('/lowker','LowkerController')->only(['index','create', 'store', 'edit', 'update', 'destroy']);
 
 Route::resource('profile','ProfileController',['only'=>['edit','update']],['middleware'=>['auth']]);

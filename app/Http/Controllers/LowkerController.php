@@ -10,7 +10,9 @@ class LowkerController extends Controller
     public function index()
     {
         $lowker = Lowker::latest()->paginate(3);
-        return view('lowker.index', compact('lowker'))->with('id');
+        return view('lowker.index', compact('lowker'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+
     }
 
     public function create()
@@ -69,10 +71,10 @@ class LowkerController extends Controller
 
     public function destroy($id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
+        // menghapus data berdasarkan id yang dipilih
         DB::table('lowker')->where('id', $id)->delete();
 
-        // alihkan halaman ke halaman pegawai
+        // alihkan halaman ke halaman
         return redirect('lowker.index')->with('success', 'Data is successfully deleted');
     }
 }

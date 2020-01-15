@@ -15,6 +15,7 @@
             <table class="table table-bordered" id="product-table">
                 <thead>
                 <tr>
+                    <th>No</th>
                     <th>Requerments</th>
                     <th>Description</th>
                     <th>Closing Date</th>
@@ -23,6 +24,7 @@
                 <tbody>
                 @foreach($lowker as $row)
                     <tr>
+                        <td>{{++$i}}</td>
                         <td>{{$row->requerments}}</td>
                         <td>{!! html_entity_decode($row->description) !!}</td>
                         <td>{{$row->closing_date}}</td>
