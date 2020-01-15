@@ -8,7 +8,7 @@
             <table class="table table-bordered" id="users-table">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th>No</th>
 					<th>Name</th>
 					<th>Email</th>
 					<th>Status</th>
