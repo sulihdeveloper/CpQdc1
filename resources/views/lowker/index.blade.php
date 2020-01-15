@@ -4,7 +4,7 @@
     <div class="container" id="content">
         <div class="col-md-12">
             <h1>Requerments lists</h1>
-            <p class="text-center"><a href="{{route('lowker.create')}}" class="btn btn-md btn-success">add new Requerments</a></p>
+            <p class="text-left"><a href="{{route('lowker.create')}}" class="btn btn-md btn-success">Create</a></p>
             @if (session('success'))
                 <p class="alert alert-success">
                     {{ session('success') }}

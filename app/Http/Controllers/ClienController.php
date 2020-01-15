@@ -84,10 +84,12 @@ class ClienController extends Controller
 
     public function destroy($id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('clien')->where('id', $id)->delete();
+        $clien = Clien::where('id',$id)->first();
+        File::delete('data_file/'.$clien->file);
 
-        // alihkan halaman ke halaman pegawai
+        // hapus data
+        Clien::where('id',$id)->delete();
+
         return redirect('clien.index')->with('success', 'Data is successfully deleted');
     }
 

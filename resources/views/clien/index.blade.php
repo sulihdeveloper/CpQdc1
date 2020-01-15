@@ -36,7 +36,7 @@
                             <a href="{{route('clien.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
                             @csrf
                             @method('delete')
-                            <a href="/clien/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-danger">Delete</a>
+                            <a href="/clien/destroy/{{ $row->id }}" class="btn btn-danger btn-xs ">Delete</a>
                         </td>
                         @endforeach
                     </tr>
