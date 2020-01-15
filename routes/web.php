@@ -78,7 +78,7 @@ Route::get('contacts',function (){
 
     Route::resource('about', 'AboutController')->only(['index','edit', 'update',]);
 
-     Route::resource('carrer', 'CarrerController')->only(['index', 'store', 'edit', 'update', 'destroy']);
+    Route::resource('carrer', 'CarrerController')->only(['index', 'store', 'edit', 'update', 'destroy']);
 
     Route::resource('clien', 'ClienController')->only(['index','create', 'store', 'edit', 'update', 'destroy']);
 
