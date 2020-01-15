@@ -18,7 +18,8 @@ class AboutController extends Controller
     public function index()
     {
         $about = Post::latest()->paginate(5);
-        return view('about.index',compact('about'));
+        return view('about.index',compact('about'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

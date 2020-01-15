@@ -18,6 +18,7 @@
         <table class="table table-bordered" id="product-table">
             <thead>
             <tr>
+                <th>No</th>
                 <th>Judul</th>
                 <th>Isi</th>
                 <th>Action</th>
@@ -25,6 +26,7 @@
             <tbody>
             @foreach($about as $item)
             <tr>
+                <td>{{++$i}}</td>
                 <td>{{$item->section_one}}</td>
                 <td>{!! html_entity_decode($item->section_two)!!}</td>
                 <td>
