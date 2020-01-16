@@ -6,6 +6,7 @@ use App\capability;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Session;
+use DB;
 
 class CapabilityController extends Controller
 {
@@ -40,7 +41,8 @@ class CapabilityController extends Controller
     {
         $this->validate($request, [
             'judul'    =>  'required',
-            'isi'    =>  'required',            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
+            'isi'    =>  'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
         ]);
 
         $image = $request->file('image');
