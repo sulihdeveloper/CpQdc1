@@ -100,7 +100,6 @@
         </div>
     </div>
         @endforeach
-    </div>
 </section>
 <!-- #about -->
 

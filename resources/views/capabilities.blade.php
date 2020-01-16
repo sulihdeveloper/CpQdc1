@@ -64,20 +64,23 @@
                 </div>
             </div>
         </div>
-        @foreach($capability as $k=>$data)
         <div class="container">
             <div class="row mar-bot">
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                <div class="col-lg-5 ml-auto">
+                    @foreach($capability as $value)
+                      <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                         <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-screen"><img src="{{url('images/'.$data->image)}}" width="120" height="100"></a>
+                            <a href="#" class=""><img src="{{url('images/'.$value->image)}}" width="120" height="100"></a>
                         </div>
                     </div>
-                    <h3 class="text-bold">{{ $data->judul }}</h3>
-                    <p>{!! html_entity_decode($data->isi) !!}.</p>
+                    <h3 class="text-bold">{{ $value->judul }}</h3>
+                    <p>{!! html_entity_decode($value->isi) !!}.</p>
                     <div class="clear"></div>
+                    @endforeach
                 </div>
-                @endforeach
+            </div>
+        </div>
+     </div>
     </section>
 
     <br/><br/><br/><br/><br/><br/>

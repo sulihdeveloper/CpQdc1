@@ -40,10 +40,10 @@ class HomeController extends Controller
     {
         return view('templates.dashboard-v1');
     }
-    public function capabilities()
+    public function capabilities($id)
     {
-       $capability = Capability::all();
-        return view('capabilities', compact('capability'));
+       $capability = Capability::latest($id)->paginate(6);
+       return view('capabilities', compact('capability'));
     }
 
     public function contacts()
@@ -52,7 +52,7 @@ class HomeController extends Controller
     }
     public function berita()
     {
-        $news = News::latest()->paginate(10);
+        $news = News::latest()->paginate(9);
         return view('berita');
     }
 
@@ -63,7 +63,7 @@ class HomeController extends Controller
     }
     public function formcarrer($id)
     {
-        $lowker = Lowker::latest($id)->firstOrFail();
+        $lowker = Lowker::latest($id)->paginate(9);
         return view('formcarrer');
     }
     public function view_carrer($id)

@@ -33,7 +33,7 @@ Route::get('capabilities',function (){
     $capa =[
       'capability' => $capability,
     ];
-    return view('capabilities',$capability);
+    return view('capabilities',$capa);
 });
 
 Route::get('/view_berita/{id}',function ($id){

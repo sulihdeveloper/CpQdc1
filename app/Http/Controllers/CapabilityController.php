@@ -17,8 +17,9 @@ class CapabilityController extends Controller
      */
     public function index()
     {
-        $capability = Capability::latest()->paginate(5);
-        return view('capability.index',compact('capability'));
+        $capability = Capability::latest()->paginate(10);
+        return view('capability.index',compact('capability'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
