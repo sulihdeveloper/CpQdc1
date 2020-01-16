@@ -104,100 +104,102 @@
 </section>
 <!-- #about -->
 
-    <!-- about -->
-    <section id="about" class="section appear clearfix">
+    <!-- #capability -->
+    <div class="site-section">
         <div class="container">
-            <div class="row mar-bot">
-                <div class="col-md-offset-1 col-md-9">
-                    <div class="section-header">
-                        <div class="section-header">
-                            <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
-                            <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
-                        </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row mar-bot">
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-screen">screen</a>
-                        </div>
-                    </div>
-                    <h3 class="text-bold">Feasibility Research</h3>
-                    <p>Before undertaking many projects, it is essential to undertake feasibility studies to ensure the viability of the project. Qdc can offer additional assistance by providing services such as.</p>
-                    <p>
-                    Technology path engineering </p>
-                    Network route selection</p>
-                    Viability of technological alternatives
-                    </p>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-list">list</a>
-                        </div>
-                    </div>
-                    <h3 class="text-bold">Consultancy</h3>
-                    <p>Qdc provides a range of value added consultancy services including surveys, auditing, testing and contract negotiations. In order to provide the most effective, reliable, customised solution, Qdc can bring together the skills and technologies appropriate to client’s individual needs. Qdc is able to offer a full consultative service grounded in decades of experience and proven expertise.</p>
-
-                    <div class="clear"></div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-images">images</a>
-                        </div>
-                    </div>
-                    <h3 class="text-bold">Planning and Design</h3>
-                    <p>The depth of experience and skills within this group enables Qdc to design solutions that are achievable in all prevailing conditions, which meet and often exceed environmental, individual and health expectations. The service includes site surveying from which topographical maps are produced, environmental and heritage aspects researched and authorised, appropriate equipment sourced and project operation documentation is prepared.</p>
-                    <div class="clear"></div>
-                </div>
-
-            </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-archive">archive</a>
-                        </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="img-border">
+                        <img src="img/images.jpg" alt="Image" class="img-fluid" width="550" height="568">
                     </div>
-                    <h3 class="text-bold">Project Management</h3>
-                    <p>All aspects of every project are the responsibility of a specific Qdc Project Manager. These responsibilities include delivery on time, on budget, on customer specification and to quality standards equal to the best in the world. Qdc is sufficiently flexible to mirror clients’ differing Project Management practices on a project-by-project basis if required.</p>
-
-                    <div class="clear"></div>
                 </div>
+                <div class="col-lg-5 ml-auto">
 
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-cog">Mobile</a>
+                    <h2 class="font-weight-bold text-black mb-5">Why Us</h2>
+                    <span class="sub-title">Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</span>
+                    <div class="accordion" id="accordionExample">
+
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                1. Feasibility Research?
+                            </button>
+                        </h2>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Before undertaking many projects, it is essential to undertake feasibility studies to ensure the viability of the project. Qdc can offer additional assistance by providing services such as:
+                                    <a href="#">Technology path engineering,</a> <a href="#">Network route selection,</a> <a href="#">Viability of technological alternatives.</a> </p>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="text-bold">Material Management</h3>
-                    <p>Qdc has established partnerships for the provision and support of equipment. This is a distinct advantage in ensuring the best possible pricing and full life support of the equipment.</p>
-                    <div class="clear"></div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-clock">Faster</a>
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                2. Consultancy?
+                            </button>
+                        </h2>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Qdc provides a range of value added consultancy services including surveys, auditing, testing and contract negotiations. In order to provide the most effective, reliable, customised solution, Qdc can bring together the skills and technologies appropriate to client’s individual needs. Qdc is able to offer a full consultative service grounded in decades of experience and proven expertise.</p>
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="text-bold">Contract Management</h3>
-                    <p>Qdc Contract Management staffs ensure that the primary task of all parties to the agreement is the management of project deliverables in accordance with the agreed contractual terms and conditions, hence minimising the commercial risk for the client. The meticulous management of all contracts within the project ensures a seamless delivery of projects worldwide.</p>
-                    <div class="clear"></div>
-                </div>
 
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                3. Planning and Design
+                            </button>
+                        </h2>
+
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>The depth of experience and skills within this group enables Qdc to design solutions that are achievable in all prevailing conditions, which meet and often exceed environmental, individual and health expectations. The service includes site surveying from which topographical maps are produced, environmental and heritage aspects researched and authorised, appropriate equipment sourced and project operation documentation is prepared.</p>
+                            </div>
+                        </div>
+
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                4. Project Management
+                            </button>
+                        </h2>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>All aspects of every project are the responsibility of a specific Qdc Project Manager. These responsibilities include delivery on time, on budget, on customer specification and to quality standards equal to the best in the world. Qdc is sufficiently flexible to mirror clients’ differing Project Management practices on a project-by-project basis if required.</p>
+                            </div>
+                        </div>
+
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                5. Material Management
+                            </button>
+                        </h2>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Qdc has established partnerships for the provision and support of equipment. This is a distinct advantage in ensuring the best possible pricing and full life support of the equipment.</p>
+                            </div>
+                        </div>
+
+                        <h2 class="mb-0 border rounded mb-2">
+                            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                6. Contract Management
+                            </button>
+                        </h2>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Qdc Contract Management staffs ensure that the primary task of all parties to the agreement is the management of project deliverables in accordance with the agreed contractual terms and conditions, hence minimising the commercial risk for the client. The meticulous management of all contracts within the project ensures a seamless delivery of projects worldwide.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+
 
 <!--==========================
   Clients Section
