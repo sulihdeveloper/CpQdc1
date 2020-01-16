@@ -42,9 +42,10 @@
                             <td>
                                         <a href="{{route('news.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
                                         <a href="{{route('news.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
-                                            @csrf
-                                            @method('delete')
-                                        <a href="/news/destroy/{{ $data->id }}" class="pull-right btn btn-xs btn-danger">Delete</a>
+                                <form action="{{ action('NewsController@destroy',['id'=>$data->id]) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                             </td>
                             @endforeach
                             </tr>

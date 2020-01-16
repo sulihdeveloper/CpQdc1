@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Clien;
 use Illuminate\Http\Request;
 use App\Carrer;
+use Session;
 
 class CarrerController extends Controller
 {
@@ -111,11 +113,9 @@ class CarrerController extends Controller
 
     public function destroy($id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('carrer')->where('id', $id)->delete();
-
-        // alihkan halaman ke halaman pegawai
-        return redirect('carrer.index')->with('success', 'Data is successfully deleted');
+        $carrer = Carrer::destroy($id);
+        Session::flash('flash_message','data berhasil di hapus');
+        return redirect()->action('CarrerController@index');
 
     }
 }

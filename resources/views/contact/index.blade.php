@@ -34,9 +34,10 @@
                 <td>{{ $row->subject }}</td>
                 <td>{{ $row->message }}</td>
                 <td>
-                    @csrf
-                    @method('delete')
-                    <a href="/contact/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-danger">Delete</a> </td>
+                    <form action="{{ action('ContactController@destroy',['id'=>$row->id]) }}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                 </td>
                 @endforeach
             </tr>

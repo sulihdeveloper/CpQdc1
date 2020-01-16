@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Clien;
+use Session;
 
 class ClienController extends Controller
 {
@@ -84,13 +85,9 @@ class ClienController extends Controller
 
     public function destroy($id)
     {
-        $clien = Clien::where('id',$id)->first();
-        File::delete('data_file/'.$clien->file);
-
-        // hapus data
-        Clien::where('id',$id)->delete();
-
-        return redirect('clien.index')->with('success', 'Data is successfully deleted');
+        $clien = Clien::destroy($id);
+        Session::flash('flash_message','data berhasil di hapus');
+        return redirect()->action('ClienController@index');
     }
 
 }

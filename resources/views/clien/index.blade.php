@@ -34,9 +34,10 @@
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td>
                             <a href="{{route('clien.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-                            @csrf
-                            @method('delete')
-                            <a href="/clien/destroy/{{ $row->id }}" class="btn btn-danger btn-xs ">Delete</a>
+                            <form action="{{ action('ClienController@destroy',['id'=>$row->id]) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                           <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                         </td>
                         @endforeach
                     </tr>

@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Contact;
 use App\Clien;
+use Session;
 
 class ContactController extends Controller
 {
@@ -82,10 +83,8 @@ class ContactController extends Controller
 
     public function destroy($id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('contact')->where('id', $id)->delete();
-
-        // alihkan halaman ke halaman pegawai
-        return redirect('contact.index')->with('success', 'Data is successfully deleted');
+        $contac = Contact::destroy($id);
+        Session::flash('flash_message','data berhasil di hapus');
+        return redirect()->action('ContactController@index');
     }
 }

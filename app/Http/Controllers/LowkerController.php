@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Clien;
 use App\Lowker;
 use Illuminate\Http\Request;
+use Session;
 
 class LowkerController extends Controller
 {
@@ -71,10 +73,8 @@ class LowkerController extends Controller
 
     public function destroy($id)
     {
-        // menghapus data berdasarkan id yang dipilih
-        DB::table('lowker')->where('id', $id)->delete();
-
-        // alihkan halaman ke halaman
-        return redirect('lowker.index')->with('success', 'Data is successfully deleted');
+        $lowker = Lowker::destroy($id);
+        Session::flash('flash_message','data berhasil di hapus');
+        return redirect()->action('LowkerController@index');
     }
 }

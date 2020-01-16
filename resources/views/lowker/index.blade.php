@@ -31,9 +31,10 @@
                     <td>
                     <a href="{{route('lowker.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
 
-                        @csrf
-                        @method('delete')
-                    <a href="/lowker/destroy/{{ $row->id }}" class="pull-right btn btn-xs btn-danger">Delete</a> </td>
+                        <form action="{{ action('ContactController@destroy',['id'=>$row->id]) }}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                     </td>
                     @endforeach
                 </tbody>

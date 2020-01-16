@@ -7,6 +7,7 @@ use App\News;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Session;
 
 class NewsController extends Controller
 {
@@ -130,9 +131,8 @@ class NewsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('news')->where('id', $id)->delete();
-
-        // alihkan halaman ke halaman pegawai
-        return redirect('news.index')->with('success', 'Data is successfully deleted');    }
+        $news = News::destroy($id);
+        Session::flash('flash_message', 'data berhasil di hapus');
+        return redirect()->action('NewsController@index');
+    }
 }
