@@ -42,9 +42,10 @@ class HomeController extends Controller
     }
     public function capabilities()
     {
-       $capability = Capability::latest()->paginate(5);
-        return view('capabilities');
+       $capability = Capability::all();
+        return view('capabilities', compact('capability'));
     }
+
     public function contacts()
     {
         return view('contacts');
