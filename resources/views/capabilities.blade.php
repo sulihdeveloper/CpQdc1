@@ -70,7 +70,7 @@
                 <div class="col-lg-4">
                     <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
                         <div class="float-left mar-right20">
-                            <a href="#" class="hi-icon hi-icon-screen"><img src="{{url('images/'.$data->image)}}" width="160" height="115"></a>
+                            <a href="#" class="hi-icon hi-icon-screen"><img src="{{url('images/'.$data->image)}}" width="120" height="100"></a>
                         </div>
                     </div>
                     <h3 class="text-bold">{{ $data->judul }}</h3>

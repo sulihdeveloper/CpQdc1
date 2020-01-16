@@ -29,9 +29,9 @@ Route::get('bout',function (){
 });
 
 Route::get('capabilities',function (){
-    $capability = Capability::latest()->paginate(6);
+    $capability = Capability::latest()->paginate(10);
     $capa =[
-      'capabilities' => $capability,
+      'capability' => $capability,
     ];
     return view('capabilities',$capability);
 });

@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Lowker;
 use App\Post;
-use Illuminate\Http\Request;
-use App\slide;
 use App\news;
 use App\Clien;
-use App\capability;
+use App\Capability;
+use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
 
@@ -43,7 +42,7 @@ class HomeController extends Controller
     }
     public function capabilities()
     {
-        $capability = Capability::latest()->paginate(6);
+       $capability = Capability::latest()->paginate(5);
         return view('capabilities');
     }
     public function contacts()

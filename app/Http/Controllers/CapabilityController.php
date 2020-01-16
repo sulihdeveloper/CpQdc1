@@ -63,7 +63,7 @@ class CapabilityController extends Controller
      * @param News $news
      * @return Response
      */
-    public function show(News $news)
+    public function show(Capability $capability)
     {
         return view('capability.show',compact('capability'));
     }
