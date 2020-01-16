@@ -27,6 +27,7 @@
                 <ul class="treeview-menu">
                     <li class="active"><a href="{!! url('/about') !!}"><i class="fa fa-circle-o"></i> About</a></li>
                     <li class="active"><a href="{!! url('/contact') !!}"><i class="fa fa-circle-o"></i> Contact</a></li>
+                    <li class="active"><a href="{!! url('/capability') !!}"><i class="fa fa-circle-o"></i> Capability</a></li>
                     <li class="active"><a href="{!! url('/news') !!}"><i class="fa fa-circle-o"></i> News</a></li>
                     <li class="active"><a href="{!! url('/lowker') !!}"><i class="fa fa-circle-o"></i> Lowongan</a></li>
                     <li class="active"><a href="{!! url('/clien') !!}"><i class="fa fa-circle-o"></i> Client</a></li>

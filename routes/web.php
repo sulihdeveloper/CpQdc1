@@ -5,6 +5,7 @@ use App\Slide;
 use App\news;
 use App\Clien;
 use App\Post;
+use App\Capability;
 
 Auth::routes();
 
@@ -31,6 +32,7 @@ Route::get('bout',function (){
 Route::get('capability',function (){
     return view('capability');
 });
+
 Route::get('/view_berita/{id}',function ($id){
     $news = News::where('id', $id)->paginate();
     $new = [
@@ -88,3 +90,4 @@ Route::get('contacts',function (){
 
     Route::resource('contact', 'ContactController')->only(['index', 'create','store', 'edit', 'update', 'destroy']);
 
+    Route::resource('capability', 'CapabilityController')->only(['index','create','show', 'store', 'edit', 'update', 'destroy']);
