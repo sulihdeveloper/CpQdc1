@@ -34,52 +34,56 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                     <li><a href="{!! url('/') !!}">Home</a></li>
-                    <li class="active"><a href="{!! url('/bout') !!}">About</a></li>
-                    <li><a href="{!! url('/capabilities') !!}">Capabilities</a></li>
+                    <li><a href="{!! url('/bout') !!}">About</a></li>
+                    <li class="active"><a href="{!! url('/capabilities') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
                     <li><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
                     <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                 </ul>
             </div>
+            <!--/.navbar-collapse -->
         </div>
     </div>
-    </body>
-    <video id="video" width="1520" height="568" autoplay loop controls muted>
-        <source src="{{URL::asset("../public/img/ben.mp4")}}" type="video/mp4"/>
-    </video>
 
 
-    <br/><br/><br/>
-    <section id="about">
+    <section id="intro2">
+        <div class="intro-content">
+            <h2>Capabilities</h2>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="section appear clearfix">
         <div class="container">
-            <header class="section-header">
-                <h2>PT. Qdc Technologies</h2>
-                <h4> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h4>
-            </header>
-            <br>
-            @foreach($post as $item)
-                <div class="row about-container">
-                    <div class="col-lg-6 content order-lg-1 order-2">
-                        <p>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
-                        <div class="icon-box wow fadeInUp">
-                            <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                            <h4 class="title"><a href=""> {{$item->section_one}}</a></h4>
-                            <p class="description">{!! html_entity_decode($item->section_two)!!}</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 background order-lg-3 order-2 ">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ya9kj2-FyFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="row mar-bot">
+                <div class="col-md-offset-1 col-md-9">
+                    <div class="section-header">
+                        <h2 class="section-heading animated" data-animation="bounceInUp">Specialist Service Capabilities</h2>
+                        <h5>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</h5>
                     </div>
                 </div>
+            </div>
         </div>
-        @endforeach
-        </div>
+        @foreach($capability as $k=>$data)
+        <div class="container">
+            <div class="row mar-bot">
+                <div class="col-lg-4">
+                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                        <div class="float-left mar-right20">
+                            <a href="#" class="hi-icon hi-icon-screen"><img src="{{url('images/'.$data->image)}}" width="160" height="115"></a>
+                        </div>
+                    </div>
+                    <h3 class="text-bold">{{ $data->judul }}</h3>
+                    <p>{!! html_entity_decode($data->isi) !!}.</p>
+                    <div class="clear"></div>
+                </div>
+                @endforeach
     </section>
 
     <br/><br/><br/><br/><br/><br/>
     <!--==========================
-      Footer
-    ============================-->
+                    Footer
+        ============================-->
     <section id="footer" class="section-footer">
         <div class="footer-top">
             <div class="container">
@@ -95,7 +99,7 @@
                         <ul>
                             <li><a href="{!! url('/') !!}">Home</a></li>
                             <li><a href="{!! url('/bout') !!}">About us</a></li>
-                            <li><a href="{!! url('/capabilities') !!}">Capability</a></li>
+                            <li><a href="{!! url('/capabilities') !!}">Capabilitties</a></li>
                             <li><a href="{!! url('/berita') !!}">News</a></li>
                             <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                         </ul>
@@ -110,19 +114,15 @@
                             <strong>Email:</strong> info@qdc.co.id<br>
                         </p>
                     </div>
-                        <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <p>Follow </p>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
-                            </div>
-                            </form>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <p>Follow </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/pages/PT-Qdc-Technologies/110904425594975" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <a href="https://www.instagram.com/qdctechnologies/?hl=id" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <a href="https://www.linkedin.com/company/pt-qdc-technologies/about/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <a href="https://github.com/pt-qdc-technologies" class="icoGithub" title="Github"><i class="fa fa-github-alt"></i></a></li>
                         </div>
-          </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -130,14 +130,6 @@
         <div class="container">
             <div class="copyright">
                 COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
-            </div>
-            <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-                -->
             </div>
         </div>
     </section>
@@ -162,8 +154,4 @@
 
     <!-- Template Main Javascript File -->
     <script src="js1/main.js"></script>
-
-    </body>
-
-    </html>
 @endsection

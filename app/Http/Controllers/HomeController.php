@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\slide;
 use App\news;
 use App\Clien;
+use App\capability;
+
 use Illuminate\Http\Response;
 
 class HomeController extends Controller
@@ -39,9 +41,10 @@ class HomeController extends Controller
     {
         return view('templates.dashboard-v1');
     }
-    public function capability()
+    public function capabilities()
     {
-        return view('capability');
+        $capability = Capability::latest()->paginate(6);
+        return view('capabilities');
     }
     public function contacts()
     {

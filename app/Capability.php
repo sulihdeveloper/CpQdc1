@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class capability extends Model
 {
-    protected $table = 'news';
+    protected $table = 'capability';
 
     protected $fillable = [
         'judul', 'isi','image'

@@ -36,7 +36,7 @@
                 <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                     <li><a href="{!! url('/') !!}">Home</a></li>
                     <li><a href="{!! url('/bout') !!}">About</a></li>
-                    <li><a href="{!! url('/capability') !!}">Capabilities</a></li>
+                    <li><a href="{!! url('/capabilities') !!}">Capabilities</a></li>
                     <li><a href="{!! url('/berita') !!}">News</a></li>
                     <li class="active"><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
                     <li><a href="{!! url('/contacts') !!}">Contact</a></li>
@@ -91,7 +91,7 @@
                                 <ul>
                                     <li><a href="{!! url('/') !!}">Home</a></li>
                                     <li><a href="{!! url('/bout') !!}">About us</a></li>
-                                    <li><a href="{!! url('/capability') !!}">Capability</a></li>
+                                    <li><a href="{!! url('/capabilities') !!}">Capability</a></li>
                                     <li><a href="{!! url('/berita') !!}">News</a></li>
                                     <li><a href="{!! url('/contacts') !!}">Contact</a></li>
                                 </ul>

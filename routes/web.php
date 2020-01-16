@@ -1,7 +1,6 @@
 <?php
 
 use App\Lowker;
-use App\Slide;
 use App\news;
 use App\Clien;
 use App\Post;
@@ -29,8 +28,12 @@ Route::get('bout',function (){
     return view('bout',$item);
 });
 
-Route::get('capability',function (){
-    return view('capability');
+Route::get('capabilities',function (){
+    $capability = Capability::latest()->paginate(6);
+    $capa =[
+      'capabilities' => $capability,
+    ];
+    return view('capabilities',$capability);
 });
 
 Route::get('/view_berita/{id}',function ($id){
