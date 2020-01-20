@@ -12,10 +12,12 @@ Route::get('/', function () {
     $news = News::latest()->paginate(3);
     $clien = Clien::latest()->paginate(4);
     $post = Post::latest()->paginate(3);
+    $capability = Capability::latest()->paginate(10);
     $data = [
         'news' => $news,
         'clien' => $clien,
         'post' => $post,
+        'capability' => $capability,
     ];
     return view('home', $data);
 });
