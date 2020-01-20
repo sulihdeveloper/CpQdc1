@@ -64,26 +64,27 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row mar-bot">
-                <div class="col-lg-5 ml-auto">
-                    @foreach($capability as $value)
-                      <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                        <div class="float-left mar-right20">
-                            <a href="#" class=""><img src="{{url('images/'.$value->image)}}" width="120" height="100"></a>
-                        </div>
-                    </div>
-                    <h3 class="text-bold">{{ $value->judul }}</h3>
-                    <p>{!! html_entity_decode($value->isi) !!}.</p>
-                    <div class="clear"></div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-     </div>
-    </section>
 
-    <br/><br/><br/><br/><br/><br/>
+        <section id="news" id="id" >
+            <div class="section-header">
+                @foreach($capability as $value)
+                    <div class="float-center mar-right20">
+                        <div class="col-lg-4 col-md-6 col-xs-12">
+                                    <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                                        <div class="float-left mar-right20">
+                                            <img src="{{url('images/'.$value->image)}}" width="120" height="100">
+                                        </div>
+                                    </div>
+                                    <h4 class="title">"{{ $value->judul }}"</h4>
+                                    <h6>{!! html_entity_decode($value->isi) !!}</h6>
+                                </div>
+                            </div>
+                @endforeach
+            </div>
+        </section>
+
+    <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>
     <!--==========================
                     Footer
         ============================-->
