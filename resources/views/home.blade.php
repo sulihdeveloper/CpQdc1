@@ -87,12 +87,12 @@
         @foreach($post as $item)
         <div class="row about-container">
             <div class="col-lg-6 content order-lg-1 order-2">
-                <p align=”justify”>Began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
+                <div style='text-align:justify; font-size: 14px;'>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</div>
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
                     <h4><a href=""> {{$item->section_one}}</a></h4>
-                    <p>{!! html_entity_decode($item->section_two)!!} </p>
-                </div>
+                    <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($item->section_two)!!} </div>
+                    </div>
             </div>
             <div class="col-lg-4 background order-lg-3 order-2 ">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ya9kj2-FyFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -115,7 +115,7 @@
                 <div class="col-lg-5 ml-auto">
 
                     <h2 class="font-weight-bold text-black mb-5">Why Us</h2>
-                    <span class="sub-title">Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</span>
+                    <div style='text-align:justify; font-size: 14px;'>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</div>
                     <div class="accordion" id="accordionExample">
                         @foreach($capability as $value)
                         <h2 class="mb-0 border rounded mb-2">
@@ -126,8 +126,7 @@
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                <p>{!! html_entity_decode($value->isi) !!}</p>
-                            </div>
+                                <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($value->isi) !!}</div>                            </div>
                         </div>
                         @endforeach
                     </div>

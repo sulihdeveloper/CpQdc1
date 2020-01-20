@@ -36,6 +36,7 @@ h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 h4 { font-size: 18px; }
 h5 { font-size: 16px; }
+h6 { font-size: 12px; }
 .txt-light { font-weight: 300; }
 .txt-regular { font-weight: 400; }
 .txt-bold { font-weight: 700; }
@@ -230,7 +231,9 @@ a:hover {
 .align-center {
 	text-align: center;
 }
-
+.align-justify {
+    text-align:Justify;
+}
 /* ---- padding ---- */
 /* top */
 .pad-top0 {
@@ -372,6 +375,12 @@ a:hover {
 	margin-bottom: 40px;
 }
 
+/* capability
+--------------------------------*/
+.entry p {
+    text-align:Justify;
+    font-size: 12px;
+}
 
 /*===========================
   --- Sections ----

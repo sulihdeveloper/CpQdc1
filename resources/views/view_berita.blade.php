@@ -64,7 +64,7 @@
                                         <img src="{{url('images/'.$nw->image)}}" width="560" height="315">
                                                 <br/><br/>
                                                 <h4>{{$nw->judul}}</h4>
-                                                <p >{!! html_entity_decode($nw->isi)!!}</p>
+                                                <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($nw->isi)!!}</div>
                                                 <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
                                         </thead>
                                     </table>

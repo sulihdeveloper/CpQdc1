@@ -76,7 +76,7 @@
                                         </div>
                                     </div>
                                     <h4 class="title">"{{ $value->judul }}"</h4>
-                                    <h5>{!! html_entity_decode($value->isi) !!}</h5>
+                                    <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($value->isi) !!}</div>
                                 </div>
                             </div>
                 @endforeach

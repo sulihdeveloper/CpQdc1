@@ -60,11 +60,11 @@
             @foreach($post as $item)
                 <div class="row about-container">
                     <div class="col-lg-6 content order-lg-1 order-2">
-                        <p>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</p>
+                        <div style='text-align:justify; font-size: 14px;'>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</div>
                         <div class="icon-box wow fadeInUp">
                             <div class="icon"><i class="fa fa-shopping-bag"></i></div>
                             <h4 class="title"><a href=""> {{$item->section_one}}</a></h4>
-                            <p class="description">{!! html_entity_decode($item->section_two)!!}</p>
+                            <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($item->section_two)!!} </div>
                         </div>
                     </div>
                     <div class="col-lg-4 background order-lg-3 order-2 ">
