@@ -41,6 +41,7 @@
                                     <td><img src="{{url('images/'.$data->image)}}" width="160" height="115"></td>
                                     <td>
                                         <a href="{{route('capability.show',$data->id)}}" class="btn btn-success btn-xs">show</a>
+                                        <a href="{{route('capability.edit',$data->id)}}" class="btn btn-info btn-xs">edit</a>
                                         <form action="{{ action('CapabilityController@destroy',['id'=>$data->id]) }}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
