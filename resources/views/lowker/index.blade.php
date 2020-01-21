@@ -29,9 +29,8 @@
                         <td>{!! html_entity_decode($row->description) !!}</td>
                         <td>{{$row->closing_date}}</td>
                     <td>
-                    <a href="{{route('lowker.edit',$row->id)}}" class="btn btn-info btn-xs">edit</a>
-
-                        <form action="{{ action('ContactController@destroy',['id'=>$row->id]) }}" method="POST">
+                        <a href="{{route('lowker.edit',$row->id)}}" class="btn btn-info btn-xs">Edit</a>
+                        <form action="{{ action('LowkerController@destroy',['id'=>$row->id]) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button class="btn btn-xs btn-danger" type="submit">Delete</button>

@@ -64,6 +64,7 @@
         </header>
 
     <section id="news" id="id" >
+        <div class="container">
         <div class="section-header">
             @foreach($lowker as $c)
                 <div class="float-center mar-right20">

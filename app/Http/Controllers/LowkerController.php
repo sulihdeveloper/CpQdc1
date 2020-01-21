@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Clien;
 use App\Lowker;
 use Illuminate\Http\Request;
 use Session;
@@ -44,13 +43,12 @@ class LowkerController extends Controller
     public function show($id)
     {
         $lowker = Lowker::latest()->paginate(10);
-        return view('lowker.show', compact('lowker'));
+        return view('lowker.show', compact('id'));
     }
 
-    public function edit($id)
+    public function edit(Lowker $lowker)
     {
-        $lowker = Lowker::latest()->paginate(10);
-        return view('lowker.edit')->withCarousels($lowker);
+        return view('lowker.edit',compact('lowker'));
     }
 
     public function update(Request $request, $id)

@@ -54,6 +54,7 @@
 <br/><br/>
 
         <section id="news" id="id" >
+            <div class="container">
             <div class="section-header">
                 @foreach($news as $k=>$nw)
                     <div class="float-center mar-right20">

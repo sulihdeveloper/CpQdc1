@@ -18,25 +18,25 @@
 
             <div class="col-md-12">
                 <div class="col-md-7">
-                    <form action="{{ route('lowker.update',$row->id) }}" method="POST">
+                    <form action="{{ route('lowker.update',$lowker->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PATCH')}}
                         <div class="form-group">
-                            <label for="requerments" class="col-md-3 control-label">Requerments</label>
-                            <div class="col-md-9">
-                                <textarea id="content" class="form-control col-md-9" name="requerments"  placeholder="requerments"> value="{{ $row->requerments }}</textarea>
+                            <label for="requerments" class="col-md-5 control-label">Requerments</label>
+                            <div class="col-md-12">
+                                <textarea id="content" class="form-control col-md-9" name="requerments"  placeholder="requerments"> value="{{ $lowker->requerments }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="closing_date" class="col-md-3 control-label">Closing Date</label>
-                            <div class="col-md-9">
-                                <input class="form-control" id="closing_date" type="date" name="closing_date" placeholder="Closing Date" value="{{ $row->closing_date }}">
+                            <label for="closing_date" class="col-md-5 control-label">Closing Date</label>
+                            <div class="col-md-12">
+                                <input class="form-control" id="closing_date" type="date" name="closing_date" placeholder="Closing Date" value="{{ $lowker->closing_date }}">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="description" class="col-md-3 control-label">Description</label>
-                            <div class="col-md-9">
-                                <textarea id="content" class="form-control col-md-9" name=""  placeholder="description"> value="{{ $row->description }}"</textarea>
+                            <label for="description" class="col-md-5 control-label">Description</label>
+                            <div class="col-md-12">
+                                <textarea id="content" class="form-control col-md-9" name="description"  placeholder="description"> value="{!! html_entity_decode($lowker->description) !!}"</textarea>
                             </div>
                         </div>
                         <div class="form-group">

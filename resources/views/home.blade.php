@@ -2,10 +2,10 @@
 
 @section('content')
     <!-- BASICS -->
+    <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="../public/slides/favicon.png">
     <title>QDC Technologies</title>
-    <meta name="description" content="">
+    <meta name="description" content="Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="js1/rs-plugin/css/settings.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css1/isotope.css" media="screen">
@@ -18,6 +18,8 @@
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
 </head>
+
+    <link type="shortcut icon" src="{{URL::asset("../public/img/favicon.png")}}">
 
 <body>
 <div id="fullpage"></div>
@@ -104,6 +106,7 @@
 <!-- #about -->
 
     <!-- #capability -->
+    <section>
     <div class="site-section">
         <div class="container">
             <div class="row">
@@ -112,30 +115,93 @@
                         <img src="img/images.jpg" alt="Image" class="img-fluid" width="550" height="568">
                     </div>
                 </div>
-                <div class="col-lg-5 ml-auto">
+                <div class="col-lg-6 ml-auto">
+                    <div class="col-lg-10 mb-5 mb-lg-0">
+                        <h2 class="font-weight-bold text-black mb-5">Why Us</h2>
+                        <div style='text-align:justify; font-size: 14px;'>Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.</div>
+                        <div class="accordion" id="accordionExample">
 
-                    <h2 class="font-weight-bold text-black mb-5">Why Us</h2>
-                    <div style='text-align:justify; font-size: 14px;'>Qdc’s specialist capabilities have been gained from unique experiences within the delivery of large-scale telecommunications projects. These skills have been developed to ensure that a client’s operational network is delivered with minimal risk and maximum peace of mind.</div>
-                    <div class="accordion" id="accordionExample">
-                        @foreach($capability as $value)
-                        <h2 class="mb-0 border rounded mb-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                {{ $value->judul }}
-                            </button>
-                        </h2>
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Radio Networks
+                                </button>
+                            </h2>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($value->isi) !!}</div>                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Qdc undertakes engineering design in-house for all types of radio systems from single hop and trunk-ed radio, through to complex high capacity broadband microwave radio systems, as deployed in trunk and inter-capital city routes. Qdc can also undertakes a range of mobiles cell planning and design.</div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Box with icon
+                                </button>
+                            </h2>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of all switches network.Qdc designs and installs to produce a fully integrated solution to match our clients’ telecommunications traffic and specific network applications.</div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Power Transmission Lines
+                                </button>
+                            </h2>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of Electric Power Transmission for Low up to High 500 KV transmission.Qdc designs, installs and stringing conductor to produce a fully integrated power transmission solution to match our clients’ electric power load current voltage requirement.</div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Power Substation
+                                </button>
+                            </h2>
+
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of Electric Power Transmission for Low up to High 500 KV transmission.Qdc designs, installs and stringing conductor to produce a fully integrated power transmission solution to match our clients’ electric power load current voltage requirement.</div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Building & Civil
+                                </button>
+                            </h2>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Qdc designs and provides all the necessary Building and civil works infrastructure required to support any network system, ranging from highly secure compounds and buildings through to a range of portable environmental equipment shelters specifically designed for use in the high temperature conditions.Qdc also undertakes a range of air conditioning and building engineering services, including specification and provision of building fire alarm, access control and security facilities.</div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-0 border rounded mb-2">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Positive Reviews
+                                </button>
+                            </h2>
+
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div style='text-align:justify; font-size: 14px;'>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</div>
+                                </div>
+                            </div>
+
                         </div>
-                        @endforeach
+
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </div>
-
-
+    </section>
 <!--==========================
   Clients Section
 ============================-->
@@ -147,17 +213,16 @@
         </div>
     </div>
         @foreach($clien as $k=>$nw)
-            <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="container">
+            <div class="col-lg-2 col-md-6 col-xs-10">
                 <div class="client-logo">
                     <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
                 </div>
             </div>
         @endforeach
         </div>
-    </div>
     </section>
-<br/><br/><br/><br/><br/><br/>
-    <!--==========================
+=    <!--==========================
       Footer
     ============================-->
     <section id="footer" class="section-footer">

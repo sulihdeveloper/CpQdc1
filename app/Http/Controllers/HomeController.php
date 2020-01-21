@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index($id)
     {
         $news = News::latest($id)->paginate(6);
-        $clien = Clien::latest($id)->paginate(10);
+        $clien = Clien::latest($id);
         $post = Post::where('page',1)->get();
         $capability = Capability::latest()->paginate(6);
         return view ('home',compact('clien','contacts','news','formcarrer'));
