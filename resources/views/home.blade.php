@@ -2,8 +2,9 @@
 
 @section('content')
     <!-- BASICS -->
-    <head>
+<head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <title>QDC Technologies</title>
     <meta name="description" content="Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +19,6 @@
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
 </head>
-
-    <link type="shortcut icon" src="{{URL::asset("../public/img/favicon.png")}}">
 
 <body>
 <div id="fullpage"></div>
@@ -216,7 +215,7 @@
             <div class="container">
             <div class="col-lg-2 col-md-6 col-xs-10">
                 <div class="client-logo">
-                    <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="">
+                    <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="align-center">
                 </div>
             </div>
         @endforeach
