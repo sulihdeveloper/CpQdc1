@@ -61,7 +61,7 @@
                                 <div class="card-body">
                                     <table class="table table-bordered" id="id">
                                         <thead>
-                                        <img src="{{url('images/'.$nw->image)}}" width="560" height="315">
+                                        <img src="{{url('images/'.$nw->image)}}" width="560" height="315" style="display: block; margin: auto;">
                                                 <br/><br/>
                                                 <h4>{{$nw->judul}}</h4>
                                                 <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($nw->isi)!!}</div>
