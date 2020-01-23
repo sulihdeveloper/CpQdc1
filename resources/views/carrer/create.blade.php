@@ -85,7 +85,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label class="font-weight-bold" for="email">Phone</label>
-                                    <input type="number" name="Phone" class="form-control" placeholder="Phone">
+                                    <input type="text" name="Phone" class="form-control" placeholder="Phone">
                                 </div>
                             </div>
 
