@@ -84,56 +84,56 @@
         </ul>
     </div>
 @endif
-<!-- contact -->
-<section id="section-contact" class="section appear clearfix">
-    <div class="container">
-        <div class="row mar-bot40">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="section-header">
-                    <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-                   </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="cform" id="contact-form">
-                    <div id="sendmessage">Your message has been sent. Thank you!</div>
-                    <div id="errormessage"></div>
-                    <form method="post" action="{{ route('contact.store') }}"  class="contactForm">
-                        @csrf
-                        <div class="field your-name form-group">
-                            <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validation"></div>
+
+
+    <form method="post" action="{{ route('contact.store') }}"  class="contactForm">
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h2 class="site-heading text-black mb-5">Contact <strong>us</strong></h2>
+                    <form action="#" class="p-5 bg-white">
+
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <label class="font-weight-bold" for="fullname">Full Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Full Name">
+                            </div>
                         </div>
-                        <div class="field your-email form-group">
-                            <input type="text" name="email" placeholder="Your Email" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
-                            <div class="validation"></div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            </div>
                         </div>
-                        <div class="field subject form-group">
-                            <input type="text" name="subject" placeholder="Subject" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                            <div class="validation"></div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Subject</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div>
                         </div>
 
-                        <div class="field message form-group">
-                            <textarea name="message" class="cform-textarea" cols="40" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                            <div class="validation"></div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="message">Message</label>
+                                <textarea name="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                            </div>
                         </div>
 
-                        <div class="send-btn">
-                            <input name="add" type="submit" value="Send" class="btn btn-theme input-lg">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Send" class="btn btn-primary rounded-0 btn-lg">
+                            </div>
                         </div>
+
 
                     </form>
                 </div>
             </div>
-            <!-- ./span12 -->
         </div>
-
     </div>
-</section>
 
 
-    <br/><br/><br/><br/><br/><br/>
     <!--==========================
       Footer
     ============================-->

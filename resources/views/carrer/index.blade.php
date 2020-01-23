@@ -42,11 +42,13 @@
                         <td>{{ $row->address }}</td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->photo }}" class="img-thumbnail" width="75" /></td>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->file }}" class="img-thumbnail" width="75" /></td>
+                        <td>
                         <form action="{{ action('CarrerController@destroy',['id'=>$row->id]) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                         @endforeach
+                        </td>
                     </tr>
             </table>
         </div>

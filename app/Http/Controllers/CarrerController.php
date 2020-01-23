@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Clien;
+use App\Lowker;
 use Illuminate\Http\Request;
 use App\Carrer;
 use Session;
@@ -31,12 +32,13 @@ class CarrerController extends Controller
             'phone'     =>  'required',
             'address'     =>  'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:2048',
+            'file' => 'required|',
         ]);
 
         $image = $request->file('photo');
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);
+
         $form_data = array(
             'first_name'=>   $request->first_name,
             'last_name'=>   $request->last_name,
@@ -45,7 +47,6 @@ class CarrerController extends Controller
             'address'=>   $request->address,
             'photo'=>   $new_name,
             'file'=>   $new_name
-
         );
 
         Carrer::create($form_data);

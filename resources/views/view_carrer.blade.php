@@ -72,7 +72,13 @@
                         </div>
                     </div>
                 </div>
-    <br/>
+            <br/>
+            <div class="container">
+                <div class="row content-center">
+                     <a href="{{route('carrer.create',$row->id)}}" class="btn btn-info">APLY</a>
+                </div>
+            </div>
+            <br/>
             <!--==========================
                  Footer
                ============================-->
