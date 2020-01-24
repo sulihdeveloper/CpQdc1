@@ -3,7 +3,7 @@
 @section('content')
     <!-- BASICS -->
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="../public/slides/favicon.png">
+    <link rel="shortcut icon" href="../img/favicon.ico">
     <title>QDC Technologies</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css1/bootstrap.css" media="screen"/>
     <link rel="stylesheet" href="../css1/flexslider.css" type="../text/css">
     <link rel="stylesheet" href="../js1/fancybox/jquery.fancybox.css" type="text/css" media="screen">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
     <link rel="stylesheet" href="../css1/style.css">
@@ -68,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <div class="col-md-12 mb-3 mb-md-0">
+                                <div class="col-md-12">
                                     <label class="font-weight-bold" for="last_name">Last Name</label>
                                     <input type="text" name="last_name" class="form-control" placeholder="Last Name">
                                 </div>
