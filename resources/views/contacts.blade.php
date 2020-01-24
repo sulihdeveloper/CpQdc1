@@ -109,7 +109,7 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="font-weight-bold" for="email">Subject</label>
-                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject"/>
                             </div>
                         </div>
 
@@ -186,14 +186,6 @@
         <div class="container">
             <div class="copyright">
                 COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
-            </div>
-            <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-                -->
             </div>
         </div>
     </section>

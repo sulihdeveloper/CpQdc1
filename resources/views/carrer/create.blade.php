@@ -54,25 +54,22 @@
                 @endforeach
             </ul>
         </div>
-    @endif
-
-    <form method="post" action="{{ route('carrer.store') }}" enctype="multipart/form-data">
-        @csrf
+        <form method="post" action="{{ route('carrer.store') }}" enctype="multipart/form-data" class="p-5 bg-white">
+            @endif
+            @csrf
         <br/><br/><br/>
         <div class="site-section bg-light">
             <div class="container">
                 <div class="row">
-                        <form action="#" class="p-5 bg-white">
-
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
-                                    <label class="font-weight-bold" for="fullname">Frist Name</label>
+                                    <label class="font-weight-bold" for="frist name">Frist Name</label>
                                     <input type="text" name="first_name" class="form-control" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
-                                    <label class="font-weight-bold" for="fullname">Last Name</label>
+                                    <label class="font-weight-bold" for="lastname">Last Name</label>
                                     <input type="text" name="last_name" class="form-control" placeholder="Full Name">
                                 </div>
                             </div>
@@ -84,27 +81,27 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label class="font-weight-bold" for="email">Phone</label>
+                                    <label class="font-weight-bold" for="Phone">Phone</label>
                                     <input type="text" name="Phone" class="form-control" placeholder="Phone">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label class="font-weight-bold" for="message">Address</label>
+                                    <label class="font-weight-bold" for="address">Address</label>
                                     <input type="text" name="address" cols="30" rows="5" class="form-control" placeholder="Address"/>
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label class="font-weight-bold" for="email">Select Profile Image</label>
+                                    <label class="font-weight-bold" for="photo">Select Profile Image</label>
                                     <input type="file" name="photo" class="form-control" placeholder="Select Profile Image">
                                 </div>
                             </div>
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label class="font-weight-bold" for="message">Select Document <strong>(jpeg, png)</strong></label>
+                                    <label class="font-weight-bold" for="file">Select Document <strong>(jpeg, png)</strong></label>
                                     <input type="file" name="file" cols="30" rows="5" class="form-control" placeholder="Select Document"/>
                                 </div>
                             </div>
