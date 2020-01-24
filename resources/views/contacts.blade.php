@@ -125,9 +125,7 @@
                                 <input type="submit" value="Send" class="btn btn-primary rounded-0 btn-lg">
                             </div>
                         </div>
-
-
-                    </form>
+                </form>
                 </div>
             </div>
         </div>
