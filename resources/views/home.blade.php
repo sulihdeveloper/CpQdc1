@@ -47,8 +47,8 @@
 </div>
 </body>
 
-    <video  width="1520" height="568" autoplay loop controls muted>
-        <source src="{{URL::asset("../public/img/video.mp4")}}" type="video/mp4"/>
+    <video  width="1370" height="500" autoplay loop controls muted>
+        <source src="{{URL::asset("../img/video.mp4")}}" type="video/mp4"/>
     </video>
 
 <section>

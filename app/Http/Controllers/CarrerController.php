@@ -51,7 +51,7 @@ class CarrerController extends Controller
 
         Carrer::create($form_data);
 
-        return redirect('carrer')->with('success', 'Data Added successfully.');
+        return redirect('formcarrer')->with('success', 'Data Added successfully.');
     }
 
     public function show($id)

@@ -54,8 +54,8 @@
                 @endforeach
             </ul>
         </div>
+    @endif
         <form method="post" action="{{ route('carrer.store') }}" enctype="multipart/form-data" class="p-5 bg-white">
-            @endif
             @csrf
         <br/><br/><br/>
         <div class="site-section bg-light">
@@ -64,13 +64,13 @@
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
                                     <label class="font-weight-bold" for="frist name">Frist Name</label>
-                                    <input type="text" name="first_name" class="form-control" placeholder="Full Name">
+                                    <input type="text" name="first_name" class="form-control" placeholder="Frist Name">
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
-                                    <label class="font-weight-bold" for="lastname">Last Name</label>
-                                    <input type="text" name="last_name" class="form-control" placeholder="Full Name">
+                                    <label class="font-weight-bold" for="last_name">Last Name</label>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -82,7 +82,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label class="font-weight-bold" for="Phone">Phone</label>
-                                    <input type="text" name="Phone" class="form-control" placeholder="Phone">
+                                    <input type="number" name="phone" class="form-control" placeholder="Phone">
                                 </div>
                             </div>
 
@@ -101,7 +101,7 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <label class="font-weight-bold" for="file">Select Document <strong>(jpeg, png)</strong></label>
+                                    <label class="font-weight-bold" for="file">Select Document CV <strong>(jpeg, png)</strong></label>
                                     <input type="file" name="file" cols="30" rows="5" class="form-control" placeholder="Select Document"/>
                                 </div>
                             </div>
@@ -116,7 +116,6 @@
                 </div>
             </div>
         </div>
-
         <!--==========================
           Footer
         ============================-->
@@ -167,14 +166,6 @@
     <div class="container">
         <div class="copyright">
             COPYRIGHT © 2019 <strong>. QDC TECHNOLOGIES </strong>
-        </div>
-        <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
-            -->
         </div>
     </div>
     </section>
