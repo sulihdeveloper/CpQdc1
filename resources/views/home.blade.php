@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css1/bootstrap.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
-    <img rel="shortcut icon" type="image/x-icon" src="img/favicon.ico"/>
     <link rel="stylesheet" href="css1/style.css">
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
