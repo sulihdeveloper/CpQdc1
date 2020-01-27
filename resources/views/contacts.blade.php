@@ -90,8 +90,7 @@
     <div class="site-section bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-lg-12">
-                    <h2 class="site-heading text-black mb-5">Contact <strong>us</strong></h2>
+                <br/><br/><br/><br/><br/><br/>
                     <form action="#" class="p-5 bg-white">
 
                         <div class="row form-group">

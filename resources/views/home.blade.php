@@ -4,9 +4,8 @@
     <!-- BASICS -->
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="<?php echo asset('assets/img/favicon.ico'); ?>">
     <title>QDC Technologies</title>
-    <meta name="description" content="Website">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen">
     <link rel="stylesheet" type="text/css" href="css1/isotope.css" media="screen">
@@ -15,11 +14,11 @@
     <link rel="stylesheet" href="css1/bootstrap.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
+    <img rel="shortcut icon" type="image/x-icon" src="img/favicon.ico"/>
     <link rel="stylesheet" href="css1/style.css">
     <!-- skin -->
     <link rel="stylesheet" href="skin/default.css">
 </head>
-
 <body>
 <div id="fullpage"></div>
 <section id="header" class="appear"></section>
@@ -46,6 +45,7 @@
 </div>
 </div>
 </body>
+
 
     <video  width="1370" height="500" autoplay loop controls muted>
         <source src="{{URL::asset("../img/video.mp4")}}" type="video/mp4"/>
@@ -209,8 +209,6 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
-        </div>
-    </div>
         @foreach($clien as $k=>$nw)
             <div class="container">
             <div class="col-lg-2 col-md-6 col-xs-10">
@@ -220,6 +218,8 @@
             </div>
         @endforeach
         </div>
+        </div>
+    </div>
     </section>
 =    <!--==========================
       Footer
