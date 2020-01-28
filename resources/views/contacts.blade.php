@@ -83,13 +83,11 @@
 @endif
 
 
-    <form method="post" action="{{ route('contact.store') }}"  class="contactForm">
+    <form method="post" action="{{ route('contact.store') }}"  class="contactForm"/>
     <div class="site-section bg-light">
         <div class="container">
             <div class="row">
-                <br/><br/><br/><br/><br/><br/>
-                    <form action="#" class="p-5 bg-white">
-
+                <br/><br/><br/>
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="font-weight-bold" for="fullname">Full Name</label>
@@ -121,7 +119,6 @@
                                 <input type="submit" value="Send" class="btn btn-primary rounded-0 btn-lg">
                             </div>
                         </div>
-                </form>
                 </div>
             </div>
         </div>
