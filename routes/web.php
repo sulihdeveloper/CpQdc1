@@ -8,6 +8,13 @@ use App\Capability;
 
 Auth::routes();
 
+Route::get('/clear-cache', function() {
+    $run = Artisan::call('config:clear');
+    $run = Artisan::call('cache:clear');
+    $run = Artisan::call('config:cache');
+    return 'FINISHED';
+});
+
 Route::get('/', function () {
     $news = News::latest()->paginate(3);
     $clien = Clien::latest()->paginate(20);
