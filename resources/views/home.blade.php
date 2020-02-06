@@ -28,7 +28,7 @@
                 <span class="fa fa-bars color-white"></span>
             </button>
             <div class="navbar-logo">
-                <a href="#"><img data-0="width:155px;" data-300=" width:120px;" src="img1/pp-removebg-preview.png" alt=""></a>
+                <a href="#"><img data-0="width:155px;" data-300="width:120px;" src="img1/pp-removebg-preview.png" alt=""></a>
             </div>
         </div>
         <div class="navbar-collapse collapse">
@@ -46,7 +46,7 @@
 </body>
 
 
-    <video  width="1370" height="500" autoplay loop controls muted>
+    <video  width="100%" height="auto" autoplay loop controls muted>
         <source src="{{URL::asset("../img/video.mp4")}}" type="video/mp4"/>
     </video>
 
@@ -204,13 +204,13 @@
   Clients Section
 ============================-->
 
-    <section id="clients" class="section-bg">
+    <section id="clients">
     <div class="container">
         <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Our CLients</h2>
         @foreach($clien as $k=>$nw)
             <div class="container">
-            <div class="col-lg-2 col-md-6 col-xs-10">
+            <div class="col-lg-2 col-md-6">
                 <div class="client-logo">
                     <img src="{{ URL::to('/') }}/images/{{ $nw->photo }}" width="100px" height="120px" class="img-fluid" alt="align-center">
                 </div>

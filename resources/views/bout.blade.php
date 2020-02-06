@@ -43,7 +43,7 @@
         </div>
     </div>
     </body>
-    <video id="video" width="1370" height="568" autoplay loop controls muted>
+    <video width="100%" height="auto" autoplay loop controls muted>
         <source src="{{URL::asset("../img/ben.mp4")}}" type="video/mp4"/>
     </video>
 
@@ -57,7 +57,7 @@
             </header>
             <br>
             @foreach($post as $item)
-                <div class="row about-container">
+                <div class="row about-container" width="100%" height="auto">
                     <div class="col-lg-6 content order-lg-1 order-2">
                         <div style='text-align:justify; font-size: 14px;'>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</div>
                         <div class="icon-box wow fadeInUp">
