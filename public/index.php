@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../qdc1/bootstrap/autoload.php';
+require __DIR__.'/../bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +35,8 @@ require __DIR__.'/../qdc1/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../qdc1/bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-// set the public path to this directory
-    $app->bind('path.public', function() {
-    return __DIR__;
-});
 
 /*
 |--------------------------------------------------------------------------
