@@ -5,7 +5,7 @@ use App\news;
 use App\Clien;
 use App\Post;
 use App\Capability;
-
+use App\Map;
 Auth::routes();
 
 Route::get('/clear-cache', function() {
@@ -18,14 +18,12 @@ Route::get('/clear-cache', function() {
 Route::get('/', function () {
     $news = News::latest()->paginate(3);
     $clien = Clien::latest()->paginate(20);
-    $post = Post::latest()->paginate(3);
-    $capability = Capability::latest()->paginate(10);
+    $Map = Map::Latest()->paginate(20);
     $data = [
         'news' => $news,
         'clien' => $clien,
-        'post' => $post,
-        'capability' => $capability,
-    ];
+        'map' => $Map,
+       ];
     return view('home', $data);
 });
 
@@ -103,3 +101,5 @@ Route::get('contacts',function (){
     Route::resource('contact', 'ContactController')->only(['index', 'create','store', 'edit', 'update', 'destroy']);
 
     Route::resource('capability', 'CapabilityController')->only(['index','create','show', 'store', 'edit', 'update', 'destroy']);
+
+    Route::resource('map', 'MapsController')->only(['index','create','show', 'store', 'edit', 'update', 'destroy']);

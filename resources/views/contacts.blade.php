@@ -50,7 +50,8 @@
 <br>
 <br>
 <br>
-<!-- map -->
+
+    <!-- map -->
 <section class="col-lg-6 col-md-6" id="section-map" class="clearfix">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1718602850483!2d106.8241704138113!3d-6.241067295482373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3dc5aaef733%3A0x7064d74d810c5e76!2sPT%20Qdc%20Technologies!5e0!3m2!1sid!2sid!4v1573635247003!5m2!1sid!2sid" width="699" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe></section>
 
@@ -81,7 +82,6 @@
         </ul>
     </div>
 @endif
-
 
     <form method="post" action="{{ route('contact.store') }}"  class="contactForm"/>
     <div class="site-section bg-light">

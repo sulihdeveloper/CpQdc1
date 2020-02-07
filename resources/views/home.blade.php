@@ -20,7 +20,7 @@
 </head>
 <body>
 <div id="fullpage"></div>
-<section id="header" class="appear"></section>
+<section id="header" class="appear">
 <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
     <div class="container">
         <div class="navbar-header">
@@ -38,168 +38,176 @@
                 <li><a href="{!! url('/capabilities') !!}">Capabilities</a></li>
                 <li><a href="{!! url('/berita') !!}">News</a></li>
                 <li><a href="{!! url('/formcarrer') !!}">Carrers</a></li>
+                <li><a href="{!! url('/klien') !!}">Our Client</a></li>
                 <li><a href="{!! url('/contacts') !!}">Contact</a></li>
             </ul>
         </div>
 </div>
 </div>
-</body>
-
+</section>
 
     <video  width="100%" height="auto" autoplay loop controls muted>
         <source src="{{URL::asset("../img/video.mp4")}}" type="video/mp4"/>
     </video>
+<div>
 
-<section>
-    <section id="news" id="id">
-            <div class="section-header">
-                @foreach($news as $k=>$nw)
-                <div class="float-center mar-right20">
-                <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
-                <div class="row">
-                <div class="box">
-                        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-                            <div class="float-left mar-right20">
-                                <a href="{!! url ('/view_berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
-                            </div>
-                        </div>
-                    <h4 class="title"><a href="{!! url ('/view_berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = 'more')  }}</a></h4>
-                    <h6><b>Created at Admin QDC ( {{$nw->created_at->format('d F Y')}} )</b></h6>
-          </div>
-          </div>
-          </div>
-          </div>
-    @endforeach
-    </div>
-</section>
-</section>
-
+</div>
+</body>
+    <br/><br/><br/>
     <!--==========================
-      About Us Section
+                  produk
     ============================-->
-<section id="about">
-    <div class="container">
-        <header class="section-header">
-            <h2>PT. Qdc Technologies</h2>
-            <h5> began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company.</h5>
-        </header>
-        <br>
-        @foreach($post as $item)
-        <div class="row about-container">
-            <div class="col-lg-6 content order-lg-1 order-2">
-                <div style='text-align:justify; font-size: 14px;'>began operation in July 2003, spawned by the withdraw from Indonesia of a multinational telecommunication company, a group of ex employees formed Qdc Technologies and is now providing high quality telecommunications and power infrastructure services in Indonesia. Capitalizing on business relationships, highly valued and professional staff in addition to extensive knowledge of the Indonesia telecommunications and power infrastructure market developed over many years, Qdc Technologies is uniquely positioned to deliver high quality competitive and flexible products and services to the market.</div>
-                <div class="icon-box wow fadeInUp">
-                    <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                    <h4><a href=""> {{$item->section_one}}</a></h4>
-                    <div style='text-align:justify; font-size: 14px;'>{!! html_entity_decode($item->section_two)!!} </div>
-                    </div>
-            </div>
-            <div class="col-lg-4 background order-lg-3 order-2 ">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ya9kj2-FyFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-        @endforeach
-</section>
-<!-- #about -->
-
-    <!-- #capability -->
     <section>
-    <div class="site-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="img-border">
-                        <img src="img/images.jpg" alt="Image" class="img-fluid" width="550" height="568">
-                    </div>
-                </div>
-                <div class="col-lg-6 ml-auto">
-                    <div class="col-lg-10 mb-5 mb-lg-0">
-                        <h2 class="font-weight-bold text-black mb-5">Why Us</h2>
-                        <div style='text-align:justify; font-size: 14px;'>Highly skilled and efficient crews provide the expertise in aerial, subterranean and submarine optical fibre cables, providing an end to end solution for clients including design, installation, splicing, testing and commissioning. With both “single mode” and “multimode” expertise and with direct access to specialised cable installation plant and latest version test equipment, Qdc has seamlessly provided complex state of the art solutions for many clients understanding their diverse operational requirements.</div>
-                        <div class="accordion" id="accordionExample">
+        <div class="col-lg-6 col-md-6">
+            <div class="list-group-item action active">Product</div>
+            <br/>
+            <style>
+                /* Make the image fully responsive */
+                .carousel-inner img {
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Radio Networks
-                                </button>
-                            </h2>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Qdc undertakes engineering design in-house for all types of radio systems from single hop and trunk-ed radio, through to complex high capacity broadband microwave radio systems, as deployed in trunk and inter-capital city routes. Qdc can also undertakes a range of mobiles cell planning and design.</div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Box with icon
-                                </button>
-                            </h2>
-
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of all switches network.Qdc designs and installs to produce a fully integrated solution to match our clients’ telecommunications traffic and specific network applications.</div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Power Transmission Lines
-                                </button>
-                            </h2>
-
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of Electric Power Transmission for Low up to High 500 KV transmission.Qdc designs, installs and stringing conductor to produce a fully integrated power transmission solution to match our clients’ electric power load current voltage requirement.</div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Power Substation
-                                </button>
-                            </h2>
-
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Qdc can also design and manage the supply, installation, test and commissioning of Electric Power Transmission for Low up to High 500 KV transmission.Qdc designs, installs and stringing conductor to produce a fully integrated power transmission solution to match our clients’ electric power load current voltage requirement.</div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Building & Civil
-                                </button>
-                            </h2>
-
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Qdc designs and provides all the necessary Building and civil works infrastructure required to support any network system, ranging from highly secure compounds and buildings through to a range of portable environmental equipment shelters specifically designed for use in the high temperature conditions.Qdc also undertakes a range of air conditioning and building engineering services, including specification and provision of building fire alarm, access control and security facilities.</div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-0 border rounded mb-2">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Positive Reviews
-                                </button>
-                            </h2>
-
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div style='text-align:justify; font-size: 14px;'>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</div>
-                                </div>
-                            </div>
-
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://drive.google.com/uc?export=download&id=17MKwEHxWd-OCPx9P2LsTBBR0kNR__aCe" alt="Gambar - 1" width="1280" height="700">
+                        <div class="carousel-caption">
+                            <h3>Slide 1</h3>
+                            <p>Deskripsi Slide 1</p>
                         </div>
-
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://drive.google.com/uc?export=download&id=1m3O0HLyKQPO-MOFcSNtP4EqpenycEQaC" alt="Gambar - 2" width="1280" height="700">
+                        <div class="carousel-caption">
+                            <h3>Slide 2</h3>
+                            <p>Deskripsi Slide 2</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://drive.google.com/uc?export=download&id=1NSeFxs2MXhLfCU14qtqnRWce8LPJC6bR" alt="Gambar - 3" width="1280" height="700">
+                        <div class="carousel-caption">
+                            <h3>Slide 3</h3>
+                            <p>Deskripsi Slide 3</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
         </div>
+            <!--==========================
+                  produk
+            ============================-->
+    <div class="col-md-offset-7 footer-contact">
+        <div class="list-group-item action active">News</div>
+        @foreach($news as $k=>$nw)
+            <div class="float-center mar-right20">
+                <div class="container">
+                <div class="col-lg-4 col-md-6 col-xs-10 wow bounceInUp" data-wow-duration="2.4s">
+                            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+                                <div class="float-left mar-right20">
+                                    <a href="{!! url ('/view_berita',$nw->id) !!}" class="fa fa-newspaper-o">News</a>
+                                </div>
+                            </div>
+                            <h4 class="title"><a href="{!! url ('/view_berita',$nw->id) !!}">{{ str_limit($nw->judul,$limit = 20, $end = 'more')  }}</a></h4>
+                </div>
+            </div>
+        @endforeach
         </div>
     </div>
     </section>
+
+<br/><br/><br/><br/><br/>
+<!--==========================
+      Maps
+============================-->
+        <!-- ======= Our Services Section ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+            </div>
+        </section><!-- End Our Services Section -->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div id="dvMap" style=" width: 100%; height: 350px"></div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=" async defer></script>
+            <script type="text/javascript">
+                var markers = [
+                        <?php
+                        $DB_HOST='localhost';
+                        $DB_USERNAME='root';
+                        $DB_PASSWORD='';
+                        $DB_DATABASE='db_blog';
+                        $db=mysqli_connect($DB_HOST,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
+                        $sql = mysqli_query($db, "SELECT * FROM maps");
+                        while(($data =  mysqli_fetch_assoc($sql))) {
+                        ?>
+                    {
+                        "name": '<?php echo $data['name']; ?>',
+                        "tower": '<?php echo $data['tower']; ?>',
+                        "lat": '<?php echo $data['lat']; ?>',
+                        "lng": '<?php echo $data['lng']; ?>',
+                        "alamat": '<?php echo $data['alamat']; ?>',
+                        "provinsi": '<?php echo $data['provinsi']; ?>'
+                    },
+                    <?php
+                    }
+                    ?>
+                ];
+            </script>
+            <script type="text/javascript">
+                window.onload = function () {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(-0.2249959,117.2822537),
+                        zoom: 5,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var infoWindow = new google.maps.InfoWindow();
+                    var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+                    for (i = 0; i < markers.length; i++) {
+                        var data = markers[i];
+                        var latnya = data.lat;
+                        var lngnya = data.lng;
+
+                        var myLatlng = new google.maps.LatLng(latnya, lngnya);
+                        var marker = new google.maps.Marker({
+                            position: myLatlng,
+                            map: map,
+                            title: data.alamat
+                        });
+                        (function (marker, data) {
+                            google.maps.event.addListener(marker, "click", function (e) {
+                                infoWindow.setContent('<b>Name</b> :' + data.name + '<br>' +'<b>Tower</b> :' +data.tower+ '<br>' + data.alamat);
+                                infoWindow.open(map, marker);
+                            });
+                        })(marker, data);
+                    }
+                }
+            </script>
+
 <!--==========================
   Clients Section
 ============================-->

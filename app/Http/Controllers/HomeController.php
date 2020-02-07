@@ -7,6 +7,7 @@ use App\Post;
 use App\news;
 use App\Clien;
 use App\Capability;
+use App\Map;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
@@ -17,9 +18,8 @@ class HomeController extends Controller
     {
         $news = News::latest($id)->paginate(6);
         $clien = Clien::latest($id);
-        $post = Post::where('page',1)->get();
-        $capability = Capability::latest()->paginate(6);
-        return view ('home',compact('clien','contacts','news','formcarrer'));
+        $Map = Map::Latest($id);
+        return view ('home',compact('clien','contacts','news','formcarrer','map'));
     }
 
     /**
